@@ -6,7 +6,8 @@
 
 
 # 基于Matlab的图像处理软件
-   本项目是自己根据所学的《图像处理》课程内容基于Matlab GUI编程实现一些基本的图像处理算法，
+
+&nbsp;&nbsp;&nbsp;&nbsp;本项目是自己根据所学的《图像处理》课程内容基于Matlab GUI编程实现一些基本的图像处理算法，
 原本有一个主程序，但目前完成的内容比较少，所以直接单独列出各个模块了，有空再完善一下。实现
 的功能比较简单，主要是为了练习一下Matlab的GUI编程以及实现图像处理的一些基本算法。
 
@@ -18,13 +19,13 @@
 ## sobal算子
  [查看源码](https://zhangqunwei.github.io/ImageProcessingMatlab/source/sobal.html)
 {% highlight Matlab %}  
-说明：用Matlab的实时编辑器打开运行
-sobal算子
-1、设置算子
+% 说明：用Matlab的实时编辑器打开运行
+% sobal算子
+% 1、设置算子
 
 plateX=[-1 -2 -1;0 0 0;1 2 1];
 plateY=[-1 0  1;-2 0 2;-1 0 1];
-2、读取并显示原图
+% 2、读取并显示原图
 
 X=imread('cameraman.tif');
 figure
@@ -32,7 +33,7 @@ imshow(X);
 
 X=double(X);
 [height,width]=size(X);     % 检索图像大小
-3、计算dx即X方向
+% 3、计算dx即X方向
 N=size(plateX,1);           % 检索模板大小
 dX=X;                       % 保存计算后的图像（double类型）
 for i=1:height-2
