@@ -6,11 +6,11 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>&#28857;&#25805;&#20316;---&#22270;&#20687;&#28784;&#24230;&#26144;&#23556;</title><meta name="generator" content="MATLAB 9.0"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2017-05-11"><meta name="DC.source" content="DCZTuXiangHuiDuYingShe.m"><style type="text/css">
+      --><title>&#28857;&#25805;&#20316;---&#22270;&#20687;&#28784;&#24230;&#26144;&#23556;</title><meta name="generator" content="MATLAB 9.0"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2017-05-27"><meta name="DC.source" content="DCZTuXiangHuiDuYingShe.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
-html body { height:100%; margin:5%; font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#000; line-height:140%; background:#ADEBFF none; overflow-y:scroll; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
 html body td { vertical-align:top; text-align:left; }
 
 h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
@@ -22,7 +22,7 @@ a:hover { color:#005fce; text-decoration:underline; }
 a:visited { color:#004aa0; text-decoration:none; }
 
 p { padding:0px; margin:0px 0px 20px; }
-img { padding:0px; margin:0px 0px 20px; border:none;  width: 760;height: 450; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
 p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
 
 ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
@@ -38,7 +38,7 @@ ol li ul li { list-style:square; }
 
 .content { font-size:1.2em; line-height:140%; padding: 20px; }
 
-pre, code { font-size:16px; }
+pre, code { font-size:12px; }
 tt { font-size: 1.2em; }
 pre { margin:0px 0px 20px; }
 pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
@@ -84,7 +84,8 @@ gui_State = struct(<span class="string">'gui_Name'</span>,       mfilename, <spa
     gui_mainfcn(gui_State, varargin{:});
 <span class="keyword">end</span>
 <span class="comment">% End initialization code - DO NOT EDIT</span>
-</pre><h2>&#24320;&#22987;&#20989;&#25968;<a name="4"></a></h2><p><b>&#30456;&#20851;&#21021;&#22987;&#21270;</b></p><pre class="codeinput"><span class="keyword">function</span> DCZTuXiangHuiDuYingShe_OpeningFcn(hObject, eventdata, handles, varargin)
+</pre><h2>&#24320;&#22987;&#20989;&#25968;<a name="4"></a></h2><p><b>&#30456;&#20851;&#21021;&#22987;&#21270;</b></p><pre class="codeinput"><span class="keyword">function</span> DCZTuXiangHuiDuYingShe_OpeningFcn(hObject, eventdata, handles, <span class="keyword">...</span>
+                                            varargin)
 </pre><pre class="codeinput"><span class="comment">% &#20840;&#23616;&#21464;&#37327;</span>
     handles.img_str=<span class="string">' '</span>;        <span class="comment">% &#22270;&#20687;&#22320;&#22336;</span>
     handles.img=0;              <span class="comment">% &#22270;&#20687;&#25968;&#25454;</span>
@@ -106,7 +107,7 @@ handles.output = hObject;
 guidata(hObject, handles);
 <span class="comment">% UIWAIT makes DCZTuXiangHuiDuYingShe wait for user response (see UIRESUME)</span>
 <span class="comment">% uiwait(handles.figure1);</span>
-</pre><h2>&#36755;&#20986;&#20989;&#25968;<a name="7"></a></h2><pre class="codeinput"><span class="keyword">function</span> DCZTuXiangHuiDuYingShe_OutputFcn(hObject, eventdata, handles)
+</pre><img vspace="5" hspace="5" src="DCZTuXiangHuiDuYingShe_01.png" alt=""> <h2>&#36755;&#20986;&#20989;&#25968;<a name="7"></a></h2><pre class="codeinput"><span class="keyword">function</span> DCZTuXiangHuiDuYingShe_OutputFcn(hObject, eventdata, handles)
 <span class="comment">% Get default command line output from handles structure</span>
 <span class="comment">%varargout{1} = handles.output;</span>
 <span class="comment">%</span>
@@ -142,7 +143,7 @@ guidata(hObject, handles);
 <span class="keyword">end</span>
 </pre><h2>&#20445;&#23384;&#22270;&#20687;<a name="10"></a></h2><pre class="codeinput"><span class="keyword">function</span> PB_SaveImg_Callback(hObject, eventdata, handles)
 </pre><pre class="codeinput"><span class="comment">% &#20445;&#23384;&#22270;&#20687;</span>
-    [FileName,PathName] =uiputfile({<span class="string">'*.jpg;*.tif;*.png;*.gif'</span>,<span class="string">'All Image Files'</span>;<span class="keyword">...</span>
+    [FileName,PathName] =uiputfile({<span class="string">'*.jpg;*.tif;*.png;*.gif'</span>,<span class="string">'All Image Files'</span>;
               <span class="string">'*.*'</span>,<span class="string">'All Files'</span> },<span class="string">'&#20445;&#23384;&#22270;&#20687;'</span>,<span class="keyword">...</span>
               <span class="string">'C:\Work\newfile.jpg'</span>);
     <span class="keyword">if</span> FileName==0
@@ -213,7 +214,7 @@ guidata(hObject, handles);
     I=handles.img;
     <span class="keyword">if</span> b==0 &amp;&amp; a==1
         I((I&lt;85) | (I&gt;85 &amp; I&lt;170) | (I&gt;170))=256/85.*I((I&lt;85) | <span class="keyword">...</span>
-        (I&gt;85 &amp; I&lt;170) | (I&gt;170));
+            (I&gt;85 &amp; I&lt;170) | (I&gt;170));
         handles.img=I;
     <span class="keyword">else</span> <span class="keyword">if</span> b==1&amp;&amp; a==0
             I(I&lt;85)=256/85.*I(I&lt;85);
@@ -429,8 +430,8 @@ guidata(hObject, handles);
 set(hObject,<span class="string">'value'</span>,1);
 <span class="comment">% Hint: edit controls usually have a white background on Windows.</span>
 <span class="comment">%       See ISPC and COMPUTER.</span>
-<span class="keyword">if</span> ispc &amp;&amp; isequal(get(hObject,<span class="string">'BackgroundColor'</span>),<span class="keyword">...</span>
- get(0,<span class="string">'defaultUicontrolBackgroundColor'</span>))
+<span class="keyword">if</span> ispc &amp;&amp; isequal(get(hObject,<span class="string">'BackgroundColor'</span>), <span class="keyword">...</span>
+        get(0,<span class="string">'defaultUicontrolBackgroundColor'</span>))
     set(hObject,<span class="string">'BackgroundColor'</span>,<span class="string">'white'</span>);
 <span class="keyword">end</span>
 
@@ -448,10 +449,10 @@ set(hObject,<span class="string">'value'</span>,1);
 <span class="comment">% Hint: edit controls usually have a white background on Windows.</span>
 <span class="comment">%       See ISPC and COMPUTER.</span>
 <span class="keyword">if</span> ispc &amp;&amp; isequal(get(hObject,<span class="string">'BackgroundColor'</span>), <span class="keyword">...</span>
-get(0,<span class="string">'defaultUicontrolBackgroundColor'</span>))
+        get(0,<span class="string">'defaultUicontrolBackgroundColor'</span>))
     set(hObject,<span class="string">'BackgroundColor'</span>,<span class="string">'white'</span>);
 <span class="keyword">end</span>
-</pre><p class="footer"><br><br></p></div><!--
+</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2016a</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% 点操作REPLACE_WITH_DASH_DASH-图像灰度映射
 % * 概述      ：主要实现图像典型的灰度映射
@@ -488,7 +489,8 @@ end
 
 %% 开始函数
 % *相关初始化*
-function DCZTuXiangHuiDuYingShe_OpeningFcn(hObject, eventdata, handles, varargin)
+function DCZTuXiangHuiDuYingShe_OpeningFcn(hObject, eventdata, handles, ... 
+                                            varargin)
 % 全局变量
     handles.img_str=' ';        % 图像地址
     handles.img=0;              % 图像数据
@@ -552,7 +554,7 @@ end
 %% 保存图像
 function PB_SaveImg_Callback(hObject, eventdata, handles)
 % 保存图像
-    [FileName,PathName] =uiputfile({'*.jpg;*.tif;*.png;*.gif','All Image Files';...
+    [FileName,PathName] =uiputfile({'*.jpg;*.tif;*.png;*.gif','All Image Files';
               '*.*','All Files' },'保存图像',...
               'C:\Work\newfile.jpg');
     if FileName==0
@@ -641,7 +643,8 @@ function handles=junYunYingShe(hObject,handles)
     b=get(handles.edit_YRK,'value'); 
     I=handles.img;
     if b==0 && a==1
-        I((I<85) | (I>85 & I<170) | (I>170))=256/85.*I((I<85) | (I>85 & I<170) | (I>170));
+        I((I<85) | (I>85 & I<170) | (I>170))=256/85.*I((I<85) | ...
+            (I>85 & I<170) | (I>170));
         handles.img=I;
     else if b==1&& a==0
             I(I<85)=256/85.*I(I<85);
@@ -899,7 +902,8 @@ function edit_YRK_CreateFcn(hObject, eventdata, handles)
 set(hObject,'value',1);
 % Hint: edit controls usually have a white background on Windows.
 %       See ISPC and COMPUTER.
-if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+if ispc && isequal(get(hObject,'BackgroundColor'), ...
+        get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
 end
 
@@ -916,7 +920,8 @@ function edit_XC_CreateFcn(hObject, eventdata, handles)
 set(hObject,'value',1);
 % Hint: edit controls usually have a white background on Windows.
 %       See ISPC and COMPUTER.
-if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+if ispc && isequal(get(hObject,'BackgroundColor'), ...
+        get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
 end
 ##### SOURCE END #####

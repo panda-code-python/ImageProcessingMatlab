@@ -22,7 +22,7 @@ a:hover { color:#005fce; text-decoration:underline; }
 a:visited { color:#004aa0; text-decoration:none; }
 
 p { padding:0px; margin:0px 0px 20px; }
-img { padding:0px; margin:0px 0px 20px; border:none; }
+img { padding:0px; margin:0px 0px 20px; border:none; width: 760;height: 450;}
 p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
 
 ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
@@ -245,7 +245,8 @@ set(hObject,<span class="string">'value'</span>,Angle);
             <span class="comment">% &#21462;&#20986;x&#65292;y&#24182;&#21028;&#26029;&#21464;&#25442;&#21518;&#30340;&#20301;&#32622;&#26159;&#21542;&#36234;&#30028;</span>
             x = uint16(temp(1, 1));
             y = uint16(temp(2, 1));
-            <span class="keyword">if</span> (x &lt;= handles.img_hight) &amp;&amp; (y &lt;= handles.img_width) &amp;&amp; (x &gt;= 1) &amp;&amp; (y &gt;= 1)
+            <span class="keyword">if</span> (x &lt;= handles.img_hight) &amp;&amp; (y &lt;= handles.img_width) &amp;&amp;  <span class="keyword">...</span>
+            (x &gt;= 1) &amp;&amp; (y &gt;= 1)
                 res(i, j) = handles.img(x, y);
             <span class="keyword">end</span>
         <span class="keyword">end</span>
@@ -318,7 +319,8 @@ guidata(hObject, handles);
             <span class="comment">% &#21462;&#20986;x&#65292;y&#24182;&#21028;&#26029;&#21464;&#25442;&#21518;&#30340;&#20301;&#32622;&#26159;&#21542;&#36234;&#30028;</span>
             x = temp(1, 1);
             y = temp(2, 1);
-            <span class="keyword">if</span> (x &lt;= handles.img_hight) &amp;&amp; (y &lt;= handles.img_width) &amp;&amp; (x &gt;= 1) &amp;&amp; (y &gt;= 1)
+            <span class="keyword">if</span> (x &lt;= handles.img_hight) &amp;&amp; (y &lt;= handles.img_width) &amp;&amp;  <span class="keyword">...</span>
+            (x &gt;= 1) &amp;&amp; (y &gt;= 1)
                 res(x, y) = handles.img(i,j);
             <span class="keyword">end</span>
         <span class="keyword">end</span>
@@ -364,7 +366,8 @@ set(hObject,<span class="string">'value'</span>,SuoFang);
             <span class="comment">% &#21462;&#20986;x&#65292;y&#24182;&#21028;&#26029;&#21464;&#25442;&#21518;&#30340;&#20301;&#32622;&#26159;&#21542;&#36234;&#30028;</span>
             x = uint16(temp(1, 1));
             y = uint16(temp(2, 1));
-            <span class="keyword">if</span> (x &lt;= handles.img_hight) &amp;&amp; (y &lt;= handles.img_width) &amp;&amp; (x &gt;= 1) &amp;&amp; (y &gt;= 1)
+            <span class="keyword">if</span> (x &lt;= handles.img_hight) &amp;&amp; (y &lt;= handles.img_width) &amp;&amp;  <span class="keyword">...</span>
+             (x &gt;= 1) &amp;&amp; (y &gt;= 1)
                 res(i, j) = handles.img(x, y);
             <span class="keyword">end</span>
         <span class="keyword">end</span>

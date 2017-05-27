@@ -33,7 +33,8 @@ end
 
 %% 开始函数
 % *相关初始化*
-function DCZTuXiangHuiDuYingShe_OpeningFcn(hObject, eventdata, handles, varargin)
+function DCZTuXiangHuiDuYingShe_OpeningFcn(hObject, eventdata, handles, ... 
+                                            varargin)
 % 全局变量
     handles.img_str=' ';        % 图像地址
     handles.img=0;              % 图像数据
@@ -97,7 +98,7 @@ end
 %% 保存图像
 function PB_SaveImg_Callback(hObject, eventdata, handles)
 % 保存图像
-    [FileName,PathName] =uiputfile({'*.jpg;*.tif;*.png;*.gif','All Image Files';...
+    [FileName,PathName] =uiputfile({'*.jpg;*.tif;*.png;*.gif','All Image Files';
               '*.*','All Files' },'保存图像',...
               'C:\Work\newfile.jpg');
     if FileName==0
@@ -186,7 +187,8 @@ function handles=junYunYingShe(hObject,handles)
     b=get(handles.edit_YRK,'value'); 
     I=handles.img;
     if b==0 && a==1
-        I((I<85) | (I>85 & I<170) | (I>170))=256/85.*I((I<85) | (I>85 & I<170) | (I>170));
+        I((I<85) | (I>85 & I<170) | (I>170))=256/85.*I((I<85) | ...
+            (I>85 & I<170) | (I>170));
         handles.img=I;
     else if b==1&& a==0
             I(I<85)=256/85.*I(I<85);
@@ -444,7 +446,8 @@ function edit_YRK_CreateFcn(hObject, eventdata, handles)
 set(hObject,'value',1);
 % Hint: edit controls usually have a white background on Windows.
 %       See ISPC and COMPUTER.
-if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+if ispc && isequal(get(hObject,'BackgroundColor'), ...
+        get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
 end
 
@@ -461,6 +464,7 @@ function edit_XC_CreateFcn(hObject, eventdata, handles)
 set(hObject,'value',1);
 % Hint: edit controls usually have a white background on Windows.
 %       See ISPC and COMPUTER.
-if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+if ispc && isequal(get(hObject,'BackgroundColor'), ...
+        get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
 end

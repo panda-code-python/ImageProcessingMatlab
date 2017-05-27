@@ -22,7 +22,7 @@ a:hover { color:#005fce; text-decoration:underline; }
 a:visited { color:#004aa0; text-decoration:none; }
 
 p { padding:0px; margin:0px 0px 20px; }
-img { padding:0px; margin:0px 0px 20px; border:none; }
+img { padding:0px; margin:0px 0px 20px; border:none; width: 760;height: 450;}
 p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
 
 ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
@@ -104,19 +104,22 @@ gui_State = struct(<span class="string">'gui_Name'</span>,       mfilename, <spa
 <span class="comment">% &#25511;&#20214;&#21021;&#22987;&#21270;</span>
     <span class="comment">% A=1\2\3\PB_UpData_A\PB_Recover_A</span>
     set(handles.A_p,<span class="string">'enable'</span>,<span class="string">'off'</span>,<span class="string">'string'</span>,{<span class="string">'A'</span>;<span class="string">'B'</span>;<span class="string">'C'</span>;<span class="string">'_'</span>});
-    set(handles.A_algorithm,<span class="string">'enable'</span>,<span class="string">'off'</span>,<span class="string">'string'</span>,{<span class="string">'+'</span>;<span class="string">'-'</span>;<span class="string">'*'</span>;<span class="string">'/'</span>;<span class="string">'AND'</span>;<span class="string">'OR'</span>;<span class="string">'XOR'</span>;<span class="string">'NOT'</span>;<span class="string">'_'</span>});
+    set(handles.A_algorithm,<span class="string">'enable'</span>,<span class="string">'off'</span>,<span class="string">'string'</span>,{<span class="string">'+'</span>;<span class="string">'-'</span>;<span class="string">'*'</span>;<span class="string">'/'</span>;<span class="string">'AND'</span>; <span class="keyword">...</span>
+    <span class="string">'OR'</span>;<span class="string">'XOR'</span>;<span class="string">'NOT'</span>;<span class="string">'_'</span>});
     set(handles.A_q,<span class="string">'enable'</span>,<span class="string">'off'</span>,<span class="string">'string'</span>,{<span class="string">'A'</span>;<span class="string">'B'</span>;<span class="string">'C'</span>});
     set(handles.PB_UpData_A,<span class="string">'enable'</span>,<span class="string">'off'</span>);
     set(handles.PB_Recover_A,<span class="string">'enable'</span>,<span class="string">'off'</span>);
     <span class="comment">% B=4\5\6\PB_UpData_B\PB_Recover_B</span>
     set(handles.B_p,<span class="string">'enable'</span>,<span class="string">'off'</span>,<span class="string">'string'</span>,{<span class="string">'A'</span>;<span class="string">'B'</span>;<span class="string">'C'</span>;<span class="string">'_'</span>});
-    set(handles.B_algorithm,<span class="string">'enable'</span>,<span class="string">'off'</span>,<span class="string">'string'</span>,{<span class="string">'+'</span>;<span class="string">'-'</span>;<span class="string">'*'</span>;<span class="string">'/'</span>;<span class="string">'AND'</span>;<span class="string">'OR'</span>;<span class="string">'XOR'</span>;<span class="string">'NOT'</span>;<span class="string">'_'</span>});
+    set(handles.B_algorithm,<span class="string">'enable'</span>,<span class="string">'off'</span>,<span class="string">'string'</span>,{<span class="string">'+'</span>;<span class="string">'-'</span>;<span class="string">'*'</span>;<span class="string">'/'</span>;<span class="string">'AND'</span>; <span class="keyword">...</span>
+    <span class="string">'OR'</span>;<span class="string">'XOR'</span>;<span class="string">'NOT'</span>;<span class="string">'_'</span>});
     set(handles.B_q,<span class="string">'enable'</span>,<span class="string">'off'</span>,<span class="string">'string'</span>,{<span class="string">'A'</span>;<span class="string">'B'</span>;<span class="string">'C'</span>});
     set(handles.PB_UpData_B,<span class="string">'enable'</span>,<span class="string">'off'</span>);
     set(handles.PB_Recover_B,<span class="string">'enable'</span>,<span class="string">'off'</span>);
     <span class="comment">% C=7\8\9\PB_UpData_C\PB_Recover_C</span>
     set(handles.C_p,<span class="string">'enable'</span>,<span class="string">'on'</span>,<span class="string">'string'</span>,{<span class="string">'A'</span>;<span class="string">'B'</span>;<span class="string">'C'</span>;<span class="string">'_'</span>});
-    set(handles.C_algorithm,<span class="string">'enable'</span>,<span class="string">'off'</span>,<span class="string">'string'</span>,{<span class="string">'+'</span>;<span class="string">'-'</span>;<span class="string">'*'</span>;<span class="string">'/'</span>;<span class="string">'AND'</span>;<span class="string">'OR'</span>;<span class="string">'XOR'</span>;<span class="string">'NOT'</span>;<span class="string">'_'</span>});
+    set(handles.C_algorithm,<span class="string">'enable'</span>,<span class="string">'off'</span>,<span class="string">'string'</span>,{<span class="string">'+'</span>;<span class="string">'-'</span>;<span class="string">'*'</span>;<span class="string">'/'</span>;<span class="string">'AND'</span>; <span class="keyword">...</span>
+    <span class="string">'OR'</span>;<span class="string">'XOR'</span>;<span class="string">'NOT'</span>;<span class="string">'_'</span>});
     set(handles.C_q,<span class="string">'enable'</span>,<span class="string">'off'</span>,<span class="string">'string'</span>,{<span class="string">'A'</span>;<span class="string">'B'</span>;<span class="string">'C'</span>});
     set(handles.PB_UpData_C,<span class="string">'enable'</span>,<span class="string">'off'</span>);
     set(handles.PB_Recover_C,<span class="string">'enable'</span>,<span class="string">'off'</span>);
