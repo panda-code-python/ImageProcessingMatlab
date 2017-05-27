@@ -1,0 +1,1165 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>&#28857;&#25805;&#20316;---&#22270;&#20687;&#38388;&#36816;&#31639;</title><meta name="generator" content="MATLAB 9.0"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2017-05-11"><meta name="DC.source" content="DCZTuXiangJianYunSuan.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:5%; font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#000; line-height:140%; background:#ADEBFF none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:16px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>&#28857;&#25805;&#20316;---&#22270;&#20687;&#38388;&#36816;&#31639;</h1><!--introduction--><div><ul><li>&#27010;&#36848;      &#65306;&#23454;&#29616;&#22270;&#20687;&#38388;&#30340;&#31639;&#26415;&#21644;&#36923;&#36753;&#36816;&#31639;</li><li>&#20316;&#32773;		&#65306;&#24352;&#32676;&#20255;	&#21335;&#26124;&#33322;&#31354;&#22823;&#23398;&#20449;&#24687;&#24037;&#31243;&#23398;&#38498;&#33258;&#21160;&#21270;&#31995;</li><li>&#26085;&#26399;		&#65306;[4/5/2017]</li></ul></div><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#2">&#20027;&#20989;&#25968;</a></li><li><a href="#4">&#24320;&#22987;&#20989;&#25968;</a></li><li><a href="#7">&#36755;&#20986;&#20989;&#25968;</a></li><li><a href="#10">&#24674;&#22797;A&#22270;&#20687;</a></li><li><a href="#13">&#21152;&#36733;A&#22270;&#20687;</a></li><li><a href="#16">&#26356;&#26032;A&#22270;&#20687;</a></li><li><a href="#19">A_p &#36171;&#20540;</a></li><li><a href="#22">A_{'+';'-';'*';'/';'AND';'OR';'XOR';'NOT';'_'} &#36171;&#20540;</a></li><li><a href="#25">A_q &#36171;&#20540;</a></li><li><a href="#28">&#24674;&#22797;B&#22270;&#20687;</a></li><li><a href="#31">&#21152;&#36733;B&#22270;&#20687;</a></li><li><a href="#34">&#26356;&#26032;B&#22270;&#20687;</a></li><li><a href="#37">B_p &#36171;&#20540;</a></li><li><a href="#40">B_{'+';'-';'*';'/';'AND';'OR';'XOR';'NOT';'_'} &#36171;&#20540;</a></li><li><a href="#43">B_q &#36171;&#20540;</a></li><li><a href="#46">&#24674;&#22797;C&#22270;&#20687;</a></li><li><a href="#49">&#21152;&#36733;C&#22270;&#20687;</a></li><li><a href="#52">&#26356;&#26032;C&#22270;&#20687;</a></li><li><a href="#55">C_p &#36171;&#20540;</a></li><li><a href="#58">C_{'+';'-';'*';'/';'AND';'OR';'XOR';'NOT';'_'} &#36171;&#20540;</a></li><li><a href="#61">C_q &#36171;&#20540;</a></li><li><a href="#64">&#23558;B&#36171;&#20540;&#32473;C</a></li><li><a href="#65">&#23558;A&#21462;&#21453;&#21518;&#36171;&#20540;&#32473;B</a></li><li><a href="#66">&#23558;A&#21152;B&#21518;&#36171;&#20540;&#32473;C</a></li><li><a href="#68">&#23558;B&#24322;&#25110;C&#21518;&#36171;&#20540;&#32473;A</a></li></ul></div><p><img vspace="5" hspace="5" src="main.bmp" alt=""> </p><h2>&#20027;&#20989;&#25968;<a name="2"></a></h2><p><b>&#19981;&#20570;&#20219;&#20309;&#20462;&#25913;</b></p><pre class="codeinput"><span class="keyword">function</span> varargout = DCZTuXiangJianYunSuan(varargin)
+</pre><pre class="codeinput"><span class="comment">% Begin initialization code - DO NOT EDIT</span>
+gui_Singleton = 1;
+gui_State = struct(<span class="string">'gui_Name'</span>,       mfilename, <span class="keyword">...</span>
+                   <span class="string">'gui_Singleton'</span>,  gui_Singleton, <span class="keyword">...</span>
+                   <span class="string">'gui_OpeningFcn'</span>, @DCZTuXiangJianYunSuan_OpeningFcn, <span class="keyword">...</span>
+                   <span class="string">'gui_OutputFcn'</span>,  @DCZTuXiangJianYunSuan_OutputFcn, <span class="keyword">...</span>
+                   <span class="string">'gui_LayoutFcn'</span>,  [] , <span class="keyword">...</span>
+                   <span class="string">'gui_Callback'</span>,   []);
+<span class="keyword">if</span> nargin &amp;&amp; ischar(varargin{1})
+    gui_State.gui_Callback = str2func(varargin{1});
+<span class="keyword">end</span>
+<span class="keyword">if</span> nargout
+    [varargout{1:nargout}] = gui_mainfcn(gui_State, varargin{:});
+<span class="keyword">else</span>
+    gui_mainfcn(gui_State, varargin{:});
+<span class="keyword">end</span>
+<span class="comment">% End initialization code - DO NOT EDIT</span>
+</pre><h2>&#24320;&#22987;&#20989;&#25968;<a name="4"></a></h2><p><b>&#30456;&#20851;&#21021;&#22987;&#21270;</b></p><pre class="codeinput"><span class="keyword">function</span> DCZTuXiangJianYunSuan_OpeningFcn(hObject, eventdata, handles, varargin)
+</pre><pre class="codeinput"><span class="comment">% &#20840;&#23616;&#21464;&#37327;</span>
+    <span class="comment">% N&#38454;&#26041;&#38453;</span>
+    handles.N=0;
+    <span class="comment">% A&#22270;&#20687;</span>
+    handles.imgA_old=0;      <span class="comment">% A&#22270;&#20687;&#22320;&#22336;</span>
+    handles.imgA=0;          <span class="comment">% A&#22270;&#20687;&#25968;&#25454;</span>
+    <span class="comment">% B&#22270;&#20687;</span>
+    handles.imgB_old=0;      <span class="comment">% B&#22270;&#20687;&#22320;&#22336;</span>
+    handles.imgB=0;          <span class="comment">% B&#22270;&#20687;&#25968;&#25454;</span>
+    <span class="comment">% C&#22270;&#20687;</span>
+    handles.imgC_old=0;      <span class="comment">% C&#22270;&#20687;&#22320;&#22336;</span>
+    handles.imgC=0;          <span class="comment">% C&#22270;&#20687;&#25968;&#25454;</span>
+    <span class="comment">% p,  q,  op&#25805;&#20316;</span>
+    handles.p=0;
+    handles.q=0;
+    handles.op=0;
+<span class="comment">% &#25511;&#20214;&#21021;&#22987;&#21270;</span>
+    <span class="comment">% A=1\2\3\PB_UpData_A\PB_Recover_A</span>
+    set(handles.A_p,<span class="string">'enable'</span>,<span class="string">'off'</span>,<span class="string">'string'</span>,{<span class="string">'A'</span>;<span class="string">'B'</span>;<span class="string">'C'</span>;<span class="string">'_'</span>});
+    set(handles.A_algorithm,<span class="string">'enable'</span>,<span class="string">'off'</span>,<span class="string">'string'</span>,{<span class="string">'+'</span>;<span class="string">'-'</span>;<span class="string">'*'</span>;<span class="string">'/'</span>;<span class="string">'AND'</span>;<span class="string">'OR'</span>;<span class="string">'XOR'</span>;<span class="string">'NOT'</span>;<span class="string">'_'</span>});
+    set(handles.A_q,<span class="string">'enable'</span>,<span class="string">'off'</span>,<span class="string">'string'</span>,{<span class="string">'A'</span>;<span class="string">'B'</span>;<span class="string">'C'</span>});
+    set(handles.PB_UpData_A,<span class="string">'enable'</span>,<span class="string">'off'</span>);
+    set(handles.PB_Recover_A,<span class="string">'enable'</span>,<span class="string">'off'</span>);
+    <span class="comment">% B=4\5\6\PB_UpData_B\PB_Recover_B</span>
+    set(handles.B_p,<span class="string">'enable'</span>,<span class="string">'off'</span>,<span class="string">'string'</span>,{<span class="string">'A'</span>;<span class="string">'B'</span>;<span class="string">'C'</span>;<span class="string">'_'</span>});
+    set(handles.B_algorithm,<span class="string">'enable'</span>,<span class="string">'off'</span>,<span class="string">'string'</span>,{<span class="string">'+'</span>;<span class="string">'-'</span>;<span class="string">'*'</span>;<span class="string">'/'</span>;<span class="string">'AND'</span>;<span class="string">'OR'</span>;<span class="string">'XOR'</span>;<span class="string">'NOT'</span>;<span class="string">'_'</span>});
+    set(handles.B_q,<span class="string">'enable'</span>,<span class="string">'off'</span>,<span class="string">'string'</span>,{<span class="string">'A'</span>;<span class="string">'B'</span>;<span class="string">'C'</span>});
+    set(handles.PB_UpData_B,<span class="string">'enable'</span>,<span class="string">'off'</span>);
+    set(handles.PB_Recover_B,<span class="string">'enable'</span>,<span class="string">'off'</span>);
+    <span class="comment">% C=7\8\9\PB_UpData_C\PB_Recover_C</span>
+    set(handles.C_p,<span class="string">'enable'</span>,<span class="string">'on'</span>,<span class="string">'string'</span>,{<span class="string">'A'</span>;<span class="string">'B'</span>;<span class="string">'C'</span>;<span class="string">'_'</span>});
+    set(handles.C_algorithm,<span class="string">'enable'</span>,<span class="string">'off'</span>,<span class="string">'string'</span>,{<span class="string">'+'</span>;<span class="string">'-'</span>;<span class="string">'*'</span>;<span class="string">'/'</span>;<span class="string">'AND'</span>;<span class="string">'OR'</span>;<span class="string">'XOR'</span>;<span class="string">'NOT'</span>;<span class="string">'_'</span>});
+    set(handles.C_q,<span class="string">'enable'</span>,<span class="string">'off'</span>,<span class="string">'string'</span>,{<span class="string">'A'</span>;<span class="string">'B'</span>;<span class="string">'C'</span>});
+    set(handles.PB_UpData_C,<span class="string">'enable'</span>,<span class="string">'off'</span>);
+    set(handles.PB_Recover_C,<span class="string">'enable'</span>,<span class="string">'off'</span>);
+<span class="comment">% Choose default command line output for DCZTuXiangJianYunSuan</span>
+handles.output = hObject;
+<span class="comment">% Update handles structure</span>
+guidata(hObject, handles);
+<span class="comment">% UIWAIT makes DCZTuXiangJianYunSuan wait for user response (see UIRESUME)</span>
+<span class="comment">% uiwait(handles.figure1);</span>
+</pre><h2>&#36755;&#20986;&#20989;&#25968;<a name="7"></a></h2><pre class="codeinput"><span class="keyword">function</span> DCZTuXiangJianYunSuan_OutputFcn(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% Get default command line output from handles structure</span>
+<span class="comment">% varargout{1} = handles.output;</span>
+<span class="comment">%</span>
+</pre><h2>&#24674;&#22797;A&#22270;&#20687;<a name="10"></a></h2><pre class="codeinput"><span class="keyword">function</span> PB_Recover_A_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% &#24674;&#22797;A&#22270;&#20687;</span>
+    handles.imgA=handles.imgA_old;
+<span class="comment">% &#26356;&#26032;&#32467;&#26500;&#20307;&#25968;&#25454;</span>
+    guidata(hObject, handles);
+<span class="comment">% &#35774;&#32622;&#22270;&#20687;&#26174;&#31034;&#21306;&#22495;</span>
+    axes(handles.axes1);
+    imshow(uint8(handles.imgA));
+</pre><h2>&#21152;&#36733;A&#22270;&#20687;<a name="13"></a></h2><pre class="codeinput"><span class="keyword">function</span> PB_Load_A_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% &#21152;&#36733;A&#22270;&#20687;</span>
+str=<span class="string">' '</span>;
+[fname,pname,index]=uigetfile({<span class="string">'*.bmp'</span>;<span class="string">'*.jpg'</span>},<span class="string">'&#36873;&#25321;&#22270;&#29255;'</span>);
+<span class="keyword">if</span> index
+    str=[pname fname];
+<span class="keyword">end</span>
+<span class="keyword">if</span> str~=<span class="string">' '</span>
+   <span class="comment">% &#25968;&#25454;&#21021;&#22987;&#21270;</span>
+        handles.imgA=uint8(imread(str));    <span class="comment">% &#22270;&#20687;&#25968;&#25454;</span>
+   <span class="comment">% &#22270;&#20687;&#23610;&#23544;&#22788;&#29702;</span>
+        <span class="comment">% &#26816;&#32034;&#22270;&#20687;&#30340;&#23610;&#23544;</span>
+        [Ahight,Awidth]=size(handles.imgA);
+        <span class="comment">% &#26816;&#32034;&#23610;&#23544;&#26368;&#22823;&#20540;</span>
+        handles.N=max([Ahight,Awidth,handles.N]);
+        <span class="comment">% &#26500;&#36896;&#19977;&#20010;&#20840;&#20026;1&#30340;N&#38454;&#26041;&#38453;</span>
+        tempA=ones(handles.N);
+        tempB=tempA;
+        tempC=tempA;
+        <span class="comment">% &#23558;A,B,C&#22270;&#20687;&#20998;&#21035;&#25918;&#21040;N&#38454;&#26041;&#38453;&#20013;</span>
+        tempA(1:Ahight,1:Awidth)=handles.imgA;
+        [Bhight,Bwidth]=size(handles.imgB);
+        tempB(1:Bhight,1:Bwidth)=handles.imgB;
+        [Chight,Cwidth]=size(handles.imgC);
+        tempC(1:Chight,1:Cwidth)=handles.imgC;
+        <span class="comment">% &#20877;&#20998;&#21035;&#36171;&#20540;&#32473;&#20840;&#23616;&#21464;&#37327;</span>
+        handles.imgA=tempA();
+        handles.imgB=tempB();
+        handles.imgC=tempC();
+        handles.imgA_old=tempA();
+        handles.imgB_old=tempB();
+        handles.imgC_old=tempC();
+   <span class="comment">% &#26356;&#26032;&#32467;&#26500;&#20307;&#25968;&#25454;</span>
+        guidata(hObject, handles);
+   <span class="comment">% &#25511;&#20214;&#21021;&#22987;&#21270;</span>
+        <span class="comment">% &#26356;&#26032;&#22270;&#20687;</span>
+        axes(handles.axes1);
+        imshow(uint8(handles.imgA));
+        axes(handles.axes2);
+        imshow(uint8(handles.imgB));
+        axes(handles.axes3);
+        imshow(uint8(handles.imgC));
+        <span class="comment">% &#25171;&#24320;&#30456;&#20851;&#20351;&#33021;</span>
+        set(handles.A_p,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+<span class="keyword">end</span>
+</pre><h2>&#26356;&#26032;A&#22270;&#20687;<a name="16"></a></h2><pre class="codeinput"><span class="keyword">function</span> PB_UpData_A_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% &#26356;&#26032;A&#22270;&#20687;</span>
+<span class="comment">% &#25191;&#34892;&#22270;&#20687;&#36816;&#31639;</span>
+    <span class="comment">%   1   2   3   4   5     6    7     8    9</span>
+    <span class="comment">% {'+';'-';'*';'/';'AND';'OR';'XOR';'NOT';'_'}</span>
+    <span class="keyword">switch</span> get(handles.A_algorithm,<span class="string">'value'</span>)
+        <span class="keyword">case</span> 1
+            handles.imgA=handles.p+handles.q;
+        <span class="keyword">case</span> 2
+            handles.imgA=handles.p-handles.q;
+        <span class="keyword">case</span> 3
+            handles.imgA=handles.p .* handles.q;
+        <span class="keyword">case</span> 4
+            handles.imgA=handles.p ./ handles.q;
+        <span class="keyword">case</span> 5
+            handles.imgA=handles.p .* handles.q;
+        <span class="keyword">case</span> 6
+            handles.imgA=handles.p+handles.q;
+        <span class="keyword">case</span> 7
+            temp=handles.p+handles.q;
+            temp(temp&gt;500)=0;
+            handles.imgA=temp;
+        <span class="keyword">case</span> 8
+            <span class="keyword">if</span> get(handles.A_p,<span class="string">'value'</span>)==4
+                handles.imgA=255-handles.q;
+            <span class="keyword">else</span>
+                hs=msgbox(<span class="string">'&#35821;&#27861;&#38169;&#35823;!'</span>,<span class="string">'&#38169;&#35823;'</span>,<span class="string">'error'</span>);
+                ht=findobj(hs,<span class="string">'type'</span>,<span class="string">'text'</span>);
+                set(ht,<span class="string">'FontSize'</span>,16);
+                uiwait(hs);
+            <span class="keyword">end</span>
+        <span class="keyword">case</span> 9
+            <span class="keyword">if</span> get(handles.A_p,<span class="string">'value'</span>) == 4
+                handles.imgA= handles.q;
+            <span class="keyword">else</span>
+                h=msgbox(<span class="string">'&#35821;&#27861;&#38169;&#35823;!'</span>,<span class="string">'&#38169;&#35823;'</span>,<span class="string">'error'</span>);uiwait(h);
+                ht=findobj(h,<span class="string">'type'</span>,<span class="string">'text'</span>);
+                set(ht,<span class="string">'FontSize'</span>,16);
+            <span class="keyword">end</span>
+    <span class="keyword">end</span>
+<span class="comment">% &#26356;&#26032;&#32467;&#26500;&#20307;&#25968;&#25454;</span>
+    guidata(hObject, handles);
+    <span class="comment">% &#35774;&#32622;&#22270;&#20687;&#26174;&#31034;&#21306;&#22495;</span>
+    axes(handles.axes1);
+    <span class="comment">% &#26174;&#31034;&#22270;&#20687;</span>
+    imshow(uint8(handles.imgA));
+<span class="comment">% &#35774;&#32622;&#30456;&#20851;&#20351;&#33021;</span>
+    set(hObject,<span class="string">'enable'</span>,<span class="string">'off'</span>);
+    set(handles.A_p,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+    set(handles.A_algorithm,<span class="string">'enable'</span>,<span class="string">'off'</span>);
+    set(handles.A_q,<span class="string">'enable'</span>,<span class="string">'off'</span>);
+    set(handles.PB_Recover_A,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+</pre><h2>A_p &#36171;&#20540;<a name="19"></a></h2><pre class="codeinput"><span class="keyword">function</span> A_p_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% A_p &#36171;&#20540;</span>
+    <span class="comment">%   1   2   3   4</span>
+    <span class="comment">% {'A';'B';'C';'_'}</span>
+    <span class="keyword">switch</span> get(hObject,<span class="string">'value'</span>)
+    <span class="keyword">case</span> 1
+        handles.p=handles.imgA;
+    <span class="keyword">case</span> 2
+        handles.p=handles.imgB;
+    <span class="keyword">case</span> 3
+        handles.p=handles.imgC;
+    <span class="keyword">case</span> 4
+        handles.p=repmat(255,handles.N,handles.N);
+    <span class="keyword">end</span>
+<span class="comment">% &#25171;&#24320;&#30456;&#20851;&#20351;&#33021;</span>
+    set(handles.A_algorithm,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+<span class="comment">% &#26356;&#26032;&#32467;&#26500;&#20307;&#25968;&#25454;</span>
+    guidata(hObject, handles);
+</pre><h2>A_{'+';'-';'*';'/';'AND';'OR';'XOR';'NOT';'_'} &#36171;&#20540;<a name="22"></a></h2><pre class="codeinput"><span class="keyword">function</span> A_algorithm_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% A_{'+';'-';'*';'/';'AND';'OR';'XOR';'NOT';'_'} &#36171;&#20540;</span>
+<span class="comment">% &#25171;&#24320;&#30456;&#20851;&#20351;&#33021;</span>
+    set(handles.A_q,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+</pre><h2>A_q &#36171;&#20540;<a name="25"></a></h2><pre class="codeinput"><span class="keyword">function</span> A_q_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% A_q &#36171;&#20540;</span>
+    <span class="comment">%   1   2   3</span>
+    <span class="comment">% {'A';'B';'C'}</span>
+    <span class="keyword">switch</span> get(hObject,<span class="string">'value'</span>)
+        <span class="keyword">case</span> 1
+            handles.q=handles.imgA;
+        <span class="keyword">case</span> 2
+            handles.q=handles.imgB;
+        <span class="keyword">case</span> 3
+            handles.q=handles.imgC;
+    <span class="keyword">end</span>
+<span class="comment">% &#25171;&#24320;&#30456;&#20851;&#20351;&#33021;</span>
+    set(handles.PB_UpData_A,<span class="string">'Enable'</span>,<span class="string">'on'</span>);
+<span class="comment">% &#26356;&#26032;&#32467;&#26500;&#20307;&#25968;&#25454;</span>
+    guidata(hObject, handles);
+</pre><h2>&#24674;&#22797;B&#22270;&#20687;<a name="28"></a></h2><pre class="codeinput"><span class="keyword">function</span> PB_Recover_B_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% &#24674;&#22797;B&#22270;&#20687;</span>
+    handles.imgB=handles.imgB_old;
+<span class="comment">% &#26356;&#26032;&#32467;&#26500;&#20307;&#25968;&#25454;</span>
+    guidata(hObject, handles);
+<span class="comment">% &#35774;&#32622;&#22270;&#20687;&#26174;&#31034;&#21306;&#22495;</span>
+    axes(handles.axes2);
+    imshow(uint8(handles.imgB));
+</pre><h2>&#21152;&#36733;B&#22270;&#20687;<a name="31"></a></h2><pre class="codeinput"><span class="keyword">function</span> PB_Load_B_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% &#21152;&#36733;B&#22270;&#20687;</span>
+str=<span class="string">' '</span>;
+[fname,pname,index]=uigetfile({<span class="string">'*.bmp'</span>;<span class="string">'*.jpg'</span>},<span class="string">'&#36873;&#25321;&#22270;&#29255;'</span>);
+<span class="keyword">if</span> index
+    str=[pname fname];
+<span class="keyword">end</span>
+<span class="keyword">if</span> str~=<span class="string">' '</span>
+   <span class="comment">% &#25968;&#25454;&#21021;&#22987;&#21270;</span>
+        handles.imgB=uint8(imread(str));    <span class="comment">% &#22270;&#20687;&#25968;&#25454;</span>
+   <span class="comment">% &#22270;&#20687;&#23610;&#23544;&#22788;&#29702;</span>
+        <span class="comment">% &#26816;&#32034;&#22270;&#20687;&#30340;&#23610;&#23544;</span>
+        [Bhight,Bwidth]=size(handles.imgB);
+        <span class="comment">% &#26816;&#32034;&#23610;&#23544;&#26368;&#22823;&#20540;</span>
+        handles.N=max([Bhight,Bwidth,handles.N]);
+        <span class="comment">% &#26500;&#36896;&#19977;&#20010;&#20840;&#20026;1&#30340;N&#38454;&#26041;&#38453;</span>
+        tempA=ones(handles.N);
+        tempB=tempA;
+        tempC=tempA;
+        <span class="comment">% &#23558;A,B,C&#22270;&#20687;&#20998;&#21035;&#25918;&#21040;N&#38454;&#26041;&#38453;&#20013;</span>
+        [Ahight,Awidth]=size(handles.imgA);
+        tempA(1:Ahight,1:Awidth)=handles.imgA;
+        tempB(1:Bhight,1:Bwidth)=handles.imgB;
+        [Chight,Cwidth]=size(handles.imgC);
+        tempC(1:Chight,1:Cwidth)=handles.imgC;
+        <span class="comment">% &#20877;&#20998;&#21035;&#36171;&#20540;&#32473;&#20840;&#23616;&#21464;&#37327;</span>
+        handles.imgA=tempA();
+        handles.imgB=tempB();
+        handles.imgC=tempC();
+        handles.imgA_old=tempA();
+        handles.imgB_old=tempB();
+        handles.imgC_old=tempC();
+   <span class="comment">% &#26356;&#26032;&#32467;&#26500;&#20307;&#25968;&#25454;</span>
+        guidata(hObject, handles);
+   <span class="comment">% &#25511;&#20214;&#21021;&#22987;&#21270;</span>
+        <span class="comment">% &#26356;&#26032;&#22270;&#20687;</span>
+        axes(handles.axes1);
+        imshow(uint8(handles.imgA));
+        axes(handles.axes2);
+        imshow(uint8(handles.imgB));
+        axes(handles.axes3);
+        imshow(uint8(handles.imgC));
+        <span class="comment">% &#25171;&#24320;&#30456;&#20851;&#20351;&#33021;</span>
+        set(handles.B_p,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+<span class="keyword">end</span>
+</pre><h2>&#26356;&#26032;B&#22270;&#20687;<a name="34"></a></h2><pre class="codeinput"><span class="keyword">function</span> PB_UpData_B_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% &#26356;&#26032;B&#22270;&#20687;</span>
+<span class="comment">% &#25191;&#34892;&#22270;&#20687;&#36816;&#31639;</span>
+    <span class="comment">%   1   2   3   4   5     6    7     8    9</span>
+    <span class="comment">% {'+';'-';'*';'/';'AND';'OR';'XOR';'NOT';'_'}</span>
+    <span class="keyword">switch</span> get(handles.B_algorithm,<span class="string">'value'</span>)
+        <span class="keyword">case</span> 1
+            handles.imgB=handles.p+handles.q;
+        <span class="keyword">case</span> 2
+            handles.imgB=handles.p-handles.q;
+        <span class="keyword">case</span> 3
+            handles.imgB=handles.p .* handles.q;
+        <span class="keyword">case</span> 4
+            handles.imgB=handles.p ./ handles.q;
+        <span class="keyword">case</span> 5
+            handles.imgB=handles.p.*handles.q;
+        <span class="keyword">case</span> 6
+            handles.imgB=handles.p+handles.q;
+        <span class="keyword">case</span> 7
+            temp=handles.p+handles.q;
+            temp(temp&gt;500)=0;
+            handles.imgB=temp;
+        <span class="keyword">case</span> 8
+            <span class="keyword">if</span> get(handles.B_p,<span class="string">'value'</span>)==4
+                handles.imgB=255-handles.q;
+            <span class="keyword">else</span>
+                hs=msgbox(<span class="string">'&#35821;&#27861;&#38169;&#35823;!'</span>,<span class="string">'&#38169;&#35823;'</span>,<span class="string">'error'</span>);
+                ht=findobj(hs,<span class="string">'type'</span>,<span class="string">'text'</span>);
+                set(ht,<span class="string">'FontSize'</span>,16);
+                uiwait(hs);
+            <span class="keyword">end</span>
+        <span class="keyword">case</span> 9
+            <span class="keyword">if</span> get(handles.B_p,<span class="string">'value'</span>) == 4
+                handles.imgB= handles.q;
+            <span class="keyword">else</span>
+                h=msgbox(<span class="string">'&#35821;&#27861;&#38169;&#35823;!'</span>,<span class="string">'&#38169;&#35823;'</span>,<span class="string">'error'</span>);
+                ht=findobj(h,<span class="string">'type'</span>,<span class="string">'text'</span>);
+                set(ht,<span class="string">'FontSize'</span>,16);
+                uiwait(h);
+            <span class="keyword">end</span>
+    <span class="keyword">end</span>
+<span class="comment">% &#26356;&#26032;&#32467;&#26500;&#20307;&#25968;&#25454;</span>
+    guidata(hObject, handles);
+    <span class="comment">% &#35774;&#32622;&#22270;&#20687;&#26174;&#31034;&#21306;&#22495;</span>
+    axes(handles.axes2);
+    <span class="comment">% &#26174;&#31034;&#22270;&#20687;</span>
+    imshow(uint8(handles.imgB));
+<span class="comment">% &#35774;&#32622;&#30456;&#20851;&#20351;&#33021;</span>
+    set(hObject,<span class="string">'enable'</span>,<span class="string">'off'</span>);
+    set(handles.B_p,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+    set(handles.B_algorithm,<span class="string">'enable'</span>,<span class="string">'off'</span>);
+    set(handles.B_q,<span class="string">'enable'</span>,<span class="string">'off'</span>);
+    set(handles.PB_Recover_B,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+</pre><h2>B_p &#36171;&#20540;<a name="37"></a></h2><pre class="codeinput"><span class="keyword">function</span> B_p_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% B_p &#36171;&#20540;</span>
+    <span class="comment">%   1   2   3   4</span>
+    <span class="comment">% {'A';'B';'C';'_'}</span>
+    <span class="keyword">switch</span> get(hObject,<span class="string">'value'</span>)
+        <span class="keyword">case</span> 1
+            handles.p=handles.imgA;
+        <span class="keyword">case</span> 2
+            handles.p=handles.imgB;
+        <span class="keyword">case</span> 3
+            handles.p=handles.imgC;
+        <span class="keyword">case</span> 4
+            handles.p=repmat(255,handles.N,handles.N);
+    <span class="keyword">end</span>
+<span class="comment">% &#25171;&#24320;&#30456;&#20851;&#20351;&#33021;</span>
+    set(handles.B_algorithm,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+<span class="comment">% &#26356;&#26032;&#32467;&#26500;&#20307;&#25968;&#25454;</span>
+    guidata(hObject, handles);
+</pre><h2>B_{'+';'-';'*';'/';'AND';'OR';'XOR';'NOT';'_'} &#36171;&#20540;<a name="40"></a></h2><pre class="codeinput"><span class="keyword">function</span> B_algorithm_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% B_{'+';'-';'*';'/';'AND';'OR';'XOR';'NOT';'_'} &#36171;&#20540;</span>
+<span class="comment">% &#25171;&#24320;&#30456;&#20851;&#20351;&#33021;</span>
+    set(handles.B_q,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+</pre><h2>B_q &#36171;&#20540;<a name="43"></a></h2><pre class="codeinput"><span class="keyword">function</span> B_q_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% B_q &#36171;&#20540;</span>
+    <span class="comment">%   1   2   3</span>
+    <span class="comment">% {'A';'B';'C'}</span>
+    <span class="keyword">switch</span> get(hObject,<span class="string">'value'</span>)
+        <span class="keyword">case</span> 1
+            handles.q=handles.imgA;
+        <span class="keyword">case</span> 2
+            handles.q=handles.imgB;
+        <span class="keyword">case</span> 3
+            handles.q=handles.imgC;
+    <span class="keyword">end</span>
+<span class="comment">% &#25171;&#24320;&#30456;&#20851;&#20351;&#33021;</span>
+    set(handles.PB_UpData_B,<span class="string">'Enable'</span>,<span class="string">'on'</span>);
+<span class="comment">% &#26356;&#26032;&#32467;&#26500;&#20307;&#25968;&#25454;</span>
+    guidata(hObject, handles);
+</pre><h2>&#24674;&#22797;C&#22270;&#20687;<a name="46"></a></h2><pre class="codeinput"><span class="keyword">function</span> PB_Recover_C_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% &#24674;&#22797;C&#22270;&#20687;</span>
+    handles.imgC=handles.imgC_old;
+<span class="comment">% &#26356;&#26032;&#32467;&#26500;&#20307;&#25968;&#25454;</span>
+    guidata(hObject, handles);
+<span class="comment">% &#35774;&#32622;&#22270;&#20687;&#26174;&#31034;&#21306;&#22495;</span>
+    axes(handles.axes3);
+<span class="comment">% &#26174;&#31034;&#22270;&#20687;</span>
+    imshow(uint8(handles.imgC));
+</pre><h2>&#21152;&#36733;C&#22270;&#20687;<a name="49"></a></h2><pre class="codeinput"><span class="keyword">function</span> PB_Load_C_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% &#21152;&#36733;C&#22270;&#20687;</span>
+str=<span class="string">' '</span>;
+[fname,pname,index]=uigetfile({<span class="string">'*.bmp'</span>;<span class="string">'*.jpg'</span>},<span class="string">'&#36873;&#25321;&#22270;&#29255;'</span>);
+<span class="keyword">if</span> index
+    str=[pname fname];
+<span class="keyword">end</span>
+<span class="keyword">if</span> str~=<span class="string">' '</span>
+   <span class="comment">% &#25968;&#25454;&#21021;&#22987;&#21270;</span>
+        handles.imgC=uint8(imread(str));    <span class="comment">% &#22270;&#20687;&#25968;&#25454;</span>
+   <span class="comment">% &#22270;&#20687;&#23610;&#23544;&#22788;&#29702;</span>
+        <span class="comment">% &#26816;&#32034;&#22270;&#20687;&#30340;&#23610;&#23544;</span>
+        [Chight,Cwidth]=size(handles.imgC);
+        <span class="comment">% &#26816;&#32034;&#23610;&#23544;&#26368;&#22823;&#20540;</span>
+        handles.N=max([Chight,Cwidth,handles.N]);
+        <span class="comment">% &#26500;&#36896;&#19977;&#20010;&#20840;&#20026;1&#30340;N&#38454;&#26041;&#38453;</span>
+        tempA=ones(handles.N);
+        tempB=tempA;
+        tempC=tempA;
+        <span class="comment">% &#23558;A,B,C&#22270;&#20687;&#20998;&#21035;&#25918;&#21040;N&#38454;&#26041;&#38453;&#20013;</span>
+        [Ahight,Awidth]=size(handles.imgA);
+        tempA(1:Ahight,1:Awidth)=handles.imgA;
+        [Bhight,Bwidth]=size(handles.imgB);
+        tempB(1:Bhight,1:Bwidth)=handles.imgB;
+        tempC(1:Chight,1:Cwidth)=handles.imgC;
+        <span class="comment">% &#20877;&#20998;&#21035;&#36171;&#20540;&#32473;&#20840;&#23616;&#21464;&#37327;</span>
+        handles.imgA=tempA();
+        handles.imgB=tempB();
+        handles.imgC=tempC();
+        handles.imgA_old=tempA();
+        handles.imgB_old=tempB();
+        handles.imgC_old=tempC();
+   <span class="comment">% &#26356;&#26032;&#32467;&#26500;&#20307;&#25968;&#25454;</span>
+        guidata(hObject, handles);
+   <span class="comment">% &#25511;&#20214;&#21021;&#22987;&#21270;</span>
+        <span class="comment">% &#26356;&#26032;&#22270;&#20687;</span>
+        axes(handles.axes1);
+        imshow(uint8(handles.imgA));
+        axes(handles.axes2);
+        imshow(uint8(handles.imgB));
+        axes(handles.axes3);
+        imshow(uint8(handles.imgC));
+        <span class="comment">% &#25171;&#24320;&#30456;&#20851;&#20351;&#33021;</span>
+        set(handles.C_p,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+<span class="keyword">end</span>
+</pre><h2>&#26356;&#26032;C&#22270;&#20687;<a name="52"></a></h2><pre class="codeinput"><span class="keyword">function</span> PB_UpData_C_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% &#26356;&#26032;C&#22270;&#20687;</span>
+<span class="comment">% &#25191;&#34892;&#22270;&#20687;&#36816;&#31639;</span>
+    <span class="comment">%   1   2   3   4   5     6    7     8    9</span>
+    <span class="comment">% {'+';'-';'*';'/';'AND';'OR';'XOR';'NOT';'_'}</span>
+    <span class="keyword">switch</span> get(handles.C_algorithm,<span class="string">'value'</span>)
+        <span class="keyword">case</span> 1
+            handles.imgC=handles.p+handles.q;
+        <span class="keyword">case</span> 2
+            handles.imgC=handles.p-handles.q;
+        <span class="keyword">case</span> 3
+            handles.imgC=handles.p .* handles.q;
+        <span class="keyword">case</span> 4
+            handles.imgC=handles.p ./ handles.q;
+        <span class="keyword">case</span> 5
+            handles.imgC=handles.p .* handles.q;
+        <span class="keyword">case</span> 6
+            handles.imgC=handles.p+handles.q;
+        <span class="keyword">case</span> 7
+            temp=handles.p+handles.q;
+            temp(temp&gt;500)=0;
+            handles.imgC=temp;
+        <span class="keyword">case</span> 8
+            <span class="keyword">if</span> get(handles.C_p,<span class="string">'value'</span>)==4
+                handles.imgC=255-handles.q;
+            <span class="keyword">else</span>
+                hs=msgbox(<span class="string">'&#35821;&#27861;&#38169;&#35823;!'</span>,<span class="string">'&#38169;&#35823;'</span>,<span class="string">'error'</span>);
+                ht=findobj(hs,<span class="string">'type'</span>,<span class="string">'text'</span>);
+                set(ht,<span class="string">'FontSize'</span>,16);
+                uiwait(hs);
+            <span class="keyword">end</span>
+        <span class="keyword">case</span> 9
+            <span class="keyword">if</span> get(handles.C_p,<span class="string">'value'</span>) == 4
+                handles.imgC= handles.q;
+            <span class="keyword">else</span>
+                hs=msgbox(<span class="string">'&#35821;&#27861;&#38169;&#35823;!'</span>,<span class="string">'&#38169;&#35823;'</span>,<span class="string">'error'</span>);
+                ht=findobj(hs,<span class="string">'type'</span>,<span class="string">'text'</span>);
+                set(ht,<span class="string">'FontSize'</span>,16);
+                uiwait(hs);
+            <span class="keyword">end</span>
+    <span class="keyword">end</span>
+<span class="comment">% &#26356;&#26032;&#32467;&#26500;&#20307;&#25968;&#25454;</span>
+    guidata(hObject, handles);
+    <span class="comment">% &#35774;&#32622;&#22270;&#20687;&#26174;&#31034;&#21306;&#22495;</span>
+    axes(handles.axes3);
+    <span class="comment">% &#26174;&#31034;&#22270;&#20687;</span>
+    imshow(uint8(handles.imgC));
+<span class="comment">% &#35774;&#32622;&#30456;&#20851;&#20351;&#33021;</span>
+    set(hObject,<span class="string">'enable'</span>,<span class="string">'off'</span>);
+    set(handles.C_p,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+    set(handles.C_algorithm,<span class="string">'enable'</span>,<span class="string">'off'</span>);
+    set(handles.C_q,<span class="string">'enable'</span>,<span class="string">'off'</span>);
+    set(handles.PB_Recover_C,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+</pre><h2>C_p &#36171;&#20540;<a name="55"></a></h2><pre class="codeinput"><span class="keyword">function</span> C_p_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% C_p &#36171;&#20540;</span>
+    <span class="comment">%   1   2   3   4</span>
+    <span class="comment">% {'A';'B';'C';'_'}</span>
+    <span class="keyword">switch</span> get(hObject,<span class="string">'value'</span>)
+        <span class="keyword">case</span> 1
+            handles.p=handles.imgA;
+        <span class="keyword">case</span> 2
+            handles.p=handles.imgB;
+        <span class="keyword">case</span> 3
+            handles.p=handles.imgC;
+        <span class="keyword">case</span> 4
+            handles.p=repmat(255,handles.N,handles.N);
+    <span class="keyword">end</span>
+<span class="comment">% &#25171;&#24320;&#30456;&#20851;&#20351;&#33021;</span>
+    set(handles.C_algorithm,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+<span class="comment">% &#26356;&#26032;&#32467;&#26500;&#20307;&#25968;&#25454;</span>
+    guidata(hObject, handles);
+</pre><h2>C_{'+';'-';'*';'/';'AND';'OR';'XOR';'NOT';'_'} &#36171;&#20540;<a name="58"></a></h2><pre class="codeinput"><span class="keyword">function</span> C_algorithm_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% C_{'+';'-';'*';'/';'AND';'OR';'XOR';'NOT';'_'} &#36171;&#20540;</span>
+<span class="comment">% &#25171;&#24320;&#30456;&#20851;&#20351;&#33021;</span>
+    set(handles.C_q,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+</pre><h2>C_q &#36171;&#20540;<a name="61"></a></h2><pre class="codeinput"><span class="keyword">function</span> C_q_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% C_q &#36171;&#20540;</span>
+    <span class="comment">%   1   2   3</span>
+    <span class="comment">% {'A';'B';'C'}</span>
+    <span class="keyword">switch</span> get(hObject,<span class="string">'value'</span>)
+        <span class="keyword">case</span> 1
+            handles.q=handles.imgA;
+        <span class="keyword">case</span> 2
+            handles.q=handles.imgB;
+        <span class="keyword">case</span> 3
+            handles.q=handles.imgC;
+    <span class="keyword">end</span>
+<span class="comment">% &#25171;&#24320;&#30456;&#20851;&#20351;&#33021;</span>
+    set(handles.PB_UpData_C,<span class="string">'Enable'</span>,<span class="string">'on'</span>);
+<span class="comment">% &#26356;&#26032;&#32467;&#26500;&#20307;&#25968;&#25454;</span>
+    guidata(hObject, handles);
+</pre><h2>&#23558;B&#36171;&#20540;&#32473;C<a name="64"></a></h2><p><img vspace="5" hspace="5" src="__B.bmp" alt=""> </p><h2>&#23558;A&#21462;&#21453;&#21518;&#36171;&#20540;&#32473;B<a name="65"></a></h2><p><img vspace="5" hspace="5" src="_NOTA.bmp" alt=""> </p><h2>&#23558;A&#21152;B&#21518;&#36171;&#20540;&#32473;C<a name="66"></a></h2><p><img vspace="5" hspace="5" src="A+B.bmp" alt=""> </p><p><img vspace="5" hspace="5" src="AB+.bmp" alt=""> </p><h2>&#23558;B&#24322;&#25110;C&#21518;&#36171;&#20540;&#32473;A<a name="68"></a></h2><p><img vspace="5" hspace="5" src="BXORC.bmp" alt=""> </p><p class="footer"><br><br></p></div><!--
+##### SOURCE BEGIN #####
+%% 点操作REPLACE_WITH_DASH_DASH-图像间运算
+% * 概述      ：实现图像间的算术和逻辑运算
+% * 作者		：张群伟	南昌航空大学信息工程学院自动化系
+% * 日期		：[4/5/2017]
+%%
+
+%%
+%
+% <<main.bmp>>
+%
+
+%% 主函数
+% *不做任何修改*
+function varargout = DCZTuXiangJianYunSuan(varargin)
+% Begin initialization code - DO NOT EDIT
+gui_Singleton = 1;
+gui_State = struct('gui_Name',       mfilename, ...
+                   'gui_Singleton',  gui_Singleton, ...
+                   'gui_OpeningFcn', @DCZTuXiangJianYunSuan_OpeningFcn, ...
+                   'gui_OutputFcn',  @DCZTuXiangJianYunSuan_OutputFcn, ...
+                   'gui_LayoutFcn',  [] , ...
+                   'gui_Callback',   []);
+if nargin && ischar(varargin{1})
+    gui_State.gui_Callback = str2func(varargin{1});
+end
+if nargout
+    [varargout{1:nargout}] = gui_mainfcn(gui_State, varargin{:});
+else
+    gui_mainfcn(gui_State, varargin{:});
+end
+% End initialization code - DO NOT EDIT
+
+
+%% 开始函数
+% *相关初始化*
+function DCZTuXiangJianYunSuan_OpeningFcn(hObject, eventdata, handles, varargin)
+% 全局变量
+    % N阶方阵
+    handles.N=0;
+    % A图像
+    handles.imgA_old=0;      % A图像地址
+    handles.imgA=0;          % A图像数据
+    % B图像
+    handles.imgB_old=0;      % B图像地址
+    handles.imgB=0;          % B图像数据
+    % C图像
+    handles.imgC_old=0;      % C图像地址
+    handles.imgC=0;          % C图像数据          
+    % p,  q,  op操作
+    handles.p=0;
+    handles.q=0;
+    handles.op=0;
+% 控件初始化
+    % A=1\2\3\PB_UpData_A\PB_Recover_A 
+    set(handles.A_p,'enable','off','string',{'A';'B';'C';'_'});
+    set(handles.A_algorithm,'enable','off','string',{'+';'-';'*';'/';'AND';'OR';'XOR';'NOT';'_'});
+    set(handles.A_q,'enable','off','string',{'A';'B';'C'});
+    set(handles.PB_UpData_A,'enable','off');
+    set(handles.PB_Recover_A,'enable','off');
+    % B=4\5\6\PB_UpData_B\PB_Recover_B
+    set(handles.B_p,'enable','off','string',{'A';'B';'C';'_'});
+    set(handles.B_algorithm,'enable','off','string',{'+';'-';'*';'/';'AND';'OR';'XOR';'NOT';'_'});
+    set(handles.B_q,'enable','off','string',{'A';'B';'C'});
+    set(handles.PB_UpData_B,'enable','off');
+    set(handles.PB_Recover_B,'enable','off');
+    % C=7\8\9\PB_UpData_C\PB_Recover_C
+    set(handles.C_p,'enable','on','string',{'A';'B';'C';'_'});
+    set(handles.C_algorithm,'enable','off','string',{'+';'-';'*';'/';'AND';'OR';'XOR';'NOT';'_'});
+    set(handles.C_q,'enable','off','string',{'A';'B';'C'});
+    set(handles.PB_UpData_C,'enable','off');
+    set(handles.PB_Recover_C,'enable','off');
+% Choose default command line output for DCZTuXiangJianYunSuan
+handles.output = hObject;
+% Update handles structure
+guidata(hObject, handles);
+% UIWAIT makes DCZTuXiangJianYunSuan wait for user response (see UIRESUME)
+% uiwait(handles.figure1);
+
+
+%% 输出函数
+function DCZTuXiangJianYunSuan_OutputFcn(hObject, eventdata, handles) 
+% Get default command line output from handles structure
+% varargout{1} = handles.output;
+%
+
+
+%% 恢复A图像
+function PB_Recover_A_Callback(hObject, eventdata, handles)
+% 恢复A图像
+    handles.imgA=handles.imgA_old;
+% 更新结构体数据
+    guidata(hObject, handles);
+% 设置图像显示区域
+    axes(handles.axes1);
+    imshow(uint8(handles.imgA));
+   
+
+%% 加载A图像    
+function PB_Load_A_Callback(hObject, eventdata, handles)
+% 加载A图像  
+str=' ';
+[fname,pname,index]=uigetfile({'*.bmp';'*.jpg'},'选择图片');
+if index 
+    str=[pname fname];    
+end
+if str~=' '
+   % 数据初始化
+        handles.imgA=uint8(imread(str));    % 图像数据
+   % 图像尺寸处理
+        % 检索图像的尺寸
+        [Ahight,Awidth]=size(handles.imgA);
+        % 检索尺寸最大值
+        handles.N=max([Ahight,Awidth,handles.N]);
+        % 构造三个全为1的N阶方阵
+        tempA=ones(handles.N);
+        tempB=tempA;
+        tempC=tempA;
+        % 将A,B,C图像分别放到N阶方阵中
+        tempA(1:Ahight,1:Awidth)=handles.imgA;
+        [Bhight,Bwidth]=size(handles.imgB);
+        tempB(1:Bhight,1:Bwidth)=handles.imgB;
+        [Chight,Cwidth]=size(handles.imgC);
+        tempC(1:Chight,1:Cwidth)=handles.imgC;
+        % 再分别赋值给全局变量
+        handles.imgA=tempA();
+        handles.imgB=tempB();
+        handles.imgC=tempC();
+        handles.imgA_old=tempA();
+        handles.imgB_old=tempB();
+        handles.imgC_old=tempC();
+   % 更新结构体数据
+        guidata(hObject, handles);
+   % 控件初始化
+        % 更新图像
+        axes(handles.axes1);
+        imshow(uint8(handles.imgA));
+        axes(handles.axes2);
+        imshow(uint8(handles.imgB));
+        axes(handles.axes3);
+        imshow(uint8(handles.imgC));
+        % 打开相关使能
+        set(handles.A_p,'enable','on');
+end
+ 
+
+%% 更新A图像   
+function PB_UpData_A_Callback(hObject, eventdata, handles)
+% 更新A图像 
+% 执行图像运算
+    %   1   2   3   4   5     6    7     8    9
+    % {'+';'-';'*';'/';'AND';'OR';'XOR';'NOT';'_'}
+    switch get(handles.A_algorithm,'value')
+        case 1
+            handles.imgA=handles.p+handles.q;
+        case 2
+            handles.imgA=handles.p-handles.q;
+        case 3
+            handles.imgA=handles.p .* handles.q;
+        case 4
+            handles.imgA=handles.p ./ handles.q;
+        case 5
+            handles.imgA=handles.p .* handles.q;
+        case 6
+            handles.imgA=handles.p+handles.q;
+        case 7
+            temp=handles.p+handles.q;
+            temp(temp>500)=0;
+            handles.imgA=temp;
+        case 8
+            if get(handles.A_p,'value')==4
+                handles.imgA=255-handles.q;
+            else
+                hs=msgbox('语法错误!','错误','error');
+                ht=findobj(hs,'type','text');
+                set(ht,'FontSize',16);
+                uiwait(hs);
+            end
+        case 9
+            if get(handles.A_p,'value') == 4
+                handles.imgA= handles.q;     
+            else
+                h=msgbox('语法错误!','错误','error');uiwait(h);
+                ht=findobj(h,'type','text');
+                set(ht,'FontSize',16);                       
+            end
+    end
+% 更新结构体数据
+    guidata(hObject, handles);
+    % 设置图像显示区域
+    axes(handles.axes1);        
+    % 显示图像
+    imshow(uint8(handles.imgA));
+% 设置相关使能
+    set(hObject,'enable','off');
+    set(handles.A_p,'enable','on');
+    set(handles.A_algorithm,'enable','off');
+    set(handles.A_q,'enable','off');
+    set(handles.PB_Recover_A,'enable','on');
+
+
+%% A_p 赋值    
+function A_p_Callback(hObject, eventdata, handles)
+% A_p 赋值
+    %   1   2   3   4
+    % {'A';'B';'C';'_'}
+    switch get(hObject,'value')
+    case 1
+        handles.p=handles.imgA;
+    case 2
+        handles.p=handles.imgB;
+    case 3
+        handles.p=handles.imgC;
+    case 4
+        handles.p=repmat(255,handles.N,handles.N);
+    end
+% 打开相关使能
+    set(handles.A_algorithm,'enable','on');
+% 更新结构体数据
+    guidata(hObject, handles);
+
+    
+%% A_{'+';'-';'*';'/';'AND';'OR';'XOR';'NOT';'_'} 赋值
+function A_algorithm_Callback(hObject, eventdata, handles)
+% A_{'+';'-';'*';'/';'AND';'OR';'XOR';'NOT';'_'} 赋值
+% 打开相关使能
+    set(handles.A_q,'enable','on');    
+
+
+%% A_q 赋值    
+function A_q_Callback(hObject, eventdata, handles)
+% A_q 赋值
+    %   1   2   3 
+    % {'A';'B';'C'}
+    switch get(hObject,'value')
+        case 1
+            handles.q=handles.imgA;
+        case 2
+            handles.q=handles.imgB;
+        case 3
+            handles.q=handles.imgC;
+    end
+% 打开相关使能
+    set(handles.PB_UpData_A,'Enable','on');
+% 更新结构体数据
+    guidata(hObject, handles);
+
+
+%% 恢复B图像
+function PB_Recover_B_Callback(hObject, eventdata, handles)
+% 恢复B图像
+    handles.imgB=handles.imgB_old;
+% 更新结构体数据
+    guidata(hObject, handles);
+% 设置图像显示区域
+    axes(handles.axes2);
+    imshow(uint8(handles.imgB));
+    
+
+%% 加载B图像    
+function PB_Load_B_Callback(hObject, eventdata, handles)
+% 加载B图像 
+str=' ';
+[fname,pname,index]=uigetfile({'*.bmp';'*.jpg'},'选择图片');
+if index 
+    str=[pname fname];    
+end
+if str~=' '
+   % 数据初始化
+        handles.imgB=uint8(imread(str));    % 图像数据
+   % 图像尺寸处理
+        % 检索图像的尺寸
+        [Bhight,Bwidth]=size(handles.imgB);      
+        % 检索尺寸最大值
+        handles.N=max([Bhight,Bwidth,handles.N]);
+        % 构造三个全为1的N阶方阵
+        tempA=ones(handles.N);
+        tempB=tempA;
+        tempC=tempA;
+        % 将A,B,C图像分别放到N阶方阵中
+        [Ahight,Awidth]=size(handles.imgA);
+        tempA(1:Ahight,1:Awidth)=handles.imgA;            
+        tempB(1:Bhight,1:Bwidth)=handles.imgB;
+        [Chight,Cwidth]=size(handles.imgC);
+        tempC(1:Chight,1:Cwidth)=handles.imgC;
+        % 再分别赋值给全局变量
+        handles.imgA=tempA();
+        handles.imgB=tempB();
+        handles.imgC=tempC();
+        handles.imgA_old=tempA();
+        handles.imgB_old=tempB();
+        handles.imgC_old=tempC();
+   % 更新结构体数据
+        guidata(hObject, handles);
+   % 控件初始化
+        % 更新图像
+        axes(handles.axes1);
+        imshow(uint8(handles.imgA));
+        axes(handles.axes2);
+        imshow(uint8(handles.imgB));
+        axes(handles.axes3);
+        imshow(uint8(handles.imgC));
+        % 打开相关使能
+        set(handles.B_p,'enable','on');
+end
+   
+
+%% 更新B图像
+function PB_UpData_B_Callback(hObject, eventdata, handles)
+% 更新B图像
+% 执行图像运算
+    %   1   2   3   4   5     6    7     8    9
+    % {'+';'-';'*';'/';'AND';'OR';'XOR';'NOT';'_'}
+    switch get(handles.B_algorithm,'value')
+        case 1
+            handles.imgB=handles.p+handles.q;
+        case 2
+            handles.imgB=handles.p-handles.q;
+        case 3
+            handles.imgB=handles.p .* handles.q;
+        case 4
+            handles.imgB=handles.p ./ handles.q;
+        case 5
+            handles.imgB=handles.p.*handles.q;
+        case 6
+            handles.imgB=handles.p+handles.q;
+        case 7
+            temp=handles.p+handles.q;
+            temp(temp>500)=0;
+            handles.imgB=temp;
+        case 8
+            if get(handles.B_p,'value')==4
+                handles.imgB=255-handles.q;
+            else
+                hs=msgbox('语法错误!','错误','error');
+                ht=findobj(hs,'type','text');
+                set(ht,'FontSize',16);
+                uiwait(hs);
+            end
+        case 9
+            if get(handles.B_p,'value') == 4
+                handles.imgB= handles.q;     
+            else
+                h=msgbox('语法错误!','错误','error');
+                ht=findobj(h,'type','text');
+                set(ht,'FontSize',16);  
+                uiwait(h);
+            end
+    end
+% 更新结构体数据
+    guidata(hObject, handles);
+    % 设置图像显示区域
+    axes(handles.axes2);         
+    % 显示图像
+    imshow(uint8(handles.imgB));
+% 设置相关使能
+    set(hObject,'enable','off');
+    set(handles.B_p,'enable','on');
+    set(handles.B_algorithm,'enable','off');
+    set(handles.B_q,'enable','off');
+    set(handles.PB_Recover_B,'enable','on');
+
+
+%% B_p 赋值    
+function B_p_Callback(hObject, eventdata, handles)
+% B_p 赋值 
+    %   1   2   3   4
+    % {'A';'B';'C';'_'}
+    switch get(hObject,'value')
+        case 1
+            handles.p=handles.imgA;
+        case 2
+            handles.p=handles.imgB;
+        case 3
+            handles.p=handles.imgC;
+        case 4
+            handles.p=repmat(255,handles.N,handles.N);
+    end
+% 打开相关使能
+    set(handles.B_algorithm,'enable','on');
+% 更新结构体数据
+    guidata(hObject, handles);
+ 
+
+%% B_{'+';'-';'*';'/';'AND';'OR';'XOR';'NOT';'_'} 赋值    
+function B_algorithm_Callback(hObject, eventdata, handles)
+% B_{'+';'-';'*';'/';'AND';'OR';'XOR';'NOT';'_'} 赋值
+% 打开相关使能
+    set(handles.B_q,'enable','on');
+
+
+%% B_q 赋值    
+function B_q_Callback(hObject, eventdata, handles)
+% B_q 赋值
+    %   1   2   3 
+    % {'A';'B';'C'}  
+    switch get(hObject,'value')
+        case 1
+            handles.q=handles.imgA;
+        case 2
+            handles.q=handles.imgB;
+        case 3
+            handles.q=handles.imgC;
+    end
+% 打开相关使能
+    set(handles.PB_UpData_B,'Enable','on');
+% 更新结构体数据
+    guidata(hObject, handles);
+
+
+%% 恢复C图像
+function PB_Recover_C_Callback(hObject, eventdata, handles)
+% 恢复C图像 
+    handles.imgC=handles.imgC_old;
+% 更新结构体数据
+    guidata(hObject, handles);
+% 设置图像显示区域
+    axes(handles.axes3);
+% 显示图像
+    imshow(uint8(handles.imgC));
+ 
+
+%% 加载C图像    
+function PB_Load_C_Callback(hObject, eventdata, handles)
+% 加载C图像
+str=' ';
+[fname,pname,index]=uigetfile({'*.bmp';'*.jpg'},'选择图片');
+if index 
+    str=[pname fname];    
+end
+if str~=' '
+   % 数据初始化
+        handles.imgC=uint8(imread(str));    % 图像数据        
+   % 图像尺寸处理
+        % 检索图像的尺寸
+        [Chight,Cwidth]=size(handles.imgC);      
+        % 检索尺寸最大值
+        handles.N=max([Chight,Cwidth,handles.N]);         
+        % 构造三个全为1的N阶方阵
+        tempA=ones(handles.N);
+        tempB=tempA;
+        tempC=tempA;
+        % 将A,B,C图像分别放到N阶方阵中
+        [Ahight,Awidth]=size(handles.imgA);
+        tempA(1:Ahight,1:Awidth)=handles.imgA;
+        [Bhight,Bwidth]=size(handles.imgB);
+        tempB(1:Bhight,1:Bwidth)=handles.imgB;
+        tempC(1:Chight,1:Cwidth)=handles.imgC;            
+        % 再分别赋值给全局变量
+        handles.imgA=tempA();
+        handles.imgB=tempB();
+        handles.imgC=tempC(); 
+        handles.imgA_old=tempA();
+        handles.imgB_old=tempB();
+        handles.imgC_old=tempC();
+   % 更新结构体数据
+        guidata(hObject, handles);
+   % 控件初始化
+        % 更新图像
+        axes(handles.axes1);
+        imshow(uint8(handles.imgA));
+        axes(handles.axes2);
+        imshow(uint8(handles.imgB));
+        axes(handles.axes3);
+        imshow(uint8(handles.imgC));
+        % 打开相关使能
+        set(handles.C_p,'enable','on');
+end
+
+
+%% 更新C图像
+function PB_UpData_C_Callback(hObject, eventdata, handles)
+% 更新C图像
+% 执行图像运算
+    %   1   2   3   4   5     6    7     8    9
+    % {'+';'-';'*';'/';'AND';'OR';'XOR';'NOT';'_'}
+    switch get(handles.C_algorithm,'value')
+        case 1
+            handles.imgC=handles.p+handles.q;
+        case 2
+            handles.imgC=handles.p-handles.q;
+        case 3
+            handles.imgC=handles.p .* handles.q;
+        case 4
+            handles.imgC=handles.p ./ handles.q;
+        case 5
+            handles.imgC=handles.p .* handles.q;
+        case 6
+            handles.imgC=handles.p+handles.q;
+        case 7
+            temp=handles.p+handles.q;
+            temp(temp>500)=0;
+            handles.imgC=temp;
+        case 8
+            if get(handles.C_p,'value')==4   
+                handles.imgC=255-handles.q;
+            else
+                hs=msgbox('语法错误!','错误','error');
+                ht=findobj(hs,'type','text');
+                set(ht,'FontSize',16);
+                uiwait(hs);
+            end    
+        case 9
+            if get(handles.C_p,'value') == 4
+                handles.imgC= handles.q;     
+            else                 
+                hs=msgbox('语法错误!','错误','error');
+                ht=findobj(hs,'type','text');
+                set(ht,'FontSize',16);  
+                uiwait(hs);
+            end
+    end
+% 更新结构体数据
+    guidata(hObject, handles);
+    % 设置图像显示区域
+    axes(handles.axes3);         
+    % 显示图像
+    imshow(uint8(handles.imgC));
+% 设置相关使能
+    set(hObject,'enable','off');
+    set(handles.C_p,'enable','on');
+    set(handles.C_algorithm,'enable','off');
+    set(handles.C_q,'enable','off');
+    set(handles.PB_Recover_C,'enable','on');
+
+
+%% C_p 赋值    
+function C_p_Callback(hObject, eventdata, handles)
+% C_p 赋值 
+    %   1   2   3   4
+    % {'A';'B';'C';'_'}
+    switch get(hObject,'value')
+        case 1
+            handles.p=handles.imgA;
+        case 2
+            handles.p=handles.imgB;
+        case 3
+            handles.p=handles.imgC;
+        case 4
+            handles.p=repmat(255,handles.N,handles.N);
+    end
+% 打开相关使能
+    set(handles.C_algorithm,'enable','on');
+% 更新结构体数据
+    guidata(hObject, handles);
+  
+
+%% C_{'+';'-';'*';'/';'AND';'OR';'XOR';'NOT';'_'} 赋值    
+function C_algorithm_Callback(hObject, eventdata, handles)
+% C_{'+';'-';'*';'/';'AND';'OR';'XOR';'NOT';'_'} 赋值
+% 打开相关使能
+    set(handles.C_q,'enable','on');
+
+
+%% C_q 赋值    
+function C_q_Callback(hObject, eventdata, handles)
+% C_q 赋值
+    %   1   2   3 
+    % {'A';'B';'C'}  
+    switch get(hObject,'value')
+        case 1
+            handles.q=handles.imgA;
+        case 2
+            handles.q=handles.imgB;
+        case 3
+            handles.q=handles.imgC;
+    end
+% 打开相关使能
+    set(handles.PB_UpData_C,'Enable','on');
+% 更新结构体数据
+    guidata(hObject, handles);
+    
+    
+%% 将B赋值给C
+% 
+% <<__B.bmp>>
+% 
+
+%% 将A取反后赋值给B
+%
+% <<_NOTA.bmp>>
+% 
+
+%% 将A加B后赋值给C
+%
+% <<A+B.bmp>>
+%
+
+%%
+%
+% <<AB+.bmp>>
+%
+
+%% 将B异或C后赋值给A
+%
+% <<BXORC.bmp>>
+% 
+
+##### SOURCE END #####
+--></body></html>

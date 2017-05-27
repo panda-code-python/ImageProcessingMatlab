@@ -1,0 +1,188 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>&#30452;&#26041;&#22270;&#22343;&#34913;&#21270;&#20989;&#25968;</title><meta name="generator" content="MATLAB 9.0"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2017-05-27"><meta name="DC.source" content="myHisteq.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:5%; font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#000; line-height:140%; background:#ADEBFF none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:16px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>&#30452;&#26041;&#22270;&#22343;&#34913;&#21270;&#20989;&#25968;</h1><!--introduction--><div><ul><li>&#27010;&#36848;      &#65306;&#23545;&#22270;&#20687;&#36827;&#34892;&#30452;&#26041;&#22270;&#22343;&#34913;&#21270;</li><li>&#20316;&#32773;		&#65306;&#24352;&#32676;&#20255;	&#21335;&#26124;&#33322;&#31354;&#22823;&#23398;&#20449;&#24687;&#24037;&#31243;&#23398;&#38498;&#33258;&#21160;&#21270;&#31995;</li><li>&#26085;&#26399;		&#65306;[10/5/2017]</li></ul></div><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">&#20989;&#25968;&#35828;&#26126;</a></li><li><a href="#4">&#20027;&#20989;&#25968;</a></li></ul></div><h2>&#20989;&#25968;&#35828;&#26126;<a name="1"></a></h2><p><b>&#21442;&#25968;&#35828;&#26126;&#65306;</b></p><pre class="codeinput"><span class="comment">%_ src_img       &#38656;&#35201;&#22343;&#34913;&#21270;&#30340;&#28304;&#22270;&#20687;</span>
+</pre><p><b>&#20351;&#29992;&#20030;&#20363;&#65306;</b></p><pre class="codeinput"><span class="comment">%_ Y=myHisteq(I);          &#23545;&#22270;&#20687;I&#36827;&#34892;&#30452;&#26041;&#22270;&#22343;&#34913;&#21270;&#65292;&#23558;&#32467;&#26524;&#36820;&#22238;&#32473;Y</span>
+<span class="comment">%_ [Y,Sk]=myHisteq(I);     &#33719;&#21462;&#30452;&#26041;&#22270;&#22343;&#34913;&#21270;&#21518;&#30340;&#32467;&#26524;&#12289;&#21407;&#22987;&#30452;&#26041;&#22270;</span>
+<span class="comment">%_ [Y,Sk,Tk]=myHisteq(I);  &#33719;&#21462;&#30452;&#26041;&#22270;&#22343;&#34913;&#21270;&#21518;&#30340;&#32467;&#26524;&#12289;&#21407;&#22987;&#30452;&#26041;&#22270;&#12289;&#32047;&#35745;&#30452;&#26041;&#22270;</span>
+</pre><h2>&#20027;&#20989;&#25968;<a name="4"></a></h2><p><b>&#23545;&#22270;&#20687;&#36827;&#34892;&#30452;&#26041;&#22270;&#22343;&#34913;&#21270;</b></p><pre class="codeinput"><span class="keyword">function</span> [I,varargout]=myHisteq(src_img)
+<span class="comment">% &#33719;&#21462;&#22270;&#20687;&#30340;&#32500;&#25968;</span>
+    [height,width] = size(src_img);
+    I=size(src_img);
+<span class="comment">% &#21407;&#22987;&#22270;&#20687;&#28784;&#24230;&#32423; k=256,</span>
+<span class="comment">% &#20445;&#23384;&#22270;&#29255;&#20013;&#21508;&#20010;&#28784;&#24230;&#32423;&#30340;&#20687;&#32032;&#30340;&#20010;&#25968;</span>
+    pixelNum=zeros(1,256);
+<span class="comment">% &#32479;&#35745;&#22270;&#29255;&#20013;&#27599;&#20010;&#28784;&#24230;&#32423;&#20687;&#32032;&#30340;&#20010;&#25968;</span>
+<span class="comment">% &#22937;&#29992;&#65306; &#22270;&#29255;&#20013;&#27599;&#20010;&#20687;&#32032;&#28857;&#30340;&#28784;&#24230;&#20540;&#20026; (0,255)&#20043;&#38388;&#30340;&#25972;&#25968;,</span>
+<span class="comment">%        &#32780;&#20445;&#23384;&#20687;&#32032;&#28857;&#20010;&#25968;&#30340;&#25968;&#32452;&#20026;&#19968;&#32500;&#25968;&#32452;&#65292;&#19988;&#20026;(1,256)</span>
+<span class="comment">%        &#25152;&#20197;&#21487;&#20197;&#36890;&#36807;&#28784;&#24230;&#20540;&#21152;&#19968;&#24471;&#21040;&#25968;&#32452;&#30340;&#32034;&#24341;&#21495;&#65292;&#20877;&#23558;&#23545;&#24212;</span>
+<span class="comment">%        &#20301;&#32622;&#30340;&#35745;&#25968;&#21152;&#19968;&#65292;&#20174;&#32780;&#21487;&#20197;&#32479;&#35745;&#20986;&#27599;&#20010;&#28784;&#24230;&#32423;&#20687;&#32032;&#30340;&#20010;&#25968;&#12290;</span>
+    <span class="keyword">for</span> i=1:height
+        <span class="keyword">for</span> j=1:width
+            pixelNum(src_img(i,j)+1)=pixelNum(src_img(i,j)+1) +1;
+        <span class="keyword">end</span>
+    <span class="keyword">end</span>
+<span class="comment">% &#24402;&#19968;&#21270; &#21363;&#35745;&#31639;&#21508;&#20010;&#28784;&#24230;&#32423;&#30340;&#27010;&#29575;</span>
+<span class="comment">% &#21407;&#22987;&#30452;&#26041;&#22270; &#65288;Original histogram &#65289;</span>
+    Sk=zeros(1,256);
+    <span class="keyword">for</span> i=1:256
+        Sk(i)=pixelNum(i)/(height*width*1.0);
+    <span class="keyword">end</span>
+    varargout{1}=Sk;
+<span class="comment">% &#32047;&#35745;&#30452;&#26041;&#22270; &#65288;Cumulative histogram&#65289;</span>
+    Tk=zeros(1,256);<span class="comment">% &#20445;&#23384;&#32047;&#31215;&#21518;&#30340;&#27010;&#29575;</span>
+    <span class="keyword">for</span> i = 1:256
+        <span class="keyword">if</span> i==1
+            Tk(i)=Sk(i);
+        <span class="keyword">else</span>
+            Tk(i)=Tk(i-1)+Sk(i);
+        <span class="keyword">end</span>
+    <span class="keyword">end</span>
+    varargout{2}=Tk;
+<span class="comment">% &#21462;&#25972;&#25193;&#23637;&#65288;Integral expansion&#65289;</span>
+<span class="comment">% &#20844;&#24335;&#65306; pixelCumu = int[(L-1)*pixelCumu+0.5]&#65288;L&#20026;&#28784;&#24230;&#32423;&#65289;</span>
+	Tk(i) = uint8((256-1) .* Tk(i) + 0.5);
+<span class="comment">% &#23545;&#28784;&#24230;&#20540;&#36827;&#34892;&#26144;&#23556;</span>
+    <span class="keyword">for</span> i=1:height
+        <span class="keyword">for</span> j=1:width
+            I(i,j)=Tk(src_img(i,j)+1);
+        <span class="keyword">end</span>
+    <span class="keyword">end</span>
+<span class="comment">% &#36820;&#22238;</span>
+    I=double(I);
+</pre><p class="footer"><br><br></p></div><!--
+##### SOURCE BEGIN #####
+%% 直方图均衡化函数
+% * 概述      ：对图像进行直方图均衡化
+% * 作者		：张群伟	南昌航空大学信息工程学院自动化系
+% * 日期		：[10/5/2017]  
+%%
+
+
+%% 函数说明
+%%
+% *参数说明：*
+%_ src_img       需要均衡化的源图像
+
+%%
+% *使用举例：*
+%_ Y=myHisteq(I);          对图像I进行直方图均衡化，将结果返回给Y
+%_ [Y,Sk]=myHisteq(I);     获取直方图均衡化后的结果、原始直方图
+%_ [Y,Sk,Tk]=myHisteq(I);  获取直方图均衡化后的结果、原始直方图、累计直方图
+
+%% 主函数
+% *对图像进行直方图均衡化*
+function [I,varargout]=myHisteq(src_img) 
+% 获取图像的维数
+    [height,width] = size(src_img);
+    I=size(src_img);
+% 原始图像灰度级 k=256,
+% 保存图片中各个灰度级的像素的个数
+    pixelNum=zeros(1,256);
+% 统计图片中每个灰度级像素的个数
+% 妙用： 图片中每个像素点的灰度值为 (0,255)之间的整数,
+%        而保存像素点个数的数组为一维数组，且为(1,256)
+%        所以可以通过灰度值加一得到数组的索引号，再将对应
+%        位置的计数加一，从而可以统计出每个灰度级像素的个数。
+    for i=1:height
+        for j=1:width
+            pixelNum(src_img(i,j)+1)=pixelNum(src_img(i,j)+1) +1;
+        end
+    end
+% 归一化 即计算各个灰度级的概率
+% 原始直方图 （Original histogram ）
+    Sk=zeros(1,256);
+    for i=1:256
+        Sk(i)=pixelNum(i)/(height*width*1.0);
+    end
+    varargout{1}=Sk;
+% 累计直方图 （Cumulative histogram） 
+    Tk=zeros(1,256);% 保存累积后的概率
+    for i = 1:256
+        if i==1
+            Tk(i)=Sk(i);
+        else
+            Tk(i)=Tk(i-1)+Sk(i);
+        end
+    end
+    varargout{2}=Tk;
+% 取整扩展（Integral expansion） 
+% 公式： pixelCumu = int[(L-1)*pixelCumu+0.5]（L为灰度级）
+	Tk(i) = uint8((256-1) .* Tk(i) + 0.5);
+% 对灰度值进行映射
+    for i=1:height
+        for j=1:width
+            I(i,j)=Tk(src_img(i,j)+1);
+        end
+    end
+% 返回
+    I=double(I);
+
+
+##### SOURCE END #####
+--></body></html>

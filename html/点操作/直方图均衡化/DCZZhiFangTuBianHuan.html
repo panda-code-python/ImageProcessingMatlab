@@ -1,0 +1,361 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>&#28857;&#25805;&#20316;-&#30452;&#26041;&#22270;&#21464;&#25442;</title><meta name="generator" content="MATLAB 9.0"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2017-05-11"><meta name="DC.source" content="DCZZhiFangTuBianHuan.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:5%; font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#000; line-height:140%; background:#ADEBFF none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:16px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>&#28857;&#25805;&#20316;-&#30452;&#26041;&#22270;&#21464;&#25442;</h1><!--introduction--><div><ul><li>&#27010;&#36848;      &#65306;&#20027;&#35201;&#23454;&#29616;&#22270;&#20687;&#30340;&#30452;&#26041;&#22270;&#22343;&#34913;&#21270;</li><li>&#20316;&#32773;		&#65306;&#24352;&#32676;&#20255;	&#21335;&#26124;&#33322;&#31354;&#22823;&#23398;&#20449;&#24687;&#24037;&#31243;&#23398;&#38498;&#33258;&#21160;&#21270;&#31995;</li><li>&#26085;&#26399;		&#65306;[9/5/2017]</li></ul></div><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#2">&#20027;&#20989;&#25968;</a></li><li><a href="#4">&#24320;&#22987;&#20989;&#25968;</a></li><li><a href="#7">&#36755;&#20986;&#20989;&#25968;</a></li><li><a href="#10">&#24674;&#22797;&#22270;&#20687;</a></li><li><a href="#13">&#21152;&#36733;&#22270;&#20687;</a></li><li><a href="#16">&#20445;&#23384;&#22270;&#20687;</a></li><li><a href="#19">&#30452;&#26041;&#22270;&#22343;&#34913;&#21270;</a></li></ul></div><p><img vspace="5" hspace="5" src="main.bmp" alt=""> </p><h2>&#20027;&#20989;&#25968;<a name="2"></a></h2><p><b>&#19981;&#20570;&#20219;&#20309;&#20462;&#25913;</b></p><pre class="codeinput"><span class="keyword">function</span> varargout = DCZZhiFangTuBianHuan(varargin)
+</pre><pre class="codeinput"><span class="comment">% Begin initialization code - DO NOT EDIT</span>
+gui_Singleton = 1;
+gui_State = struct(<span class="string">'gui_Name'</span>,       mfilename, <span class="keyword">...</span>
+                   <span class="string">'gui_Singleton'</span>,  gui_Singleton, <span class="keyword">...</span>
+                   <span class="string">'gui_OpeningFcn'</span>, @DCZZhiFangTuBianHuan_OpeningFcn, <span class="keyword">...</span>
+                   <span class="string">'gui_OutputFcn'</span>,  @DCZZhiFangTuBianHuan_OutputFcn, <span class="keyword">...</span>
+                   <span class="string">'gui_LayoutFcn'</span>,  [] , <span class="keyword">...</span>
+                   <span class="string">'gui_Callback'</span>,   []);
+<span class="keyword">if</span> nargin &amp;&amp; ischar(varargin{1})
+    gui_State.gui_Callback = str2func(varargin{1});
+<span class="keyword">end</span>
+<span class="keyword">if</span> nargout
+    [varargout{1:nargout}] = gui_mainfcn(gui_State, varargin{:});
+<span class="keyword">else</span>
+    gui_mainfcn(gui_State, varargin{:});
+<span class="keyword">end</span>
+<span class="comment">% End initialization code - DO NOT EDIT</span>
+</pre><h2>&#24320;&#22987;&#20989;&#25968;<a name="4"></a></h2><p><b>&#30456;&#20851;&#21021;&#22987;&#21270;</b></p><pre class="codeinput"><span class="keyword">function</span> DCZZhiFangTuBianHuan_OpeningFcn(hObject, eventdata, handles, varargin)
+</pre><pre class="codeinput"><span class="comment">% &#20840;&#23616;&#21464;&#37327;</span>
+    handles.img_str=<span class="string">' '</span>;        <span class="comment">% &#22270;&#20687;&#22320;&#22336;</span>
+    handles.img=0;              <span class="comment">% &#22270;&#20687;&#25968;&#25454;</span>
+    handles.img_old=0;          <span class="comment">% &#28304;&#22270;&#20687;</span>
+    handles.img_width=0;        <span class="comment">% &#22270;&#20687;&#23485;</span>
+    handles.img_height=0;        <span class="comment">% &#22270;&#20687;&#39640;</span>
+<span class="comment">% &#35774;&#32622;</span>
+    set(handles.junHengHua,<span class="string">'enable'</span>,<span class="string">'off'</span>);
+    set(handles.recover,<span class="string">'enable'</span>,<span class="string">'off'</span>);
+    set(handles.save,<span class="string">'enable'</span>,<span class="string">'off'</span>);
+
+<span class="comment">% Choose default command line output for DCZZhiFangTuBianHuan</span>
+handles.output = hObject;
+<span class="comment">% Update handles structure</span>
+guidata(hObject, handles);
+<span class="comment">% UIWAIT makes DCZZhiFangTuBianHuan wait for user response (see UIRESUME)</span>
+<span class="comment">% uiwait(handles.figure1);</span>
+</pre><h2>&#36755;&#20986;&#20989;&#25968;<a name="7"></a></h2><pre class="codeinput"><span class="keyword">function</span> DCZZhiFangTuBianHuan_OutputFcn(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% Get default command line output from handles structure</span>
+<span class="comment">% varargout{1} = handles.output;</span>
+<span class="comment">%</span>
+</pre><h2>&#24674;&#22797;&#22270;&#20687;<a name="10"></a></h2><pre class="codeinput"><span class="keyword">function</span> recover_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% &#24674;&#22797;&#22270;&#20687;</span>
+    handles.img=handles.img_old;
+    guidata(hObject,handles);
+    axes(handles.axes1);
+    imshow(uint8(handles.img));
+</pre><h2>&#21152;&#36733;&#22270;&#20687;<a name="13"></a></h2><pre class="codeinput"><span class="keyword">function</span> load_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% &#21152;&#36733;&#22270;&#20687;</span>
+[fname,pname,index]=uigetfile({<span class="string">'*.bmp'</span>;<span class="string">'*.jpg'</span>},<span class="string">'&#36873;&#25321;&#22270;&#29255;'</span>);
+<span class="keyword">if</span> index
+   <span class="comment">% &#25968;&#25454;&#21021;&#22987;&#21270;</span>
+        str=[pname fname];
+        handles.img_str=str;        <span class="comment">% &#22270;&#20687;&#22320;&#22336;</span>
+        handles.img=imread(str);    <span class="comment">% &#22270;&#20687;&#25968;&#25454;</span>
+        handles.img_old=handles.img;<span class="comment">% &#28304;&#22270;&#20687;</span>
+        [hight,width]=size(handles.img);
+        handles.img_width=width;    <span class="comment">% &#22270;&#20687;&#23485;</span>
+        handles.img_height=hight;    <span class="comment">% &#22270;&#20687;&#39640;</span>
+   <span class="comment">% &#25171;&#24320;&#20351;&#33021;</span>
+        set(handles.junHengHua,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+        set(handles.recover,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+        set(handles.save,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+   <span class="comment">% &#26356;&#26032;&#32467;&#26500;&#20307;&#25968;&#25454;</span>
+        guidata(hObject, handles);
+        <span class="comment">% &#26174;&#31034;&#22270;&#20687;</span>
+        axes(handles.axes1);
+        imshow(str);
+<span class="keyword">end</span>
+</pre><h2>&#20445;&#23384;&#22270;&#20687;<a name="16"></a></h2><pre class="codeinput"><span class="keyword">function</span> save_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% &#20445;&#23384;&#22270;&#20687;</span>
+    [FileName,PathName] =uiputfile({<span class="string">'*.jpg;*.tif;*.png;*.gif'</span>,<span class="string">'All Image Files'</span>;<span class="keyword">...</span>
+              <span class="string">'*.*'</span>,<span class="string">'All Files'</span> },<span class="string">'&#20445;&#23384;&#22270;&#20687;'</span>,<span class="keyword">...</span>
+              <span class="string">'C:\Work\newfile.jpg'</span>);
+    <span class="keyword">if</span> FileName==0
+        <span class="keyword">return</span>;
+    <span class="keyword">else</span>
+        h=getframe(handles.axes1);
+        imwrite(h.cdata,[PathName,FileName]);
+    <span class="keyword">end</span>
+</pre><h2>&#30452;&#26041;&#22270;&#22343;&#34913;&#21270;<a name="19"></a></h2><pre class="codeinput"><span class="keyword">function</span> junHengHua_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% &#30452;&#26041;&#22270;&#22343;&#34913;&#21270;</span>
+src_img=handles.img;
+<span class="comment">% &#33719;&#21462;&#22270;&#20687;&#30340;&#32500;&#25968;</span>
+    [height,width] = size(src_img);
+    I=size(src_img);
+<span class="comment">% &#21407;&#22987;&#22270;&#20687;&#28784;&#24230;&#32423; k=256,</span>
+<span class="comment">% &#20445;&#23384;&#22270;&#29255;&#20013;&#21508;&#20010;&#28784;&#24230;&#32423;&#30340;&#20687;&#32032;&#30340;&#20010;&#25968;</span>
+    pixelNum=zeros(1,256);
+<span class="comment">% &#32479;&#35745;&#22270;&#29255;&#20013;&#27599;&#20010;&#28784;&#24230;&#32423;&#20687;&#32032;&#30340;&#20010;&#25968;</span>
+<span class="comment">% &#22937;&#29992;&#65306; &#22270;&#29255;&#20013;&#27599;&#20010;&#20687;&#32032;&#28857;&#30340;&#28784;&#24230;&#20540;&#20026; (0,255)&#20043;&#38388;&#30340;&#25972;&#25968;,</span>
+<span class="comment">%        &#32780;&#20445;&#23384;&#20687;&#32032;&#28857;&#20010;&#25968;&#30340;&#25968;&#32452;&#20026;&#19968;&#32500;&#25968;&#32452;&#65292;&#19988;&#20026;(1,256)</span>
+<span class="comment">%        &#25152;&#20197;&#21487;&#20197;&#36890;&#36807;&#28784;&#24230;&#20540;&#21152;&#19968;&#24471;&#21040;&#25968;&#32452;&#30340;&#32034;&#24341;&#21495;&#65292;&#20877;&#23558;&#23545;&#24212;</span>
+<span class="comment">%        &#20301;&#32622;&#30340;&#35745;&#25968;&#21152;&#19968;&#65292;&#20174;&#32780;&#21487;&#20197;&#32479;&#35745;&#20986;&#27599;&#20010;&#28784;&#24230;&#32423;&#20687;&#32032;&#30340;&#20010;&#25968;&#12290;</span>
+    <span class="keyword">for</span> i=1:height
+        <span class="keyword">for</span> j=1:width
+            pixelNum(src_img(i,j)+1)=pixelNum(src_img(i,j)+1) +1;
+        <span class="keyword">end</span>
+    <span class="keyword">end</span>
+<span class="comment">% &#24402;&#19968;&#21270; &#21363;&#35745;&#31639;&#21508;&#20010;&#28784;&#24230;&#32423;&#30340;&#27010;&#29575;</span>
+<span class="comment">% &#21407;&#22987;&#30452;&#26041;&#22270; &#65288;Original histogram&#65289;</span>
+    Sk=zeros(1,256);
+    <span class="keyword">for</span> i=1:256
+        Sk(i)=pixelNum(i)/(height*width*1.0);
+    <span class="keyword">end</span>
+    axes(handles.axes2),bar(Sk),title(<span class="string">'&#32047;&#35745;&#30452;&#26041;&#22270;'</span>);
+<span class="comment">% &#32047;&#35745;&#30452;&#26041;&#22270; &#65288;Cumulative histogram&#65289;</span>
+    Tk=zeros(1,256);<span class="comment">% &#20445;&#23384;&#32047;&#31215;&#21518;&#30340;&#27010;&#29575;</span>
+    <span class="keyword">for</span> i = 1:256
+        <span class="keyword">if</span> i==1
+            Tk(i)=Sk(i);
+        <span class="keyword">else</span>
+            Tk(i)=Tk(i-1)+Sk(i);
+        <span class="keyword">end</span>
+    <span class="keyword">end</span>
+    axes(handles.axes3),bar(Tk),title(<span class="string">'&#32047;&#35745;&#30452;&#26041;&#22270;'</span>);
+<span class="comment">% &#21462;&#25972;&#25193;&#23637;&#65288;Integral expansion&#65289;</span>
+<span class="comment">% &#20844;&#24335;&#65306; pixelCumu = int[(L-1)*pixelCumu+0.5]&#65288;L&#20026;&#28784;&#24230;&#32423;&#65289;</span>
+    Tk(i) = uint8((256-1) .* Tk(i) + 0.5);
+<span class="comment">% &#23545;&#28784;&#24230;&#20540;&#36827;&#34892;&#26144;&#23556;</span>
+    <span class="keyword">for</span> i=1:height
+        <span class="keyword">for</span> j=1:width
+            I(i,j)=Tk(src_img(i,j));
+        <span class="keyword">end</span>
+    <span class="keyword">end</span>
+    axes(handles.axes4),imshow(I);
+</pre><p><img vspace="5" hspace="5" src="%E7%9B%B4%E6%96%B9%E5%9B%BE%E5%9D%87%E8%A1%A1%E5%8C%96.bmp" alt=""> </p><p class="footer"><br><br></p></div><!--
+##### SOURCE BEGIN #####
+%% 点操作-直方图变换
+% * 概述      ：主要实现图像的直方图均衡化
+% * 作者		：张群伟	南昌航空大学信息工程学院自动化系
+% * 日期		：[9/5/2017]  
+%%
+
+
+%%
+%
+% <<main.bmp>>
+%
+
+
+%% 主函数
+% *不做任何修改*
+function varargout = DCZZhiFangTuBianHuan(varargin)
+% Begin initialization code - DO NOT EDIT
+gui_Singleton = 1;
+gui_State = struct('gui_Name',       mfilename, ...
+                   'gui_Singleton',  gui_Singleton, ...
+                   'gui_OpeningFcn', @DCZZhiFangTuBianHuan_OpeningFcn, ...
+                   'gui_OutputFcn',  @DCZZhiFangTuBianHuan_OutputFcn, ...
+                   'gui_LayoutFcn',  [] , ...
+                   'gui_Callback',   []);
+if nargin && ischar(varargin{1})
+    gui_State.gui_Callback = str2func(varargin{1});
+end
+if nargout
+    [varargout{1:nargout}] = gui_mainfcn(gui_State, varargin{:});
+else
+    gui_mainfcn(gui_State, varargin{:});
+end
+% End initialization code - DO NOT EDIT
+
+
+%% 开始函数
+% *相关初始化*
+function DCZZhiFangTuBianHuan_OpeningFcn(hObject, eventdata, handles, varargin)
+% 全局变量
+    handles.img_str=' ';        % 图像地址
+    handles.img=0;              % 图像数据
+    handles.img_old=0;          % 源图像
+    handles.img_width=0;        % 图像宽
+    handles.img_height=0;        % 图像高    
+% 设置
+    set(handles.junHengHua,'enable','off');
+    set(handles.recover,'enable','off');
+    set(handles.save,'enable','off');
+    
+% Choose default command line output for DCZZhiFangTuBianHuan
+handles.output = hObject;
+% Update handles structure
+guidata(hObject, handles);
+% UIWAIT makes DCZZhiFangTuBianHuan wait for user response (see UIRESUME)
+% uiwait(handles.figure1);
+
+
+%% 输出函数
+function DCZZhiFangTuBianHuan_OutputFcn(hObject, eventdata, handles) 
+% Get default command line output from handles structure
+% varargout{1} = handles.output;
+%
+
+
+%% 恢复图像
+function recover_Callback(hObject, eventdata, handles)
+% 恢复图像
+    handles.img=handles.img_old;
+    guidata(hObject,handles);
+    axes(handles.axes1);
+    imshow(uint8(handles.img));
+    
+    
+%% 加载图像
+function load_Callback(hObject, eventdata, handles)
+% 加载图像
+[fname,pname,index]=uigetfile({'*.bmp';'*.jpg'},'选择图片');
+if index              
+   % 数据初始化
+        str=[pname fname]; 
+        handles.img_str=str;        % 图像地址
+        handles.img=imread(str);    % 图像数据
+        handles.img_old=handles.img;% 源图像
+        [hight,width]=size(handles.img);
+        handles.img_width=width;    % 图像宽
+        handles.img_height=hight;    % 图像高      
+   % 打开使能
+        set(handles.junHengHua,'enable','on');
+        set(handles.recover,'enable','on');
+        set(handles.save,'enable','on');
+   % 更新结构体数据
+        guidata(hObject, handles);
+        % 显示图像
+        axes(handles.axes1);
+        imshow(str); 
+end
+
+
+%% 保存图像
+function save_Callback(hObject, eventdata, handles)
+% 保存图像
+    [FileName,PathName] =uiputfile({'*.jpg;*.tif;*.png;*.gif','All Image Files';...
+              '*.*','All Files' },'保存图像',...
+              'C:\Work\newfile.jpg');
+    if FileName==0
+        return;
+    else
+        h=getframe(handles.axes1);
+        imwrite(h.cdata,[PathName,FileName]);
+    end
+
+
+%% 直方图均衡化
+function junHengHua_Callback(hObject, eventdata, handles)
+% 直方图均衡化
+src_img=handles.img;
+% 获取图像的维数
+    [height,width] = size(src_img);
+    I=size(src_img);
+% 原始图像灰度级 k=256,
+% 保存图片中各个灰度级的像素的个数
+    pixelNum=zeros(1,256);
+% 统计图片中每个灰度级像素的个数
+% 妙用： 图片中每个像素点的灰度值为 (0,255)之间的整数,
+%        而保存像素点个数的数组为一维数组，且为(1,256)
+%        所以可以通过灰度值加一得到数组的索引号，再将对应
+%        位置的计数加一，从而可以统计出每个灰度级像素的个数。
+    for i=1:height
+        for j=1:width
+            pixelNum(src_img(i,j)+1)=pixelNum(src_img(i,j)+1) +1;
+        end
+    end
+% 归一化 即计算各个灰度级的概率
+% 原始直方图 （Original histogram）
+    Sk=zeros(1,256);
+    for i=1:256
+        Sk(i)=pixelNum(i)/(height*width*1.0);
+    end
+    axes(handles.axes2),bar(Sk),title('累计直方图');
+% 累计直方图 （Cumulative histogram） 
+    Tk=zeros(1,256);% 保存累积后的概率
+    for i = 1:256
+        if i==1
+            Tk(i)=Sk(i);
+        else
+            Tk(i)=Tk(i-1)+Sk(i);
+        end
+    end
+    axes(handles.axes3),bar(Tk),title('累计直方图');
+% 取整扩展（Integral expansion） 
+% 公式： pixelCumu = int[(L-1)*pixelCumu+0.5]（L为灰度级）
+    Tk(i) = uint8((256-1) .* Tk(i) + 0.5);
+% 对灰度值进行映射
+    for i=1:height
+        for j=1:width
+            I(i,j)=Tk(src_img(i,j));
+        end
+    end
+    axes(handles.axes4),imshow(I);
+    
+%%
+%
+% <<直方图均衡化.bmp>>
+%
+##### SOURCE END #####
+--></body></html>

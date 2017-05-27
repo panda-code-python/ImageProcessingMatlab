@@ -1,0 +1,920 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>&#28857;&#25805;&#20316;---&#22270;&#20687;&#28784;&#24230;&#26144;&#23556;</title><meta name="generator" content="MATLAB 9.0"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2017-05-11"><meta name="DC.source" content="DCZTuXiangHuiDuYingShe.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:5%; font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#000; line-height:140%; background:#ADEBFF none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:16px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>&#28857;&#25805;&#20316;---&#22270;&#20687;&#28784;&#24230;&#26144;&#23556;</h1><!--introduction--><div><ul><li>&#27010;&#36848;      &#65306;&#20027;&#35201;&#23454;&#29616;&#22270;&#20687;&#20856;&#22411;&#30340;&#28784;&#24230;&#26144;&#23556;</li><li>&#20316;&#32773;		&#65306;&#24352;&#32676;&#20255;	&#21335;&#26124;&#33322;&#31354;&#22823;&#23398;&#20449;&#24687;&#24037;&#31243;&#23398;&#38498;&#33258;&#21160;&#21270;&#31995;</li><li>&#26085;&#26399;		&#65306;[9/5/2017]</li></ul></div><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#2">&#20027;&#20989;&#25968;</a></li><li><a href="#4">&#24320;&#22987;&#20989;&#25968;</a></li><li><a href="#7">&#36755;&#20986;&#20989;&#25968;</a></li><li><a href="#10">&#20445;&#23384;&#22270;&#20687;</a></li><li><a href="#13">&#24674;&#22797;&#21407;&#22270;</a></li><li><a href="#16">&#24658;&#31561;&#26144;&#23556;</a></li><li><a href="#20">&#23616;&#37096;&#26144;&#23556;</a></li><li><a href="#24">&#22343;&#21248;&#26144;&#23556;</a></li><li><a href="#28">&#21453;&#24046;&#26144;&#23556;</a></li><li><a href="#32">&#21453;&#36716;&#26144;&#23556;</a></li><li><a href="#36">&#20998;&#27573;&#26144;&#23556;</a></li><li><a href="#40">&#21160;&#24577;&#33539;&#22260;&#21387;&#32553;</a></li><li><a href="#44">&#20285;&#39532;&#26657;&#27491;</a></li><li><a href="#48">&#26356;&#26032;&#22270;&#20687;</a></li><li><a href="#51">&#36873;&#25321;&#26144;&#23556;&#20989;&#25968;</a></li></ul></div><p><img vspace="5" hspace="5" src="main.bmp" alt=""> </p><h2>&#20027;&#20989;&#25968;<a name="2"></a></h2><p><b>&#19981;&#20570;&#20219;&#20309;&#20462;&#25913;</b></p><pre class="codeinput"><span class="keyword">function</span> varargout = DCZTuXiangHuiDuYingShe(varargin)
+</pre><pre class="codeinput"><span class="comment">% Begin initialization code - DO NOT EDIT</span>
+gui_Singleton = 1;
+gui_State = struct(<span class="string">'gui_Name'</span>,       mfilename, <span class="keyword">...</span>
+                   <span class="string">'gui_Singleton'</span>,  gui_Singleton, <span class="keyword">...</span>
+                   <span class="string">'gui_OpeningFcn'</span>, @DCZTuXiangHuiDuYingShe_OpeningFcn, <span class="keyword">...</span>
+                   <span class="string">'gui_OutputFcn'</span>,  @DCZTuXiangHuiDuYingShe_OutputFcn, <span class="keyword">...</span>
+                   <span class="string">'gui_LayoutFcn'</span>,  [] , <span class="keyword">...</span>
+                   <span class="string">'gui_Callback'</span>,   []);
+<span class="keyword">if</span> nargin &amp;&amp; ischar(varargin{1})
+    gui_State.gui_Callback = str2func(varargin{1});
+<span class="keyword">end</span>
+<span class="keyword">if</span> nargout
+    [varargout{1:nargout}] = gui_mainfcn(gui_State, varargin{:});
+<span class="keyword">else</span>
+    gui_mainfcn(gui_State, varargin{:});
+<span class="keyword">end</span>
+<span class="comment">% End initialization code - DO NOT EDIT</span>
+</pre><h2>&#24320;&#22987;&#20989;&#25968;<a name="4"></a></h2><p><b>&#30456;&#20851;&#21021;&#22987;&#21270;</b></p><pre class="codeinput"><span class="keyword">function</span> DCZTuXiangHuiDuYingShe_OpeningFcn(hObject, eventdata, handles, varargin)
+</pre><pre class="codeinput"><span class="comment">% &#20840;&#23616;&#21464;&#37327;</span>
+    handles.img_str=<span class="string">' '</span>;        <span class="comment">% &#22270;&#20687;&#22320;&#22336;</span>
+    handles.img=0;              <span class="comment">% &#22270;&#20687;&#25968;&#25454;</span>
+    handles.img_width=0;        <span class="comment">% &#22270;&#20687;&#23485;</span>
+    handles.img_hight=0;        <span class="comment">% &#22270;&#20687;&#39640;</span>
+<span class="comment">% &#35774;&#32622;</span>
+    axes(handles.axes2);
+    axis([0 256 0 256]);
+    set(handles.select,<span class="string">'enable'</span>,<span class="string">'off'</span>);
+    set(handles.edit_YRK,<span class="string">'enable'</span>,<span class="string">'off'</span>);
+    set(handles.edit_XC,<span class="string">'enable'</span>,<span class="string">'off'</span>);
+    set(handles.PB_ReNewImg,<span class="string">'enable'</span>,<span class="string">'off'</span>);
+    set(handles.PB_SaveImg,<span class="string">'enable'</span>,<span class="string">'off'</span>);
+    set(handles.PB_RecoverImg,<span class="string">'enable'</span>,<span class="string">'off'</span>);
+
+<span class="comment">% Choose default command line output for DCZTuXiangHuiDuYingShe</span>
+handles.output = hObject;
+<span class="comment">% Update handles structure</span>
+guidata(hObject, handles);
+<span class="comment">% UIWAIT makes DCZTuXiangHuiDuYingShe wait for user response (see UIRESUME)</span>
+<span class="comment">% uiwait(handles.figure1);</span>
+</pre><h2>&#36755;&#20986;&#20989;&#25968;<a name="7"></a></h2><pre class="codeinput"><span class="keyword">function</span> DCZTuXiangHuiDuYingShe_OutputFcn(hObject, eventdata, handles)
+<span class="comment">% Get default command line output from handles structure</span>
+<span class="comment">%varargout{1} = handles.output;</span>
+<span class="comment">%</span>
+
+
+<span class="comment">%%&#12288;&#21152;&#36733;&#22270;&#20687;</span>
+<span class="keyword">function</span> PB_LoadImg_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">%&#12288;&#21152;&#36733;&#22270;&#20687;</span>
+[fname,pname,index]=uigetfile({<span class="string">'*.bmp'</span>;<span class="string">'*.jpg'</span>},<span class="string">'&#36873;&#25321;&#22270;&#29255;'</span>);
+<span class="keyword">if</span> index
+   <span class="comment">% &#25968;&#25454;&#21021;&#22987;&#21270;</span>
+        str=[pname fname];
+        handles.img_str=str;        <span class="comment">% &#22270;&#20687;&#22320;&#22336;</span>
+        handles.img=imread(str);    <span class="comment">% &#22270;&#20687;&#25968;&#25454;</span>
+        handles.img_old=handles.img;<span class="comment">% &#28304;&#22270;&#20687;</span>
+        [hight,width]=size(handles.img);
+        handles.img_width=width;    <span class="comment">% &#22270;&#20687;&#23485;</span>
+        handles.img_hight=hight;    <span class="comment">% &#22270;&#20687;&#39640;</span>
+   <span class="comment">% &#25171;&#24320;&#20351;&#33021;</span>
+        set(handles.select,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+        set(handles.edit_YRK,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+        set(handles.edit_XC,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+        set(handles.PB_ReNewImg,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+        set(handles.PB_SaveImg,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+        set(handles.PB_RecoverImg,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+        set(handles.select,<span class="string">'String'</span>,{<span class="string">'&#24658;&#31561;&#26144;&#23556;'</span>,<span class="string">'&#23616;&#37096;&#26144;&#23556;'</span>,<span class="string">'&#22343;&#21248;&#26144;&#23556;'</span>,<span class="keyword">...</span>
+            <span class="string">'&#21453;&#24046;&#26144;&#23556;'</span>,<span class="string">'&#21453;&#36716;&#26144;&#23556;'</span>,<span class="string">'&#20998;&#27573;&#26144;&#23556;'</span>,<span class="string">'&#21160;&#24577;&#33539;&#22260;&#21387;&#32553;'</span>,<span class="string">'&#20285;&#39532;&#26657;&#27491;'</span>});
+   <span class="comment">% &#26356;&#26032;&#32467;&#26500;&#20307;&#25968;&#25454;</span>
+        guidata(hObject, handles)
+        <span class="comment">% &#26174;&#31034;&#22270;&#20687;</span>
+        axes(handles.axes1);
+        imshow(str);
+<span class="keyword">end</span>
+</pre><h2>&#20445;&#23384;&#22270;&#20687;<a name="10"></a></h2><pre class="codeinput"><span class="keyword">function</span> PB_SaveImg_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% &#20445;&#23384;&#22270;&#20687;</span>
+    [FileName,PathName] =uiputfile({<span class="string">'*.jpg;*.tif;*.png;*.gif'</span>,<span class="string">'All Image Files'</span>;<span class="keyword">...</span>
+              <span class="string">'*.*'</span>,<span class="string">'All Files'</span> },<span class="string">'&#20445;&#23384;&#22270;&#20687;'</span>,<span class="keyword">...</span>
+              <span class="string">'C:\Work\newfile.jpg'</span>);
+    <span class="keyword">if</span> FileName==0
+        <span class="keyword">return</span>;
+    <span class="keyword">else</span>
+        h=getframe(handles.axes1);
+        imwrite(h.cdata,[PathName,FileName]);
+    <span class="keyword">end</span>
+</pre><h2>&#24674;&#22797;&#21407;&#22270;<a name="13"></a></h2><pre class="codeinput"><span class="keyword">function</span> PB_RecoverImg_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% &#24674;&#22797;&#21407;&#22270;</span>
+    handles.img=handles.img_old;
+    guidata(hObject,handles);
+    axes(handles.axes1);
+    imshow(uint8(handles.img));
+</pre><h2>&#24658;&#31561;&#26144;&#23556;<a name="16"></a></h2><pre class="codeinput"><span class="keyword">function</span> handles=hengDengYingShe(hObject,handles)
+</pre><pre class="codeinput"><span class="comment">% &#24658;&#31561;&#26144;&#23556;</span>
+<span class="comment">% &#20989;&#25968;&#26174;&#31034;</span>
+    x=0:256;
+    k=get(handles.edit_YRK,<span class="string">'value'</span>);
+    y=k*x;
+    axes(handles.axes2);
+    plot(x,y);
+    axis([0 256 0 256]);
+<span class="comment">% &#22270;&#20687;&#26174;&#31034;</span>
+    handles.img=k.*handles.img;
+</pre><p><img vspace="5" hspace="5" src="%E6%81%92%E7%AD%89%E6%98%A0%E5%B0%84.bmp" alt=""> </p><h2>&#23616;&#37096;&#26144;&#23556;<a name="20"></a></h2><pre class="codeinput"><span class="keyword">function</span> handles=juBuYingShe(hObject,handles)
+</pre><pre class="codeinput"><span class="comment">% &#23616;&#37096;&#26144;&#23556;</span>
+<span class="comment">% &#26816;&#32034;&#30456;&#20851;&#25968;&#25454;</span>
+    x0=get(handles.edit_XC,<span class="string">'value'</span>);        <span class="comment">% X</span>
+    y0=get(handles.edit_YRK,<span class="string">'value'</span>);       <span class="comment">% Y</span>
+<span class="comment">% &#36793;&#30028;&#26816;&#26597;</span>
+    <span class="keyword">if</span> (x0&gt;=256) || (y0&gt;=256)
+        load <span class="string">chirp</span>                          <span class="comment">% &#40479;&#22768;</span>
+        sound(y,Fs);
+        hs=msgbox(<span class="string">'&#36755;&#20837;&#21442;&#25968;&#36229;&#20986;&#25351;&#23450;&#33539;&#22260;&#65281;'</span>,<span class="string">'&#35686;&#21578;'</span>,<span class="string">'warn'</span>);
+        ht=findobj(hs,<span class="string">'type'</span>,<span class="string">'text'</span>);
+        set(ht,<span class="string">'FontSize'</span>,11);
+        uiwait(hs);                         <span class="comment">% &#31561;&#24453;&#30830;&#23450;</span>
+        x0=0;
+        y0=0;
+        set(handles.edit_XC,<span class="string">'string'</span>,0,<span class="string">'value'</span>,0);
+        set(handles.edit_YRK,<span class="string">'string'</span>,0,<span class="string">'value'</span>,0);
+        guidata(hObject,handles);
+    <span class="keyword">end</span>
+<span class="comment">% &#20989;&#25968;&#26174;&#31034;</span>
+    x=0:1:256;
+    y=y0*(x&lt;x0)+(y0+(x-x0)./(256-x0).*(256-y0)).*(x&gt;=x0);
+    axes(handles.axes2);
+    plot(x,y);
+    axis([0 256 0 256]);
+    text(x0,y0,[<span class="string">'('</span>,num2str(x0),<span class="string">','</span>,num2str(y0),<span class="string">')'</span>],<span class="string">'color'</span>,<span class="string">'b'</span>);
+<span class="comment">% &#22270;&#20687;&#26174;&#31034;</span>
+    handles.img(handles.img&lt;=x0)=y0;
+    handles.img(handles.img&gt;x0)=y0+(256-y0)/(256-x0)*(handles.img(handles.img&gt;x0)-x0);
+</pre><p><img vspace="5" hspace="5" src="%E5%B1%80%E9%83%A8%E6%98%A0%E5%B0%84.bmp" alt=""> </p><h2>&#22343;&#21248;&#26144;&#23556;<a name="24"></a></h2><pre class="codeinput"><span class="keyword">function</span> handles=junYunYingShe(hObject,handles)
+</pre><pre class="codeinput"><span class="comment">% &#22343;&#21248;&#26144;&#23556;</span>
+<span class="comment">% &#20989;&#25968;&#26174;&#31034;</span>
+    x=0:1:256;
+    y=256/85.*x.*(x&lt;85)+(0:256).*(x==85);
+    y=y+256/85.*(x-85).*(x&gt;85 &amp; x&lt;170)+(0:256).*(x==85);
+    y=y+256/85.*(x-170).*(x&gt;170 &amp; x&lt;256)+(0:256).*(x==170);
+    axes(handles.axes2);
+    plot(x,y);
+    axis([0 256 0 256]);
+<span class="comment">% &#22270;&#20687;&#26174;&#31034;</span>
+    a=get(handles.edit_XC,<span class="string">'value'</span>);
+    b=get(handles.edit_YRK,<span class="string">'value'</span>);
+    I=handles.img;
+    <span class="keyword">if</span> b==0 &amp;&amp; a==1
+        I((I&lt;85) | (I&gt;85 &amp; I&lt;170) | (I&gt;170))=256/85.*I((I&lt;85) | (I&gt;85 &amp; I&lt;170) | (I&gt;170));
+        handles.img=I;
+    <span class="keyword">else</span> <span class="keyword">if</span> b==1&amp;&amp; a==0
+            I(I&lt;85)=256/85.*I(I&lt;85);
+            I(I&gt;85 &amp; I&lt;170)=256/85.*I(I&gt;85 &amp; I&lt;170);
+            I(I&gt;170)=256/85.*I(I&gt;170);
+            handles.img=I;
+        <span class="keyword">else</span>
+            load <span class="string">chirp</span>                          <span class="comment">% &#40479;&#22768;</span>
+            sound(y,Fs);
+            hs=msgbox(<span class="string">'&#36755;&#20837;&#21442;&#25968;&#19981;&#21512;&#27861;&#65281;'</span>,<span class="string">'&#35686;&#21578;'</span>,<span class="string">'warn'</span>);
+            ht=findobj(hs,<span class="string">'type'</span>,<span class="string">'text'</span>);
+            set(ht,<span class="string">'FontSize'</span>,11);
+            uiwait(hs);                         <span class="comment">% &#31561;&#24453;&#30830;&#23450;</span>
+            set(handles.edit_XC,<span class="string">'string'</span>,0,<span class="string">'value'</span>,0);
+            set(handles.edit_YRK,<span class="string">'string'</span>,0,<span class="string">'value'</span>,0);
+        <span class="keyword">end</span>
+    <span class="keyword">end</span>
+</pre><p><img vspace="5" hspace="5" src="%E5%9D%87%E5%8C%80%E6%98%A0%E5%B0%84.bmp" alt=""> </p><h2>&#21453;&#24046;&#26144;&#23556;<a name="28"></a></h2><pre class="codeinput"><span class="keyword">function</span> handles=fanChaYingShe(hObject,handles)
+</pre><pre class="codeinput"><span class="comment">% &#21453;&#24046;&#26144;&#23556;</span>
+<span class="comment">% &#20989;&#25968;&#26174;&#31034;</span>
+    R1=get(handles.edit_XC,<span class="string">'value'</span>);
+    R2=get(handles.edit_YRK,<span class="string">'value'</span>);
+    x=0:1:256;
+    y=x.^R1.*(x&lt;128)+(128+(x-128).^R2).*(128&lt;x &amp; x&lt;256);
+    axes(handles.axes2);
+    plot(x,y);
+<span class="comment">% &#22270;&#20687;&#26174;&#31034;</span>
+    I=handles.img;
+    I(I&lt;128)=I(I&lt;128).^R1;
+    I(128&lt;I &amp; I&lt;256)=128+(I(128&lt;I &amp; I&lt;256)-128).^R2;
+    handles.img=I;
+</pre><p><img vspace="5" hspace="5" src="%E5%8F%8D%E5%B7%AE%E6%98%A0%E5%B0%84.bmp" alt=""> </p><h2>&#21453;&#36716;&#26144;&#23556;<a name="32"></a></h2><pre class="codeinput"><span class="keyword">function</span> handles=fanZhuanYingShe(hObject,handles)
+</pre><pre class="codeinput"><span class="comment">% &#21453;&#36716;&#26144;&#23556;</span>
+<span class="comment">% &#20989;&#25968;&#26174;&#31034;</span>
+    x=0:1:256;
+    y=256.*(x==0)+(256-x).*(x&gt;=1);
+    axes(handles.axes2);
+    plot(x,y);
+<span class="comment">% &#22270;&#20687;&#26174;&#31034;</span>
+    I=handles.img;
+    I=256-I;
+    handles.img=I;
+</pre><p><img vspace="5" hspace="5" src="%E5%8F%8D%E8%BD%AC%E6%98%A0%E5%B0%84.bmp" alt=""> </p><h2>&#20998;&#27573;&#26144;&#23556;<a name="36"></a></h2><pre class="codeinput"><span class="keyword">function</span> handles=fenDuanYingShe(hObject,handles)
+</pre><pre class="codeinput"><span class="comment">% &#20998;&#27573;&#26144;&#23556;</span>
+<span class="comment">% &#25552;&#21462;&#36755;&#20837;&#21442;&#25968;</span>
+    <span class="comment">% &#31532;&#19968;&#20010;&#28857;</span>
+    str1=get(handles.edit_XC,<span class="string">'String'</span>);
+    <span class="comment">% &#25552;&#21462;&#23383;&#31526;&#20018;1&#30340;&#38271;&#24230;</span>
+    LEN1=length(str1);
+    <span class="comment">% &#26816;&#32034;&#31354;&#26684;&#30340;&#19979;&#26631;</span>
+    len1=regexp(str1,<span class="string">','</span>);
+    <span class="comment">% &#25552;&#21462;&#22352;&#26631;</span>
+    X1=str2double(str1(1:len1-1));
+    Y1=str2double(str1(len1+1:LEN1));
+    <span class="comment">% &#31532;&#20108;&#20010;&#28857;</span>
+    str2=get(handles.edit_YRK,<span class="string">'String'</span>);
+    <span class="comment">% &#25552;&#21462;&#23383;&#31526;&#20018;1&#30340;&#38271;&#24230;</span>
+    LEN2=length(str2);
+    <span class="comment">% &#26816;&#32034;&#31354;&#26684;&#30340;&#19979;&#26631;</span>
+    len2=regexp(str2,<span class="string">','</span>);
+    <span class="comment">% &#25552;&#21462;&#22352;&#26631;</span>
+    X2=str2double(str2(1:len2-1));
+    Y2=str2double(str2(len2+1:LEN2));
+<span class="comment">% &#20989;&#25968;&#26174;&#31034;</span>
+    x=0:1:256;
+    y=(Y1./X1).*x.*(x&lt;=X1)+<span class="keyword">...</span>
+        (Y1+(Y2-Y1)./(X2-X1).*(x-X1)).*(X1&lt;x &amp; x&lt;=X2)+<span class="keyword">...</span>
+        (Y2+(256-Y2)/(256-X2).*(x-X2)).*(X2&lt;x);
+    axes(handles.axes2);
+    plot(x,y);<span class="comment">% &#32472;&#21046;&#20989;&#25968;</span>
+    axis([0 256 0 256]);<span class="comment">% &#35774;&#32622;&#22352;&#26631;&#31995;&#26174;&#31034;&#33539;&#22260;</span>
+    text(X1,Y1,[<span class="string">'('</span>,num2str(X1),<span class="string">','</span>,num2str(Y1),<span class="string">')'</span>],<span class="string">'color'</span>,<span class="string">'b'</span>);
+    text(X2,Y2,[<span class="string">'('</span>,num2str(X2),<span class="string">','</span>,num2str(Y2),<span class="string">')'</span>],<span class="string">'color'</span>,<span class="string">'b'</span>);
+<span class="comment">% &#22270;&#20687;&#26174;&#31034;</span>
+    I=handles.img;
+    I(I&lt;X1)=(Y1/X1)*I(I&lt;X1);
+    I(X1&lt;I &amp; I&lt;X2)=(Y2-Y1)/(X2-X1).*(I(X1&lt;I &amp; I&lt;X2)-X1);
+    I(X2&lt;I)=(256-Y2)/(256-X2).*(I(X2&lt;I)-X2);
+    handles.img=I;
+</pre><p><img vspace="5" hspace="5" src="%E5%88%86%E6%AE%B5%E6%98%A0%E5%B0%84.bmp" alt=""> </p><h2>&#21160;&#24577;&#33539;&#22260;&#21387;&#32553;<a name="40"></a></h2><pre class="codeinput"><span class="keyword">function</span> handles=dongTaiFanWeiYaSuo(hObject,handles)
+</pre><pre class="codeinput"><span class="comment">% &#21160;&#24577;&#33539;&#22260;&#21387;&#32553;</span>
+<span class="comment">% &#26816;&#32034;&#30456;&#20851;&#21442;&#25968;</span>
+    C=str2double(get(handles.edit_XC,<span class="string">'String'</span>));
+<span class="comment">% &#20989;&#25968;&#26174;&#31034;</span>
+    x=0:1:256;
+    y=C.*log(1+x);
+    axis([0 256 0 256]);<span class="comment">% &#35774;&#32622;&#22352;&#26631;&#31995;&#26174;&#31034;&#33539;&#22260;</span>
+    axes(handles.axes2);
+    plot(x,y);
+<span class="comment">% &#22270;&#20687;&#26174;&#31034;</span>
+    I=double(handles.img);
+    I=C.*log(1+I);
+    handles.img=I;
+</pre><p><img vspace="5" hspace="5" src="%E5%8A%A8%E6%80%81%E8%8C%83%E5%9B%B4%E5%8E%8B%E7%BC%A9.bmp" alt=""> </p><h2>&#20285;&#39532;&#26657;&#27491;<a name="44"></a></h2><pre class="codeinput"><span class="keyword">function</span> handles=gaMaJiaoZheng(hObject,handles)
+</pre><pre class="codeinput"><span class="comment">% &#20285;&#39532;&#26657;&#27491;</span>
+<span class="comment">% &#26816;&#32034;&#30456;&#20851;&#21442;&#25968;</span>
+    C=str2double(get(handles.edit_XC,<span class="string">'String'</span>));
+    r=str2double(get(handles.edit_YRK,<span class="string">'String'</span>));
+<span class="comment">% &#20989;&#25968;&#26174;&#31034;</span>
+    x=0:1:256;
+    y=C.*x.^r;
+    axis([0 256 0 256]);<span class="comment">% &#35774;&#32622;&#22352;&#26631;&#31995;&#26174;&#31034;&#33539;&#22260;</span>
+    axes(handles.axes2);
+    plot(x,y);
+<span class="comment">% &#22270;&#20687;&#26174;&#31034;</span>
+    I=double(handles.img);
+    I=C.*I.^r;
+    handles.img=I;
+</pre><p><img vspace="5" hspace="5" src="..\%E4%BC%BD%E9%A9%AC%E6%A0%A1%E6%AD%A3.bmp" alt=""> </p><h2>&#26356;&#26032;&#22270;&#20687;<a name="48"></a></h2><pre class="codeinput"><span class="keyword">function</span> PB_ReNewImg_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">%   1   '&#24658;&#31561;&#26144;&#23556;'              5   '&#21453;&#36716;&#26144;&#23556;'</span>
+<span class="comment">%   2   '&#23616;&#37096;&#26144;&#23556;'              6   '&#20998;&#27573;&#26144;&#23556;'</span>
+<span class="comment">%   3   '&#22343;&#21248;&#26144;&#23556;'              7   '&#21160;&#24577;&#33539;&#22260;&#21387;&#32553;'</span>
+<span class="comment">%   4   '&#21453;&#24046;&#26144;&#23556;'              8   '&#20285;&#39532;&#26657;&#27491;'</span>
+<span class="comment">% &#36873;&#25321;&#26144;&#23556;&#20989;&#25968;</span>
+<span class="keyword">switch</span> get(handles.select,<span class="string">'value'</span>)
+    <span class="keyword">case</span> 1      <span class="comment">% &#24658;&#31561;&#26144;&#23556;</span>
+        handles=hengDengYingShe(hObject,handles);
+    <span class="keyword">case</span> 2      <span class="comment">% &#23616;&#37096;&#26144;&#23556;</span>
+        handles=juBuYingShe(hObject,handles);
+    <span class="keyword">case</span> 3      <span class="comment">% &#22343;&#21248;&#26144;&#23556;</span>
+        handles=junYunYingShe(hObject,handles);
+    <span class="keyword">case</span> 4      <span class="comment">% &#21453;&#24046;&#26144;&#23556;</span>
+        handles=fanChaYingShe(hObject,handles);
+    <span class="keyword">case</span> 5      <span class="comment">% &#21453;&#36716;&#26144;&#23556;</span>
+        handles=fanZhuanYingShe(hObject,handles);
+    <span class="keyword">case</span> 6      <span class="comment">% &#20998;&#27573;&#26144;&#23556;</span>
+        handles=fenDuanYingShe(hObject,handles);
+    <span class="keyword">case</span> 7      <span class="comment">% &#21160;&#24577;&#33539;&#22260;&#21387;&#32553;</span>
+        handles=dongTaiFanWeiYaSuo(hObject,handles);
+    <span class="keyword">case</span> 8      <span class="comment">% &#20285;&#39532;&#26657;&#27491;</span>
+        handles=gaMaJiaoZheng(hObject,handles);
+<span class="keyword">end</span>
+<span class="comment">% &#26356;&#26032;&#32467;&#26500;&#20307;&#25968;&#25454;</span>
+guidata(hObject, handles);
+<span class="comment">% &#35774;&#32622;&#22270;&#20687;&#26174;&#31034;&#21306;&#22495;</span>
+axes(handles.axes1);
+<span class="comment">% &#26174;&#31034;&#22270;&#20687;</span>
+imshow(uint8(handles.img));
+<span class="comment">% &#22788;&#29702;&#26410;&#20851;&#32852;&#65292;&#38656;&#24674;&#22797;&#21407;&#22270;</span>
+<span class="keyword">if</span> ~get(handles.radiobutton2,<span class="string">'value'</span>)
+    handles.img=handles.img_old;
+    guidata(hObject,handles);
+<span class="keyword">end</span>
+</pre><h2>&#36873;&#25321;&#26144;&#23556;&#20989;&#25968;<a name="51"></a></h2><pre class="codeinput"><span class="keyword">function</span> select_Callback(hObject, eventdata, handles)
+<span class="comment">% &#26144;&#23556;&#20989;&#25968;&#65306;</span>
+<span class="comment">%   1   '&#24658;&#31561;&#26144;&#23556;'              5   '&#21453;&#36716;&#26144;&#23556;'</span>
+<span class="comment">%   2   '&#23616;&#37096;&#26144;&#23556;'              6   '&#20998;&#27573;&#26144;&#23556;'</span>
+<span class="comment">%   3   '&#22343;&#21248;&#26144;&#23556;'              7   '&#21160;&#24577;&#33539;&#22260;&#21387;&#32553;'</span>
+<span class="comment">%   4   '&#21453;&#24046;&#26144;&#23556;'              8   '&#20285;&#39532;&#26657;&#27491;'</span>
+<span class="comment">% &#25552;&#31034;</span>
+load <span class="string">chirp</span>                          <span class="comment">% &#40479;&#22768;</span>
+sound(y,Fs);
+<span class="keyword">switch</span> get(hObject,<span class="string">'value'</span>)
+    <span class="keyword">case</span> 1
+        set(handles.edit_XC,<span class="string">'enable'</span>,<span class="string">'off'</span>);                    <span class="comment">% &#30456;&#20851;&#35774;&#32622;</span>
+        set(handles.edit_YRK,<span class="string">'string'</span>,<span class="string">'K'</span>,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+        hs=msgbox({<span class="string">'&#24658;&#31561;&#26144;&#23556;'</span> <span class="string">'&#38656;&#35201;&#36755;&#20837;&#21442;&#25968;K!'</span>},<span class="string">'&#25552;&#31034;'</span>,<span class="string">'help'</span>);
+    <span class="keyword">case</span> 2
+        set(handles.edit_XC,<span class="string">'string'</span>,<span class="string">'x0'</span>,<span class="string">'enable'</span>,<span class="string">'on'</span>);       <span class="comment">% &#30456;&#20851;&#35774;&#32622;</span>
+        set(handles.edit_YRK,<span class="string">'string'</span>,<span class="string">'y0'</span>,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+        hs=msgbox({<span class="string">'&#23616;&#37096;&#26144;&#23556;'</span> <span class="string">'&#38656;&#35201;&#36755;&#20837;&#21442;&#25968;:(x0,y0)'</span>},<span class="string">'&#25552;&#31034;'</span>,<span class="string">'help'</span>);
+    <span class="keyword">case</span> 3
+        set(handles.edit_XC,<span class="string">'enable'</span>,<span class="string">'on'</span>);                     <span class="comment">% &#30456;&#20851;&#35774;&#32622;</span>
+        set(handles.edit_YRK,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+        hs=msgbox({<span class="string">'&#22343;&#21248;&#26144;&#23556;'</span> <span class="string">'&#26080;&#21442;&#25968;&#35774;&#32622;'</span>},<span class="string">'&#25552;&#31034;'</span>,<span class="string">'help'</span>);
+    <span class="keyword">case</span> 4
+        set(handles.edit_XC,<span class="string">'string'</span>,<span class="string">'R1'</span>,<span class="string">'enable'</span>,<span class="string">'on'</span>);       <span class="comment">% &#30456;&#20851;&#35774;&#32622;</span>
+        set(handles.edit_YRK,<span class="string">'string'</span>,<span class="string">'R2'</span>,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+        hs=msgbox({<span class="string">'&#21453;&#24046;&#26144;&#23556;'</span> <span class="string">'&#38656;&#36755;&#20837;&#21442;&#25968;: R1, R2'</span> <span class="string">'&#27979;&#35797;&#20013;&#65292;&#23578;&#26410;&#23436;&#25104;'</span>}<span class="keyword">...</span>
+            ,<span class="string">'&#25552;&#31034;'</span>,<span class="string">'help'</span>);
+    <span class="keyword">case</span> 5
+        set(handles.edit_XC,<span class="string">'enable'</span>,<span class="string">'off'</span>);                    <span class="comment">% &#30456;&#20851;&#35774;&#32622;</span>
+        set(handles.edit_YRK,<span class="string">'enable'</span>,<span class="string">'off'</span>);
+        hs=msgbox({<span class="string">'&#21453;&#36716;&#26144;&#23556;'</span> <span class="string">'&#19981;&#38656;&#35201;&#36755;&#20837;&#21442;&#25968;&#65281;'</span>},<span class="string">'&#25552;&#31034;'</span>,<span class="string">'help'</span>);
+    <span class="keyword">case</span> 6
+        set(handles.edit_XC,<span class="string">'string'</span>,<span class="string">'X1,Y1'</span>,<span class="string">'enable'</span>,<span class="string">'on'</span>);    <span class="comment">% &#30456;&#20851;&#35774;&#32622;</span>
+        set(handles.edit_YRK,<span class="string">'string'</span>,<span class="string">'X2,Y2'</span>,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+        hs=msgbox({<span class="string">'&#20998;&#27573;&#26144;&#23556;'</span> <span class="string">'&#38656;&#36755;&#20837;&#20004;&#28857;&#22352;&#26631;: X1,Y1  X2,Y2'</span>}<span class="keyword">...</span>
+            ,<span class="string">'&#25552;&#31034;'</span>,<span class="string">'help'</span>);
+    <span class="keyword">case</span> 7
+        set(handles.edit_XC,<span class="string">'string'</span>,<span class="string">'C'</span>,<span class="string">'enable'</span>,<span class="string">'on'</span>);        <span class="comment">% &#30456;&#20851;&#35774;&#32622;</span>
+        set(handles.edit_YRK,<span class="string">'enable'</span>,<span class="string">'off'</span>);
+        hs=msgbox({<span class="string">'&#21160;&#24577;&#33539;&#22260;&#21387;&#32553;'</span> <span class="string">'&#38656;&#36755;&#20837;&#21442;&#25968;C!'</span>},<span class="string">'&#25552;&#31034;'</span>,<span class="string">'help'</span>);
+    <span class="keyword">case</span> 8
+        set(handles.edit_XC,<span class="string">'string'</span>,<span class="string">'C'</span>,<span class="string">'enable'</span>,<span class="string">'on'</span>);        <span class="comment">% &#30456;&#20851;&#35774;&#32622;</span>
+        set(handles.edit_YRK,<span class="string">'string'</span>,<span class="string">'r'</span>,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+        hs=msgbox({<span class="string">'&#20285;&#39532;&#26657;&#27491;'</span> <span class="string">'&#38656;&#36755;&#20837;&#20004;&#20010;&#21442;&#25968;: C,r'</span>}<span class="keyword">...</span>
+            ,<span class="string">'&#25552;&#31034;'</span>,<span class="string">'help'</span>);
+<span class="keyword">end</span>
+ht=findobj(hs,<span class="string">'type'</span>,<span class="string">'text'</span>);
+set(ht,<span class="string">'FontSize'</span>,11);
+uiwait(hs);     <span class="comment">% &#31561;&#24453;&#30830;&#23450;</span>
+<span class="comment">% &#22788;&#29702;&#26410;&#20851;&#32852;&#65292;&#38656;&#24674;&#22797;&#21407;&#22270;</span>
+<span class="keyword">if</span> ~get(handles.radiobutton2,<span class="string">'value'</span>)
+    handles.img=handles.img_old;
+    guidata(hObject,handles);
+    <span class="comment">% &#35774;&#32622;&#22270;&#20687;&#26174;&#31034;&#21306;&#22495;</span>
+    axes(handles.axes1);
+    <span class="comment">% &#26174;&#31034;&#22270;&#20687;</span>
+    imshow(uint8(handles.img));
+<span class="keyword">end</span>
+
+
+<span class="keyword">function</span> edit_YRK_Callback(hObject, eventdata, handles)
+<span class="comment">% &#23558;Y&#22352;&#26631;&#20540;&#36716;&#20026;double&#31867;&#22411;</span>
+YR=str2double(get(hObject,<span class="string">'String'</span>));
+<span class="comment">% &#20445;&#23384;&#21040;&#25511;&#20214;&#25968;&#25454;&#20013;</span>
+set(hObject,<span class="string">'value'</span>,YR);
+<span class="comment">% &#26356;&#26032;&#32467;&#26500;&#20307;&#25968;&#25454;</span>
+guidata(hObject, handles);
+
+<span class="keyword">function</span> edit_YRK_CreateFcn(hObject, eventdata, handles)
+set(hObject,<span class="string">'value'</span>,1);
+<span class="comment">% Hint: edit controls usually have a white background on Windows.</span>
+<span class="comment">%       See ISPC and COMPUTER.</span>
+<span class="keyword">if</span> ispc &amp;&amp; isequal(get(hObject,<span class="string">'BackgroundColor'</span>), get(0,<span class="string">'defaultUicontrolBackgroundColor'</span>))
+    set(hObject,<span class="string">'BackgroundColor'</span>,<span class="string">'white'</span>);
+<span class="keyword">end</span>
+
+
+<span class="keyword">function</span> edit_XC_Callback(hObject, eventdata, handles)
+<span class="comment">% &#23558;Y&#22352;&#26631;&#20540;&#36716;&#20026;double&#31867;&#22411;</span>
+XC=str2double(get(hObject,<span class="string">'String'</span>));
+<span class="comment">% &#20445;&#23384;&#21040;&#25511;&#20214;&#25968;&#25454;&#20013;</span>
+set(hObject,<span class="string">'value'</span>,XC);
+<span class="comment">% &#26356;&#26032;&#32467;&#26500;&#20307;&#25968;&#25454;</span>
+guidata(hObject, handles);
+
+<span class="keyword">function</span> edit_XC_CreateFcn(hObject, eventdata, handles)
+set(hObject,<span class="string">'value'</span>,1);
+<span class="comment">% Hint: edit controls usually have a white background on Windows.</span>
+<span class="comment">%       See ISPC and COMPUTER.</span>
+<span class="keyword">if</span> ispc &amp;&amp; isequal(get(hObject,<span class="string">'BackgroundColor'</span>), get(0,<span class="string">'defaultUicontrolBackgroundColor'</span>))
+    set(hObject,<span class="string">'BackgroundColor'</span>,<span class="string">'white'</span>);
+<span class="keyword">end</span>
+</pre><p class="footer"><br><br></p></div><!--
+##### SOURCE BEGIN #####
+%% 点操作REPLACE_WITH_DASH_DASH-图像灰度映射
+% * 概述      ：主要实现图像典型的灰度映射
+% * 作者		：张群伟	南昌航空大学信息工程学院自动化系
+% * 日期		：[9/5/2017]  
+%%
+
+%%
+%
+% <<main.bmp>>
+%
+
+%% 主函数
+% *不做任何修改*
+function varargout = DCZTuXiangHuiDuYingShe(varargin)
+% Begin initialization code - DO NOT EDIT
+gui_Singleton = 1;
+gui_State = struct('gui_Name',       mfilename, ...
+                   'gui_Singleton',  gui_Singleton, ...
+                   'gui_OpeningFcn', @DCZTuXiangHuiDuYingShe_OpeningFcn, ...
+                   'gui_OutputFcn',  @DCZTuXiangHuiDuYingShe_OutputFcn, ...
+                   'gui_LayoutFcn',  [] , ...
+                   'gui_Callback',   []);
+if nargin && ischar(varargin{1})
+    gui_State.gui_Callback = str2func(varargin{1});
+end
+if nargout
+    [varargout{1:nargout}] = gui_mainfcn(gui_State, varargin{:});
+else
+    gui_mainfcn(gui_State, varargin{:});
+end
+% End initialization code - DO NOT EDIT
+
+
+%% 开始函数
+% *相关初始化*
+function DCZTuXiangHuiDuYingShe_OpeningFcn(hObject, eventdata, handles, varargin)
+% 全局变量
+    handles.img_str=' ';        % 图像地址
+    handles.img=0;              % 图像数据
+    handles.img_width=0;        % 图像宽
+    handles.img_hight=0;        % 图像高    
+% 设置
+    axes(handles.axes2);
+    axis([0 256 0 256]);
+    set(handles.select,'enable','off');
+    set(handles.edit_YRK,'enable','off');
+    set(handles.edit_XC,'enable','off');
+    set(handles.PB_ReNewImg,'enable','off');
+    set(handles.PB_SaveImg,'enable','off');
+    set(handles.PB_RecoverImg,'enable','off');
+    
+% Choose default command line output for DCZTuXiangHuiDuYingShe
+handles.output = hObject;
+% Update handles structure
+guidata(hObject, handles);
+% UIWAIT makes DCZTuXiangHuiDuYingShe wait for user response (see UIRESUME)
+% uiwait(handles.figure1);
+
+
+%% 输出函数
+function DCZTuXiangHuiDuYingShe_OutputFcn(hObject, eventdata, handles) 
+% Get default command line output from handles structure
+%varargout{1} = handles.output;
+%
+
+
+%%　加载图像
+function PB_LoadImg_Callback(hObject, eventdata, handles)
+%　加载图像
+[fname,pname,index]=uigetfile({'*.bmp';'*.jpg'},'选择图片');
+if index              
+   % 数据初始化
+        str=[pname fname]; 
+        handles.img_str=str;        % 图像地址
+        handles.img=imread(str);    % 图像数据
+        handles.img_old=handles.img;% 源图像
+        [hight,width]=size(handles.img);
+        handles.img_width=width;    % 图像宽
+        handles.img_hight=hight;    % 图像高      
+   % 打开使能
+        set(handles.select,'enable','on');
+        set(handles.edit_YRK,'enable','on');
+        set(handles.edit_XC,'enable','on');
+        set(handles.PB_ReNewImg,'enable','on');
+        set(handles.PB_SaveImg,'enable','on');
+        set(handles.PB_RecoverImg,'enable','on');        
+        set(handles.select,'String',{'恒等映射','局部映射','均匀映射',...
+            '反差映射','反转映射','分段映射','动态范围压缩','伽马校正'});
+   % 更新结构体数据
+        guidata(hObject, handles)
+        % 显示图像
+        axes(handles.axes1);
+        imshow(str); 
+end
+
+
+%% 保存图像
+function PB_SaveImg_Callback(hObject, eventdata, handles)
+% 保存图像
+    [FileName,PathName] =uiputfile({'*.jpg;*.tif;*.png;*.gif','All Image Files';...
+              '*.*','All Files' },'保存图像',...
+              'C:\Work\newfile.jpg');
+    if FileName==0
+        return;
+    else
+        h=getframe(handles.axes1);
+        imwrite(h.cdata,[PathName,FileName]);
+    end
+
+
+%% 恢复原图
+function PB_RecoverImg_Callback(hObject, eventdata, handles)
+% 恢复原图
+    handles.img=handles.img_old;
+    guidata(hObject,handles);
+    axes(handles.axes1);
+    imshow(uint8(handles.img));
+    
+    
+%% 恒等映射 
+function handles=hengDengYingShe(hObject,handles)
+% 恒等映射    
+% 函数显示
+    x=0:256;                                
+    k=get(handles.edit_YRK,'value');           
+    y=k*x;
+    axes(handles.axes2);
+    plot(x,y);
+    axis([0 256 0 256]);
+% 图像显示  
+    handles.img=k.*handles.img;                 
+%%
+% 
+% <<恒等映射.bmp>>
+% 
+
+%% 局部映射 
+function handles=juBuYingShe(hObject,handles)
+% 局部映射 
+% 检索相关数据
+    x0=get(handles.edit_XC,'value');        % X 
+    y0=get(handles.edit_YRK,'value');       % Y
+% 边界检查
+    if (x0>=256) || (y0>=256)               
+        load chirp                          % 鸟声
+        sound(y,Fs);
+        hs=msgbox('输入参数超出指定范围！','警告','warn');
+        ht=findobj(hs,'type','text');
+        set(ht,'FontSize',11);
+        uiwait(hs);                         % 等待确定
+        x0=0;
+        y0=0;
+        set(handles.edit_XC,'string',0,'value',0);
+        set(handles.edit_YRK,'string',0,'value',0);
+        guidata(hObject,handles);
+    end
+% 函数显示
+    x=0:1:256;                              
+    y=y0*(x<x0)+(y0+(x-x0)./(256-x0).*(256-y0)).*(x>=x0);
+    axes(handles.axes2);
+    plot(x,y);
+    axis([0 256 0 256]);
+    text(x0,y0,['(',num2str(x0),',',num2str(y0),')'],'color','b'); 
+% 图像显示
+    handles.img(handles.img<=x0)=y0;        
+    handles.img(handles.img>x0)=y0+(256-y0)/(256-x0)*(handles.img(handles.img>x0)-x0);
+%%
+% 
+% <<局部映射.bmp>>
+%
+
+
+%% 均匀映射
+function handles=junYunYingShe(hObject,handles)
+% 均匀映射
+% 函数显示
+    x=0:1:256;
+    y=256/85.*x.*(x<85)+(0:256).*(x==85);
+    y=y+256/85.*(x-85).*(x>85 & x<170)+(0:256).*(x==85);
+    y=y+256/85.*(x-170).*(x>170 & x<256)+(0:256).*(x==170);
+    axes(handles.axes2);
+    plot(x,y);
+    axis([0 256 0 256]);    
+% 图像显示
+    a=get(handles.edit_XC,'value');        
+    b=get(handles.edit_YRK,'value'); 
+    I=handles.img;
+    if b==0 && a==1
+        I((I<85) | (I>85 & I<170) | (I>170))=256/85.*I((I<85) | (I>85 & I<170) | (I>170));
+        handles.img=I;
+    else if b==1&& a==0
+            I(I<85)=256/85.*I(I<85);
+            I(I>85 & I<170)=256/85.*I(I>85 & I<170);
+            I(I>170)=256/85.*I(I>170);
+            handles.img=I;
+        else
+            load chirp                          % 鸟声
+            sound(y,Fs);
+            hs=msgbox('输入参数不合法！','警告','warn');
+            ht=findobj(hs,'type','text');
+            set(ht,'FontSize',11);
+            uiwait(hs);                         % 等待确定
+            set(handles.edit_XC,'string',0,'value',0);
+            set(handles.edit_YRK,'string',0,'value',0);
+        end
+    end
+%%
+% 
+% <<均匀映射.bmp>>
+%
+
+    
+%% 反差映射
+function handles=fanChaYingShe(hObject,handles)
+% 反差映射
+% 函数显示
+    R1=get(handles.edit_XC,'value');
+    R2=get(handles.edit_YRK,'value');
+    x=0:1:256;
+    y=x.^R1.*(x<128)+(128+(x-128).^R2).*(128<x & x<256);
+    axes(handles.axes2);
+    plot(x,y);
+% 图像显示
+    I=handles.img;
+    I(I<128)=I(I<128).^R1;
+    I(128<I & I<256)=128+(I(128<I & I<256)-128).^R2;
+    handles.img=I;
+%%
+% 
+% <<反差映射.bmp>>
+% 
+    
+    
+%% 反转映射
+function handles=fanZhuanYingShe(hObject,handles)
+% 反转映射
+% 函数显示
+    x=0:1:256;
+    y=256.*(x==0)+(256-x).*(x>=1);
+    axes(handles.axes2);
+    plot(x,y);
+% 图像显示
+    I=handles.img;
+    I=256-I;
+    handles.img=I;
+%%
+% 
+% <<反转映射.bmp>>
+%    
+
+%% 分段映射
+function handles=fenDuanYingShe(hObject,handles)
+% 分段映射
+% 提取输入参数
+    % 第一个点
+    str1=get(handles.edit_XC,'String');
+    % 提取字符串1的长度
+    LEN1=length(str1);
+    % 检索空格的下标
+    len1=regexp(str1,',');
+    % 提取坐标
+    X1=str2double(str1(1:len1-1));
+    Y1=str2double(str1(len1+1:LEN1));
+    % 第二个点
+    str2=get(handles.edit_YRK,'String');
+    % 提取字符串1的长度
+    LEN2=length(str2);
+    % 检索空格的下标
+    len2=regexp(str2,',');
+    % 提取坐标
+    X2=str2double(str2(1:len2-1));
+    Y2=str2double(str2(len2+1:LEN2));    
+% 函数显示
+    x=0:1:256;
+    y=(Y1./X1).*x.*(x<=X1)+...
+        (Y1+(Y2-Y1)./(X2-X1).*(x-X1)).*(X1<x & x<=X2)+...
+        (Y2+(256-Y2)/(256-X2).*(x-X2)).*(X2<x);        
+    axes(handles.axes2);
+    plot(x,y);% 绘制函数 
+    axis([0 256 0 256]);% 设置坐标系显示范围
+    text(X1,Y1,['(',num2str(X1),',',num2str(Y1),')'],'color','b'); 
+    text(X2,Y2,['(',num2str(X2),',',num2str(Y2),')'],'color','b'); 
+% 图像显示
+    I=handles.img;
+    I(I<X1)=(Y1/X1)*I(I<X1);
+    I(X1<I & I<X2)=(Y2-Y1)/(X2-X1).*(I(X1<I & I<X2)-X1);
+    I(X2<I)=(256-Y2)/(256-X2).*(I(X2<I)-X2);
+    handles.img=I;
+%%
+% 
+% <<分段映射.bmp>>
+%      
+
+%% 动态范围压缩
+function handles=dongTaiFanWeiYaSuo(hObject,handles)
+% 动态范围压缩
+% 检索相关参数
+    C=str2double(get(handles.edit_XC,'String'));
+% 函数显示
+    x=0:1:256;
+    y=C.*log(1+x);   
+    axis([0 256 0 256]);% 设置坐标系显示范围
+    axes(handles.axes2);
+    plot(x,y);
+% 图像显示
+    I=double(handles.img);
+    I=C.*log(1+I);
+    handles.img=I;
+%%
+% 
+% <<动态范围压缩.bmp>>
+%   
+
+%% 伽马校正   
+function handles=gaMaJiaoZheng(hObject,handles)
+% 伽马校正
+% 检索相关参数
+    C=str2double(get(handles.edit_XC,'String'));
+    r=str2double(get(handles.edit_YRK,'String'));
+% 函数显示
+    x=0:1:256;
+    y=C.*x.^r;   
+    axis([0 256 0 256]);% 设置坐标系显示范围
+    axes(handles.axes2);
+    plot(x,y);
+% 图像显示
+    I=double(handles.img);
+    I=C.*I.^r;
+    handles.img=I;
+%%
+% 
+% <<..\伽马校正.bmp>>
+%
+
+
+%% 更新图像
+function PB_ReNewImg_Callback(hObject, eventdata, handles)
+%   1   '恒等映射'              5   '反转映射'
+%   2   '局部映射'              6   '分段映射'
+%   3   '均匀映射'              7   '动态范围压缩'
+%   4   '反差映射'              8   '伽马校正'
+% 选择映射函数
+switch get(handles.select,'value')
+    case 1      % 恒等映射    
+        handles=hengDengYingShe(hObject,handles); 
+    case 2      % 局部映射
+        handles=juBuYingShe(hObject,handles);
+    case 3      % 均匀映射
+        handles=junYunYingShe(hObject,handles);   
+    case 4      % 反差映射
+        handles=fanChaYingShe(hObject,handles);
+    case 5      % 反转映射
+        handles=fanZhuanYingShe(hObject,handles);
+    case 6      % 分段映射
+        handles=fenDuanYingShe(hObject,handles);
+    case 7      % 动态范围压缩
+        handles=dongTaiFanWeiYaSuo(hObject,handles);
+    case 8      % 伽马校正
+        handles=gaMaJiaoZheng(hObject,handles);
+end
+% 更新结构体数据
+guidata(hObject, handles);
+% 设置图像显示区域
+axes(handles.axes1);        
+% 显示图像
+imshow(uint8(handles.img));
+% 处理未关联，需恢复原图 
+if ~get(handles.radiobutton2,'value')
+    handles.img=handles.img_old;
+    guidata(hObject,handles);
+end
+
+
+%% 选择映射函数
+function select_Callback(hObject, eventdata, handles)
+% 映射函数：
+%   1   '恒等映射'              5   '反转映射'
+%   2   '局部映射'              6   '分段映射'
+%   3   '均匀映射'              7   '动态范围压缩'
+%   4   '反差映射'              8   '伽马校正'
+% 提示
+load chirp                          % 鸟声
+sound(y,Fs);
+switch get(hObject,'value')
+    case 1
+        set(handles.edit_XC,'enable','off');                    % 相关设置
+        set(handles.edit_YRK,'string','K','enable','on');
+        hs=msgbox({'恒等映射' '需要输入参数K!'},'提示','help');         
+    case 2
+        set(handles.edit_XC,'string','x0','enable','on');       % 相关设置
+        set(handles.edit_YRK,'string','y0','enable','on');        
+        hs=msgbox({'局部映射' '需要输入参数:(x0,y0)'},'提示','help');  
+    case 3
+        set(handles.edit_XC,'enable','on');                     % 相关设置
+        set(handles.edit_YRK,'enable','on');
+        hs=msgbox({'均匀映射' '无参数设置'},'提示','help');    
+    case 4
+        set(handles.edit_XC,'string','R1','enable','on');       % 相关设置
+        set(handles.edit_YRK,'string','R2','enable','on');
+        hs=msgbox({'反差映射' '需输入参数: R1, R2' '测试中，尚未完成'}...
+            ,'提示','help'); 
+    case 5
+        set(handles.edit_XC,'enable','off');                    % 相关设置
+        set(handles.edit_YRK,'enable','off');
+        hs=msgbox({'反转映射' '不需要输入参数！'},'提示','help');   
+    case 6
+        set(handles.edit_XC,'string','X1,Y1','enable','on');    % 相关设置
+        set(handles.edit_YRK,'string','X2,Y2','enable','on');
+        hs=msgbox({'分段映射' '需输入两点坐标: X1,Y1  X2,Y2'}...
+            ,'提示','help');    
+    case 7
+        set(handles.edit_XC,'string','C','enable','on');        % 相关设置
+        set(handles.edit_YRK,'enable','off');
+        hs=msgbox({'动态范围压缩' '需输入参数C!'},'提示','help');
+    case 8
+        set(handles.edit_XC,'string','C','enable','on');        % 相关设置
+        set(handles.edit_YRK,'string','r','enable','on');
+        hs=msgbox({'伽马校正' '需输入两个参数: C,r'}...
+            ,'提示','help');         
+end
+ht=findobj(hs,'type','text');
+set(ht,'FontSize',11);
+uiwait(hs);     % 等待确定  
+% 处理未关联，需恢复原图 
+if ~get(handles.radiobutton2,'value')
+    handles.img=handles.img_old;
+    guidata(hObject,handles);
+    % 设置图像显示区域
+    axes(handles.axes1);        
+    % 显示图像
+    imshow(uint8(handles.img));
+end
+
+
+function edit_YRK_Callback(hObject, eventdata, handles)
+% 将Y坐标值转为double类型
+YR=str2double(get(hObject,'String'));
+% 保存到控件数据中
+set(hObject,'value',YR);
+% 更新结构体数据
+guidata(hObject, handles);
+
+function edit_YRK_CreateFcn(hObject, eventdata, handles)
+set(hObject,'value',1);
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+function edit_XC_Callback(hObject, eventdata, handles)
+% 将Y坐标值转为double类型
+XC=str2double(get(hObject,'String'));
+% 保存到控件数据中
+set(hObject,'value',XC);
+% 更新结构体数据
+guidata(hObject, handles);
+
+function edit_XC_CreateFcn(hObject, eventdata, handles)
+set(hObject,'value',1);
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+##### SOURCE END #####
+--></body></html>

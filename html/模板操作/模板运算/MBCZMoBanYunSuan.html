@@ -1,0 +1,358 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>&#27169;&#26495;&#25805;&#20316;---&#27169;&#26495;&#36816;&#31639;</title><meta name="generator" content="MATLAB 9.0"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2017-05-11"><meta name="DC.source" content="MBCZMoBanYunSuan.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:5%; font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#000; line-height:140%; background:#ADEBFF none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:16px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>&#27169;&#26495;&#25805;&#20316;---&#27169;&#26495;&#36816;&#31639;</h1><!--introduction--><div><ul><li>&#27010;&#36848;      &#65306;&#20027;&#35201;&#23454;&#29616;&#23545;&#22270;&#20687;&#30340;&#27169;&#26495;&#36816;&#31639;</li><li>&#20316;&#32773;		&#65306;&#24352;&#32676;&#20255;	&#21335;&#26124;&#33322;&#31354;&#22823;&#23398;&#20449;&#24687;&#24037;&#31243;&#23398;&#38498;&#33258;&#21160;&#21270;&#31995;</li><li>&#26085;&#26399;		&#65306;[9/5/2017]</li></ul></div><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#2">&#20027;&#20989;&#25968;</a></li><li><a href="#4">&#24320;&#22987;&#20989;&#25968;</a></li><li><a href="#7">&#36755;&#20986;&#20989;&#25968;</a></li><li><a href="#10">&#36755;&#20837;&#27169;&#26495;&#22823;&#23567;</a></li><li><a href="#13">&#20351;&#29992;&#27169;&#26495;</a></li><li><a href="#16">&#28165;&#38500;&#27169;&#26495;</a></li><li><a href="#19">&#21152;&#36733;&#22270;&#20687;</a></li><li><a href="#22">&#24674;&#22797;&#22270;&#20687;</a></li><li><a href="#25">&#32467;&#26524;&#23637;&#31034;</a></li></ul></div><p><img vspace="5" hspace="5" src="main.bmp" alt=""> </p><h2>&#20027;&#20989;&#25968;<a name="2"></a></h2><p><b>&#19981;&#20570;&#20219;&#20309;&#20462;&#25913;</b></p><pre class="codeinput"><span class="keyword">function</span> varargout = MBCZMoBanYunSuan(varargin)
+</pre><pre class="codeinput"><span class="comment">% Begin initialization code - DO NOT EDIT</span>
+gui_Singleton = 1;
+gui_State = struct(<span class="string">'gui_Name'</span>,       mfilename, <span class="keyword">...</span>
+                   <span class="string">'gui_Singleton'</span>,  gui_Singleton, <span class="keyword">...</span>
+                   <span class="string">'gui_OpeningFcn'</span>, @MBCZMoBanYunSuan_OpeningFcn, <span class="keyword">...</span>
+                   <span class="string">'gui_OutputFcn'</span>,  @MBCZMoBanYunSuan_OutputFcn, <span class="keyword">...</span>
+                   <span class="string">'gui_LayoutFcn'</span>,  [] , <span class="keyword">...</span>
+                   <span class="string">'gui_Callback'</span>,   []);
+<span class="keyword">if</span> nargin &amp;&amp; ischar(varargin{1})
+    gui_State.gui_Callback = str2func(varargin{1});
+<span class="keyword">end</span>
+<span class="keyword">if</span> nargout
+    [varargout{1:nargout}] = gui_mainfcn(gui_State, varargin{:});
+<span class="keyword">else</span>
+    gui_mainfcn(gui_State, varargin{:});
+<span class="keyword">end</span>
+<span class="comment">% End initialization code - DO NOT EDIT</span>
+</pre><h2>&#24320;&#22987;&#20989;&#25968;<a name="4"></a></h2><p><b>&#30456;&#20851;&#21021;&#22987;&#21270;</b></p><pre class="codeinput"><span class="keyword">function</span> MBCZMoBanYunSuan_OpeningFcn(hObject, eventdata, handles, varargin)
+</pre><pre class="codeinput"><span class="comment">% &#20840;&#23616;&#21464;&#37327;</span>
+    handles.img_str=<span class="string">' '</span>;        <span class="comment">% &#22270;&#20687;&#22320;&#22336;</span>
+    handles.img=0;              <span class="comment">% &#22270;&#20687;&#25968;&#25454;</span>
+    handles.img_width=0;        <span class="comment">% &#22270;&#20687;&#23485;</span>
+    handles.img_height=0;       <span class="comment">% &#22270;&#20687;&#39640;</span>
+<span class="comment">% &#35774;&#32622;&#27169;&#26495;&#21021;&#20540;</span>
+    temp=ones(11);
+    set(handles.uitable1,<span class="string">'data'</span>,temp,<span class="string">'ColumnWidth'</span>,{20});
+   <span class="comment">% &#25171;&#24320;&#20351;&#33021;</span>
+        set(handles.recover,<span class="string">'enable'</span>,<span class="string">'off'</span>);
+        set(handles.usePlate,<span class="string">'enable'</span>,<span class="string">'off'</span>);
+        set(handles.clearPlate,<span class="string">'enable'</span>,<span class="string">'off'</span>);
+        set(handles.edit1,<span class="string">'enable'</span>,<span class="string">'off'</span>);
+
+<span class="comment">% Choose default command line output for MBCZMoBanYunSuan</span>
+handles.output = hObject;
+<span class="comment">% Update handles structure</span>
+guidata(hObject, handles);
+<span class="comment">% UIWAIT makes MBCZMoBanYunSuan wait for user response (see UIRESUME)</span>
+<span class="comment">% uiwait(handles.figure1);</span>
+</pre><h2>&#36755;&#20986;&#20989;&#25968;<a name="7"></a></h2><pre class="codeinput"><span class="keyword">function</span> MBCZMoBanYunSuan_OutputFcn(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% Get default command line output from handles structure</span>
+<span class="comment">% varargout{1} = handles.output;</span>
+</pre><h2>&#36755;&#20837;&#27169;&#26495;&#22823;&#23567;<a name="10"></a></h2><pre class="codeinput"><span class="keyword">function</span> edit1_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% &#27169;&#26495;&#22823;&#23567;</span>
+    N=str2double(get(hObject,<span class="string">'String'</span>));
+    M=zeros(N);
+    <span class="comment">% &#26356;&#26032;&#21040;uitable1</span>
+    <span class="keyword">if</span> N&gt;11                                 <span class="comment">% &#27169;&#26495;&#26368;&#22823;&#20026;11x11</span>
+        load <span class="string">chirp</span>                          <span class="comment">% &#40479;&#22768;</span>
+        sound(y,Fs);
+        hs=msgbox(<span class="string">'&#27169;&#26495;&#36807;&#22823;&#65281;'</span>,<span class="string">'&#35686;&#21578;'</span>,<span class="string">'warn'</span>);
+        ht=findobj(hs,<span class="string">'type'</span>,<span class="string">'text'</span>);
+        set(ht,<span class="string">'FontSize'</span>,11);
+        uiwait(hs);                         <span class="comment">% &#31561;&#24453;&#30830;&#23450;</span>
+        <span class="keyword">return</span> ;
+    <span class="keyword">else</span>
+        set(handles.uitable1,<span class="string">'Data'</span>,M);
+        guidata(hObject,handles);
+    <span class="keyword">end</span>
+</pre><h2>&#20351;&#29992;&#27169;&#26495;<a name="13"></a></h2><pre class="codeinput"><span class="keyword">function</span> usePlate_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% &#20351;&#29992;&#27169;&#26495;</span>
+<span class="comment">% &#26816;&#32034;&#27169;&#26495;&#22823;&#23567;</span>
+    N=str2double(get(handles.edit1,<span class="string">'String'</span>));
+<span class="comment">% &#26816;&#32034;&#27169;&#26495;&#25968;&#25454;</span>
+    plate=get(handles.uitable1,<span class="string">'data'</span>);
+<span class="comment">% &#26816;&#32034;&#22270;&#20687;&#25968;&#25454;</span>
+    dX=double(handles.img);
+<span class="comment">% &#20351;&#29992;&#27169;&#26495;&#28459;&#28216;&#22270;&#20687;</span>
+    <span class="keyword">for</span> i=1:handles.img_width-N+1
+       <span class="keyword">for</span> j=1:handles.img_height-N+1
+            temp=dX(i:i+(N-1),j:j+(N-1));   <span class="comment">% &#21462;&#20986;&#22270;&#20687;&#20013;&#19982;&#27169;&#29256;&#23545;&#24212;&#30340;&#25968;&#25454;</span>
+            wf=sum(sum(plate.*temp));       <span class="comment">% &#21367;&#31215;&#36816;&#31639;</span>
+            M=sum(sum(plate));              <span class="comment">% &#27714;&#27169;&#26495;&#30340;&#31995;&#25968;&#21644;</span>
+            g=wf/M;                         <span class="comment">% &#35745;&#31639;&#27169;&#26495;&#20013;&#24515;&#28857;&#28784;&#24230;&#20540;</span>
+            dX(i:i+(N-1)/2,j:j+(N-1)/2)=g;  <span class="comment">% &#23558;&#28784;&#24230;&#20540;&#20889;&#20837;&#22270;&#20687;&#23545;&#24212;&#30340;&#20301;&#32622;</span>
+       <span class="keyword">end</span>
+    <span class="keyword">end</span>
+<span class="comment">% &#26356;&#26032;&#24182;&#26174;&#31034;&#22270;&#20687;</span>
+    handles.img=uint8(dX);
+    guidata(hObject,handles);
+    axes(handles.axes1);
+    imshow(handles.img);
+</pre><h2>&#28165;&#38500;&#27169;&#26495;<a name="16"></a></h2><pre class="codeinput"><span class="keyword">function</span> clearPlate_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% &#28165;&#38500;&#27169;&#26495;</span>
+<span class="comment">% &#35774;&#32622;&#27169;&#26495;&#20026;&#21021;&#20540;</span>
+    temp=ones(11);
+    set(handles.edit1,<span class="string">'String'</span>,<span class="string">'11'</span>);
+    set(handles.uitable1,<span class="string">'data'</span>,temp,<span class="string">'ColumnWidth'</span>,{20});
+    guidata(hObject,handles);
+</pre><h2>&#21152;&#36733;&#22270;&#20687;<a name="19"></a></h2><pre class="codeinput"><span class="keyword">function</span> load_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% &#21152;&#36733;&#22270;&#20687;</span>
+[fname,pname,index]=uigetfile({<span class="string">'*.bmp'</span>;<span class="string">'*.jpg'</span>},<span class="string">'&#36873;&#25321;&#22270;&#29255;'</span>);
+<span class="keyword">if</span> index
+   <span class="comment">% &#25968;&#25454;&#21021;&#22987;&#21270;</span>
+        str=[pname fname];
+        handles.img_str=str;        <span class="comment">% &#22270;&#20687;&#22320;&#22336;</span>
+        handles.img=imread(str);    <span class="comment">% &#22270;&#20687;&#25968;&#25454;</span>
+        handles.img_old=handles.img;<span class="comment">% &#28304;&#22270;&#20687;</span>
+        [hight,width]=size(handles.img);
+        handles.img_width=width;    <span class="comment">% &#22270;&#20687;&#23485;</span>
+        handles.img_height=hight;   <span class="comment">% &#22270;&#20687;&#39640;</span>
+   <span class="comment">% &#25171;&#24320;&#20351;&#33021;</span>
+        set(handles.recover,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+        set(handles.usePlate,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+        set(handles.clearPlate,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+        set(handles.edit1,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+   <span class="comment">% &#26356;&#26032;&#32467;&#26500;&#20307;&#25968;&#25454;</span>
+        guidata(hObject, handles)
+        <span class="comment">% &#26174;&#31034;&#22270;&#20687;</span>
+        axes(handles.axes1);
+        imshow(str);
+<span class="keyword">end</span>
+</pre><h2>&#24674;&#22797;&#22270;&#20687;<a name="22"></a></h2><pre class="codeinput"><span class="keyword">function</span> recover_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% &#24674;&#22797;&#22270;&#20687;</span>
+<span class="comment">% &#24674;&#22797;&#21407;&#22270;</span>
+    handles.img=handles.img_old;
+    guidata(hObject,handles);
+    axes(handles.axes1);
+    imshow(uint8(handles.img));
+</pre><h2>&#32467;&#26524;&#23637;&#31034;<a name="25"></a></h2><p><img vspace="5" hspace="5" src="test1.bmp" alt=""> </p><p><img vspace="5" hspace="5" src="test2.bmp" alt=""> </p><p class="footer"><br><br></p></div><!--
+##### SOURCE BEGIN #####
+%% 模板操作REPLACE_WITH_DASH_DASH-模板运算
+% * 概述      ：主要实现对图像的模板运算
+% * 作者		：张群伟	南昌航空大学信息工程学院自动化系
+% * 日期		：[9/5/2017]  
+%%
+
+%%
+%
+% <<main.bmp>>
+%
+
+
+%% 主函数
+% *不做任何修改*
+function varargout = MBCZMoBanYunSuan(varargin)
+% Begin initialization code - DO NOT EDIT
+gui_Singleton = 1;
+gui_State = struct('gui_Name',       mfilename, ...
+                   'gui_Singleton',  gui_Singleton, ...
+                   'gui_OpeningFcn', @MBCZMoBanYunSuan_OpeningFcn, ...
+                   'gui_OutputFcn',  @MBCZMoBanYunSuan_OutputFcn, ...
+                   'gui_LayoutFcn',  [] , ...
+                   'gui_Callback',   []);
+if nargin && ischar(varargin{1})
+    gui_State.gui_Callback = str2func(varargin{1});
+end
+if nargout
+    [varargout{1:nargout}] = gui_mainfcn(gui_State, varargin{:});
+else
+    gui_mainfcn(gui_State, varargin{:});
+end
+% End initialization code - DO NOT EDIT
+
+
+%% 开始函数
+% *相关初始化*
+function MBCZMoBanYunSuan_OpeningFcn(hObject, eventdata, handles, varargin)
+% 全局变量
+    handles.img_str=' ';        % 图像地址
+    handles.img=0;              % 图像数据
+    handles.img_width=0;        % 图像宽
+    handles.img_height=0;       % 图像高    
+% 设置模板初值
+    temp=ones(11);
+    set(handles.uitable1,'data',temp,'ColumnWidth',{20});
+   % 打开使能
+        set(handles.recover,'enable','off');
+        set(handles.usePlate,'enable','off');
+        set(handles.clearPlate,'enable','off');
+        set(handles.edit1,'enable','off');
+        
+% Choose default command line output for MBCZMoBanYunSuan
+handles.output = hObject;
+% Update handles structure
+guidata(hObject, handles);
+% UIWAIT makes MBCZMoBanYunSuan wait for user response (see UIRESUME)
+% uiwait(handles.figure1);
+
+
+%% 输出函数
+function MBCZMoBanYunSuan_OutputFcn(hObject, eventdata, handles) 
+% Get default command line output from handles structure
+% varargout{1} = handles.output;
+
+
+%% 输入模板大小
+function edit1_Callback(hObject, eventdata, handles)
+% 模板大小
+    N=str2double(get(hObject,'String'));
+    M=zeros(N);
+    % 更新到uitable1
+    if N>11                                 % 模板最大为11x11
+        load chirp                          % 鸟声
+        sound(y,Fs);
+        hs=msgbox('模板过大！','警告','warn');
+        ht=findobj(hs,'type','text');
+        set(ht,'FontSize',11);
+        uiwait(hs);                         % 等待确定
+        return ;
+    else
+        set(handles.uitable1,'Data',M);
+        guidata(hObject,handles);
+    end
+
+    
+%%  使用模板
+function usePlate_Callback(hObject, eventdata, handles)
+% 使用模板
+% 检索模板大小 
+    N=str2double(get(handles.edit1,'String'));
+% 检索模板数据
+    plate=get(handles.uitable1,'data');
+% 检索图像数据
+    dX=double(handles.img);
+% 使用模板漫游图像
+    for i=1:handles.img_width-N+1
+       for j=1:handles.img_height-N+1
+            temp=dX(i:i+(N-1),j:j+(N-1));   % 取出图像中与模版对应的数据
+            wf=sum(sum(plate.*temp));       % 卷积运算
+            M=sum(sum(plate));              % 求模板的系数和
+            g=wf/M;                         % 计算模板中心点灰度值 
+            dX(i:i+(N-1)/2,j:j+(N-1)/2)=g;  % 将灰度值写入图像对应的位置               
+       end
+    end  
+% 更新并显示图像
+    handles.img=uint8(dX);
+    guidata(hObject,handles);
+    axes(handles.axes1);
+    imshow(handles.img); 
+        
+        
+%% 清除模板
+function clearPlate_Callback(hObject, eventdata, handles)
+% 清除模板
+% 设置模板为初值
+    temp=ones(11);
+    set(handles.edit1,'String','11');
+    set(handles.uitable1,'data',temp,'ColumnWidth',{20});
+    guidata(hObject,handles);
+    
+    
+%% 加载图像
+function load_Callback(hObject, eventdata, handles)
+% 加载图像
+[fname,pname,index]=uigetfile({'*.bmp';'*.jpg'},'选择图片');
+if index              
+   % 数据初始化
+        str=[pname fname]; 
+        handles.img_str=str;        % 图像地址
+        handles.img=imread(str);    % 图像数据
+        handles.img_old=handles.img;% 源图像
+        [hight,width]=size(handles.img);
+        handles.img_width=width;    % 图像宽
+        handles.img_height=hight;   % 图像高      
+   % 打开使能
+        set(handles.recover,'enable','on');
+        set(handles.usePlate,'enable','on');
+        set(handles.clearPlate,'enable','on');
+        set(handles.edit1,'enable','on');
+   % 更新结构体数据
+        guidata(hObject, handles)
+        % 显示图像
+        axes(handles.axes1);
+        imshow(str); 
+end
+
+
+%% 恢复图像
+function recover_Callback(hObject, eventdata, handles)
+% 恢复图像
+% 恢复原图
+    handles.img=handles.img_old;
+    guidata(hObject,handles);
+    axes(handles.axes1);
+    imshow(uint8(handles.img));
+
+%% 结果展示
+
+%%
+%
+% <<test1.bmp>>
+%    
+
+%%
+%
+% <<test2.bmp>>
+%  
+##### SOURCE END #####
+--></body></html>

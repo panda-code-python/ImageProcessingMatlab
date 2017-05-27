@@ -1,0 +1,140 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>&#20108;&#32500;&#39034;&#24207;&#32479;&#35745;&#37327;&#28388;&#27874;&#20989;&#25968;</title><meta name="generator" content="MATLAB 9.0"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2017-05-27"><meta name="DC.source" content="myordfilt2.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:5%; font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#000; line-height:140%; background:#ADEBFF none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:16px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>&#20108;&#32500;&#39034;&#24207;&#32479;&#35745;&#37327;&#28388;&#27874;&#20989;&#25968;</h1><!--introduction--><div><ul><li>&#27010;&#36848;      &#65306;&#23427;&#30340;&#28388;&#27874;&#27010;&#24565;&#26159;&#20013;&#20540;&#28388;&#27874;&#30340;&#25512;&#24191;&#65292;&#20013;&#20540;&#28388;&#27874;&#26159;&#23545;&#20110;&#32473;&#23450;&#30340;n&#20010;&#25968;&#20540;               {al ,a2,...,an}&#65292;&#23558;&#23427;&#20204;&#25353;&#22823;&#23567;&#39034;&#24207;&#25490;&#21015;&#65292;&#21462;&#20013;&#38388;&#30340;&#37027;&#20010;&#20540;&#20316;&#20026;               &#28388;&#27874;&#22120;&#30340;&#36755;&#20986;&#12290;&#32780;&#22312;myordfilt2&#20989;&#25968;&#20013;&#30340;&#20108;&#32500;&#39034;&#24207;&#32479;&#35745;&#37327;&#28388;&#27874;&#23558;n&#20010;               &#38750;&#38646;&#25968;&#20540;&#25353;&#23567;&#21040;&#22823;&#25490;&#24207;&#21518;&#22788;&#20110;&#31532;k&#20010;&#20301;&#32622;&#30340;&#20803;&#32032;&#20316;&#20026;&#28388;&#27874;&#22120;&#30340;&#36755;&#20986;&#12290;</li><li>&#20316;&#32773;		&#65306;&#24352;&#32676;&#20255;	&#21335;&#26124;&#33322;&#31354;&#22823;&#23398;&#20449;&#24687;&#24037;&#31243;&#23398;&#38498;&#33258;&#21160;&#21270;&#31995;</li><li>&#26085;&#26399;		&#65306;[10/5/2017]</li></ul></div><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">&#20989;&#25968;&#35828;&#26126;</a></li><li><a href="#4">&#20027;&#20989;&#25968;</a></li></ul></div><h2>&#20989;&#25968;&#35828;&#26126;<a name="1"></a></h2><p><b>&#21442;&#25968;&#35828;&#26126;&#65306;</b></p><pre class="codeinput"><span class="comment">%_ A       &#38656;&#35201;&#28388;&#27874;&#30340;&#28304;&#22270;&#20687;</span>
+<span class="comment">%_ order   &#24207;&#21495;</span>
+<span class="comment">%_ domain  &#28388;&#27874;&#31383;&#21475;&#22823;&#23567;</span>
+</pre><p><b>&#20351;&#29992;&#20030;&#20363;&#65306;</b></p><pre class="codeinput"><span class="comment">%_ I=myordfilt2(X,1,3);        % &#30456;&#24403;&#20110;&#27169;&#26495;&#20026;3&times;3&#30340;&#26368;&#23567;&#20540;&#28388;&#27874;</span>
+<span class="comment">%_ I=myordfilt2(X,5,3);        % &#30456;&#24403;&#20110;&#27169;&#26495;&#20026;3&times;3&#30340;&#20013;&#20540;&#28388;&#27874;</span>
+<span class="comment">%_ I=myordfilt2(X,9,3);        % &#30456;&#24403;&#20110;&#27169;&#26495;&#20026;3&times;3&#30340;&#26368;&#22823;&#20540;&#28388;&#27874;</span>
+<span class="comment">%_ I=myordfilt2(X,12,5);       % &#27169;&#26495;&#20026;5&times;5&#65292;&#21462;&#24207;&#21495;&#20026;12&#30340;&#28784;&#24230;&#20540;</span>
+</pre><h2>&#20027;&#20989;&#25968;<a name="4"></a></h2><p><b>&#23454;&#29616;&#22270;&#20687;&#30340;&#20108;&#32500;&#39034;&#24207;&#32479;&#35745;&#37327;&#28388;&#27874;</b></p><pre class="codeinput"><span class="keyword">function</span> B=myordfilt2(A,order,domain)
+[ah,aw]=size(A);
+<span class="keyword">for</span> i=1:ah-domain
+    <span class="keyword">for</span> j=1:aw-domain
+        <span class="comment">% &#21462;&#20986;&#22270;&#20687;&#20013;&#19982;&#27169;&#29256;&#23545;&#24212;&#30340;&#25968;&#25454;</span>
+        temp=A(i:i+(domain-1),j:j+(domain-1));
+        <span class="comment">% &#23558;&#30697;&#38453;&#36716;&#21464;&#20026;&#19968;&#20010;&#30690;&#37327;</span>
+        s=temp(:);
+        <span class="comment">% &#20174;&#23567;&#21040;&#22823;&#25490;&#24207;</span>
+        med=sort(s);
+        <span class="comment">% &#23558;order&#25351;&#23450;&#30340;&#20540;&#20889;&#20837;&#20013;&#24515;&#20301;&#32622;</span>
+        A(i:i+(domain-1)/2,j:j+(domain-1)/2)=med(order);
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+<span class="comment">% &#36820;&#22238;</span>
+B=A;
+</pre><p class="footer"><br><br></p></div><!--
+##### SOURCE BEGIN #####
+%% 二维顺序统计量滤波函数
+% * 概述      ：它的滤波概念是中值滤波的推广，中值滤波是对于给定的n个数值
+%               {al ,a2,...,an}，将它们按大小顺序排列，取中间的那个值作为
+%               滤波器的输出。而在myordfilt2函数中的二维顺序统计量滤波将n个
+%               非零数值按小到大排序后处于第k个位置的元素作为滤波器的输出。
+% * 作者		：张群伟	南昌航空大学信息工程学院自动化系
+% * 日期		：[10/5/2017]  
+%%
+
+
+%% 函数说明
+%%
+% *参数说明：*
+%_ A       需要滤波的源图像
+%_ order   序号
+%_ domain  滤波窗口大小 
+%%
+% *使用举例：*
+%_ I=myordfilt2(X,1,3);        % 相当于模板为3×3的最小值滤波
+%_ I=myordfilt2(X,5,3);        % 相当于模板为3×3的中值滤波
+%_ I=myordfilt2(X,9,3);        % 相当于模板为3×3的最大值滤波
+%_ I=myordfilt2(X,12,5);       % 模板为5×5，取序号为12的灰度值
+
+
+
+%% 主函数
+% *实现图像的二维顺序统计量滤波*
+function B=myordfilt2(A,order,domain)	
+[ah,aw]=size(A);
+for i=1:ah-domain
+    for j=1:aw-domain
+        % 取出图像中与模版对应的数据
+        temp=A(i:i+(domain-1),j:j+(domain-1));  
+        % 将矩阵转变为一个矢量
+        s=temp(:);  
+        % 从小到大排序
+        med=sort(s);     
+        % 将order指定的值写入中心位置
+        A(i:i+(domain-1)/2,j:j+(domain-1)/2)=med(order);
+    end
+end
+% 返回
+B=A;
+    
+
+##### SOURCE END #####
+--></body></html>

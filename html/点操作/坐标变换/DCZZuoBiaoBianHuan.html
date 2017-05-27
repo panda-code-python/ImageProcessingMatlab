@@ -1,0 +1,949 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>&#28857;&#25805;&#20316;---&#22352;&#26631;&#21464;&#25442;</title><meta name="generator" content="MATLAB 9.0"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2017-05-11"><meta name="DC.source" content="DCZZuoBiaoBianHuan.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:5%; font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#000; line-height:140%; background:#ADEBFF none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:16px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>&#28857;&#25805;&#20316;---&#22352;&#26631;&#21464;&#25442;</h1><!--introduction--><div><ul><li>&#27010;&#36848;      &#65306; <b>&#23454;&#29616;&#22270;&#20687;&#30340;&#22352;&#26631;&#21464;&#25442;&#65292;&#20027;&#35201;&#26377;&#26059;&#36716;&#65292;&#24179;&#31227;&#65292;&#25918;&#32553;&#65292;&#38236;&#20687;&#65292;&#32423;&#32852;&#20116;&#31181;&#21464;&#25442;&#65292;&#23545;&#24212;&#21453;&#21464;</b> <b>&#25442;&#23454;&#29616;&#26041;&#27861;&#31867;&#20284;&#65292;&#26412;&#20363;&#26410;&#28155;&#21152;</b></li><li>&#20316;&#32773;		&#65306;&#24352;&#32676;&#20255;	&#21335;&#26124;&#33322;&#31354;&#22823;&#23398;&#20449;&#24687;&#24037;&#31243;&#23398;&#38498;&#33258;&#21160;&#21270;&#31995;</li><li>&#26085;&#26399;		&#65306;[4/5/2017]</li></ul></div><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#2">&#20027;&#20989;&#25968;</a></li><li><a href="#4">&#24320;&#22987;&#20989;&#25968;</a></li><li><a href="#7">&#36755;&#20986;&#20989;&#25968;</a></li><li><a href="#10">&#21152;&#36733;&#22270;&#20687;</a></li><li><a href="#13">&#20445;&#23384;&#22270;&#20687;</a></li><li><a href="#16">&#24674;&#22797;&#21407;&#22270;</a></li><li><a href="#19">&#26059;&#36716;&#21464;&#25442;</a></li><li><a href="#27">&#24179;&#31227;&#21464;&#25442;</a></li><li><a href="#44">&#32553;&#25918;&#21464;&#25442;</a></li><li><a href="#52">&#38236;&#20687;&#21464;&#25442;</a></li><li><a href="#61">&#21464;&#25442;&#32423;&#32852;</a></li></ul></div><p><img vspace="5" hspace="5" src="main.bmp" alt=""> </p><h2>&#20027;&#20989;&#25968;<a name="2"></a></h2><p><b>&#19981;&#20570;&#20219;&#20309;&#20462;&#25913;</b></p><pre class="codeinput"><span class="keyword">function</span> varargout = DCZZuoBiaoBianHuan(varargin)
+</pre><pre class="codeinput"><span class="comment">% Begin initialization code - DO NOT EDIT</span>
+gui_Singleton = 1;
+gui_State = struct(<span class="string">'gui_Name'</span>,       mfilename, <span class="keyword">...</span>
+                   <span class="string">'gui_Singleton'</span>,  gui_Singleton, <span class="keyword">...</span>
+                   <span class="string">'gui_OpeningFcn'</span>, @DCZZuoBiaoBianHuan_OpeningFcn, <span class="keyword">...</span>
+                   <span class="string">'gui_OutputFcn'</span>,  @DCZZuoBiaoBianHuan_OutputFcn, <span class="keyword">...</span>
+                   <span class="string">'gui_LayoutFcn'</span>,  [], <span class="keyword">...</span>
+                   <span class="string">'gui_Callback'</span>,   []);
+<span class="keyword">if</span> nargin &amp;&amp; ischar(varargin{1})
+   gui_State.gui_Callback = str2func(varargin{1});
+<span class="keyword">end</span>
+<span class="keyword">if</span> nargout
+    [varargout{1:nargout}] = gui_mainfcn(gui_State, varargin{:});
+<span class="keyword">else</span>
+    gui_mainfcn(gui_State, varargin{:});
+<span class="keyword">end</span>
+<span class="comment">% End initialization code - DO NOT EDIT</span>
+</pre><h2>&#24320;&#22987;&#20989;&#25968;<a name="4"></a></h2><p><b>&#30456;&#20851;&#21021;&#22987;&#21270;</b></p><pre class="codeinput"><span class="keyword">function</span> DCZZuoBiaoBianHuan_OpeningFcn(hObject, eventdata, handles, varargin)
+</pre><pre class="codeinput"><span class="comment">% &#20840;&#23616;&#21464;&#37327;</span>
+    handles.img_str=0;      <span class="comment">% &#22270;&#20687;&#22320;&#22336;</span>
+    handles.img=0;          <span class="comment">% &#22270;&#20687;&#25968;&#25454;</span>
+    handles.img_width=0;    <span class="comment">% &#22270;&#20687;&#23485;</span>
+    handles.img_hight=0;    <span class="comment">% &#22270;&#20687;&#39640;</span>
+<span class="comment">% &#25171;&#24320;&#24182;&#26174;&#31034;&#21407;&#22270;&#20687;</span>
+    axes(handles.axes1);
+    str=<span class="string">' '</span>;
+    <span class="comment">% &#22270;&#20687;&#30001;&#21442;&#25968;&#20256;&#20837;</span>
+    <span class="keyword">if</span> nargin ==2
+        <span class="keyword">if</span> ischar(varargin{2})
+        <span class="comment">% &#26174;&#31034;&#22270;&#20687;</span>
+        str=varargin{2};
+        <span class="keyword">end</span>
+    <span class="comment">% &#37325;&#26032;&#25171;&#24320;&#22270;&#20687;</span>
+    <span class="keyword">else</span>
+        <span class="comment">% &#25552;&#31034;</span>
+            load <span class="string">chirp</span>   <span class="comment">% &#40479;&#22768;</span>
+            sound(y,Fs);
+            hs=msgbox(<span class="string">'&#22270;&#29255;&#26410;&#21152;&#36733;&#65281;'</span>,<span class="string">'&#36890;&#30693;'</span>,<span class="string">'warn'</span>);
+            ht=findobj(hs,<span class="string">'type'</span>,<span class="string">'text'</span>);
+            set(ht,<span class="string">'FontSize'</span>,11);
+            <span class="comment">% &#31561;&#24453;&#30830;&#23450;</span>
+            uiwait(hs);
+    <span class="keyword">end</span>
+    <span class="comment">% &#26174;&#31034;&#21407;&#22270;&#20687;</span>
+    <span class="keyword">if</span> str~=<span class="string">' '</span>
+        imshow(str);
+        <span class="comment">% &#25968;&#25454;&#21021;&#22987;&#21270;</span>
+        handles.img_str=str;        <span class="comment">% &#22270;&#20687;&#22320;&#22336;</span>
+        handles.img=imread(str);    <span class="comment">% &#22270;&#20687;&#25968;&#25454;</span>
+        [hight,width]=size(handles.img);
+        handles.img_width=width;    <span class="comment">% &#22270;&#20687;&#23485;</span>
+        handles.img_hight=hight;    <span class="comment">% &#22270;&#20687;&#39640;</span>
+        set(handles.slider1,<span class="string">'Max'</span>,1000);
+        set(handles.slider1,<span class="string">'value'</span>,1000);
+    <span class="keyword">else</span> <span class="comment">% &#26410;&#20256;&#20837;&#22270;&#20687;&#65292;&#20851;&#38381;&#20351;&#33021;</span>
+        set(handles.PB_BaoCunTuXiang,<span class="string">'enable'</span>,<span class="string">'off'</span>);
+        set(handles.RB_BianHuanJiLian,<span class="string">'enable'</span>,<span class="string">'off'</span>);
+        set(handles.edit_XuanZhuan,<span class="string">'enable'</span>,<span class="string">'off'</span>);
+        set(handles.edit_X,<span class="string">'enable'</span>,<span class="string">'off'</span>);
+        set(handles.edit_Y,<span class="string">'enable'</span>,<span class="string">'off'</span>);
+        set(handles.edit_SuoFang,<span class="string">'enable'</span>,<span class="string">'off'</span>);
+        set(handles.pushbutton3,<span class="string">'enable'</span>,<span class="string">'off'</span>);
+        set(handles.pushbutton4,<span class="string">'enable'</span>,<span class="string">'off'</span>);
+        set(handles.pushbutton5,<span class="string">'enable'</span>,<span class="string">'off'</span>);
+        set(handles.pushbutton6,<span class="string">'enable'</span>,<span class="string">'off'</span>);
+        set(handles.pushbutton9,<span class="string">'enable'</span>,<span class="string">'off'</span>);
+        set(handles.pushbutton10,<span class="string">'enable'</span>,<span class="string">'off'</span>);
+    <span class="keyword">end</span>
+<span class="comment">% Choose default command line output for DCZZuoBiaoBianHuan</span>
+handles.output = hObject;
+<span class="comment">% Update handles structure</span>
+guidata(hObject, handles);
+<span class="comment">% UIWAIT makes DCZZuoBiaoBianHuan wait for user response (see UIRESUME)</span>
+<span class="comment">% uiwait(handles.DCZZuoBiaoBianHuan);</span>
+</pre><h2>&#36755;&#20986;&#20989;&#25968;<a name="7"></a></h2><pre class="codeinput"><span class="keyword">function</span> DCZZuoBiaoBianHuan_OutputFcn(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% Get default command line output from handles structure</span>
+<span class="comment">% varargout{1} = handles.output;</span>
+<span class="comment">%</span>
+</pre><h2>&#21152;&#36733;&#22270;&#20687;<a name="10"></a></h2><pre class="codeinput"><span class="keyword">function</span> PB_JiaZaiTuXiang_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput">[fname,pname,index]=uigetfile({<span class="string">'*.bmp'</span>;<span class="string">'*.jpg'</span>},<span class="string">'&#36873;&#25321;&#22270;&#29255;'</span>);
+<span class="keyword">if</span> index
+   <span class="comment">% &#25968;&#25454;&#21021;&#22987;&#21270;</span>
+        str=[pname fname];
+        handles.img_str=str;        <span class="comment">% &#22270;&#20687;&#22320;&#22336;</span>
+        handles.img=imread(str);    <span class="comment">% &#22270;&#20687;&#25968;&#25454;</span>
+        [hight,width]=size(handles.img);
+        handles.img_width=width;    <span class="comment">% &#22270;&#20687;&#23485;</span>
+        handles.img_hight=hight;    <span class="comment">% &#22270;&#20687;&#39640;</span>
+        set(handles.slider1,<span class="string">'Max'</span>,hight);
+        set(handles.slider1,<span class="string">'value'</span>,hight);
+   <span class="comment">% &#29366;&#24577;&#24674;&#22797;</span>
+        set(handles.edit_XuanZhuan,<span class="string">'String'</span>,<span class="string">'0'</span>);
+        set(handles.edit_X,<span class="string">'String'</span>,<span class="string">'0'</span>);
+        set(handles.edit_Y,<span class="string">'String'</span>,<span class="string">'0'</span>);
+        set(handles.edit_SuoFang,<span class="string">'String'</span>,<span class="string">'0'</span>);
+        set(handles.slider1,<span class="string">'value'</span>,handles.img_hight);
+        set(handles.slider2,<span class="string">'value'</span>,0);
+   <span class="comment">% &#25171;&#24320;&#20351;&#33021;</span>
+        set(handles.PB_BaoCunTuXiang,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+        set(handles.RB_BianHuanJiLian,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+        set(handles.edit_XuanZhuan,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+        set(handles.edit_X,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+        set(handles.edit_Y,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+        set(handles.edit_SuoFang,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+        set(handles.pushbutton3,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+        set(handles.pushbutton4,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+        set(handles.pushbutton5,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+        set(handles.pushbutton6,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+        set(handles.pushbutton9,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+        set(handles.pushbutton10,<span class="string">'enable'</span>,<span class="string">'on'</span>);
+   <span class="comment">% &#26356;&#26032;&#32467;&#26500;&#20307;&#25968;&#25454;</span>
+        guidata(hObject, handles)
+        <span class="comment">% &#26174;&#31034;&#22270;&#20687;</span>
+        imshow(str);
+   <span class="comment">% &#21464;&#25442;&#32423;&#32852;</span>
+        <span class="keyword">if</span> get(handles.RB_BianHuanJiLian,<span class="string">'value'</span>)
+            handles.img=res;
+            <span class="comment">% &#26356;&#26032;&#32467;&#26500;&#20307;&#25968;&#25454;</span>
+            guidata(hObject, handles);
+        <span class="keyword">end</span>
+<span class="keyword">end</span>
+</pre><h2>&#20445;&#23384;&#22270;&#20687;<a name="13"></a></h2><pre class="codeinput"><span class="keyword">function</span> PB_BaoCunTuXiang_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% &#20445;&#23384;&#22270;&#20687;</span>
+[FileName,PathName] =uiputfile({<span class="string">'*.jpg;*.tif;*.png;*.gif'</span>,<span class="string">'All Image Files'</span>;<span class="keyword">...</span>
+          <span class="string">'*.*'</span>,<span class="string">'All Files'</span> },<span class="string">'&#20445;&#23384;&#22270;&#20687;'</span>,<span class="keyword">...</span>
+          <span class="string">'C:\Work\newfile.jpg'</span>);
+<span class="keyword">if</span> FileName==0
+    <span class="keyword">return</span>;
+<span class="keyword">else</span>
+    h=getframe(handles.axes1);
+    imwrite(h.cdata,[PathName,FileName]);
+<span class="keyword">end</span>
+</pre><h2>&#24674;&#22797;&#21407;&#22270;<a name="16"></a></h2><pre class="codeinput"> <span class="keyword">function</span> PB_HuiFuYuanTu_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% &#22270;&#20687;&#24674;&#22797;</span>
+    handles.img=imread(handles.img_str);
+<span class="comment">% &#29366;&#24577;&#24674;&#22797;</span>
+    set(handles.edit_XuanZhuan,<span class="string">'String'</span>,<span class="string">'0'</span>);
+    set(handles.edit_X,<span class="string">'String'</span>,<span class="string">'0'</span>);
+    set(handles.edit_Y,<span class="string">'String'</span>,<span class="string">'0'</span>);
+    set(handles.edit_SuoFang,<span class="string">'String'</span>,<span class="string">'0'</span>);
+    set(handles.slider1,<span class="string">'value'</span>,handles.img_hight);
+    set(handles.slider2,<span class="string">'value'</span>,0);
+<span class="comment">% &#26356;&#26032;&#32467;&#26500;&#20307;&#25968;&#25454;</span>
+    guidata(hObject, handles);
+    imshow(handles.img)
+</pre><h2>&#26059;&#36716;&#21464;&#25442;<a name="19"></a></h2><p><b>&#36755;&#20837;&#26059;&#36716;&#35282;&#24230;</b></p><pre class="codeinput"><span class="keyword">function</span> edit_XuanZhuan_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">%&#23558;&#25968;&#25454;&#36716;&#21270;&#20026;double&#31867;&#22411;</span>
+Angle=str2double(get(hObject,<span class="string">'String'</span>));
+<span class="comment">% &#20445;&#23384;&#21040;&#25511;&#20214;&#25968;&#25454;&#20013;</span>
+set(hObject,<span class="string">'value'</span>,Angle);
+</pre><p><b>&#25191;&#34892;&#26059;&#36716;&#25805;&#20316;</b></p><pre class="codeinput"><span class="keyword">function</span> PB_XuanZhuanBianHuan_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% &#29366;&#24577;&#24674;&#22797;</span>
+<span class="keyword">if</span> true ~= get(handles.RB_BianHuanJiLian,<span class="string">'value'</span>)
+    set(handles.edit_X,<span class="string">'String'</span>,<span class="string">'0'</span>);
+    set(handles.edit_Y,<span class="string">'String'</span>,<span class="string">'0'</span>);
+    set(handles.edit_SuoFang,<span class="string">'String'</span>,<span class="string">'0'</span>);
+    set(handles.slider1,<span class="string">'value'</span>,handles.img_hight);
+    set(handles.slider2,<span class="string">'value'</span>,0);
+<span class="keyword">end</span>
+<span class="comment">% &#26059;&#36716;&#21464;&#25442;</span>
+    res=repmat(255,handles.img_hight, handles.img_width);               <span class="comment">% &#20445;&#23384;&#32467;&#26524;</span>
+    Angle = get(handles.edit_XuanZhuan,<span class="string">'value'</span>) * pi / 180.0;           <span class="comment">% &#26059;&#36716;&#35282;&#24230;</span>
+    tras = [ cos(Angle) -sin(Angle)  0;                                 <span class="comment">% &#26059;&#36716;&#30340;&#21464;&#25442;&#30697;&#38453;</span>
+             sin(Angle) cos(Angle)   0;
+             0          0            1 ];
+    <span class="comment">% &#27599;&#34892;</span>
+    <span class="keyword">for</span> i = 1 : handles.img_hight
+        <span class="comment">% &#27599;&#21015;</span>
+        <span class="keyword">for</span> j = 1 : handles.img_width
+            temp = [i; j; 1];
+            <span class="comment">% &#27880;&#24847;&#65306;temp&#26159;&#21015;&#21521;&#37327;</span>
+            <span class="comment">% &#30697;&#38453;&#20056;&#27861; temp=[ i*cos(Angle)-j*sin(Angle);</span>
+            <span class="comment">%                 i*sin(Angle)+j*cos(Angle);</span>
+            <span class="comment">%                           1               ]</span>
+            temp = tras * temp;
+            <span class="comment">% &#21462;&#20986;x&#65292;y&#24182;&#21028;&#26029;&#21464;&#25442;&#21518;&#30340;&#20301;&#32622;&#26159;&#21542;&#36234;&#30028;</span>
+            x = uint16(temp(1, 1));
+            y = uint16(temp(2, 1));
+            <span class="keyword">if</span> (x &lt;= handles.img_hight) &amp;&amp; (y &lt;= handles.img_width) &amp;&amp; (x &gt;= 1) &amp;&amp; (y &gt;= 1)
+                res(i, j) = handles.img(x, y);
+            <span class="keyword">end</span>
+        <span class="keyword">end</span>
+    <span class="keyword">end</span>;
+<span class="comment">% &#26174;&#31034;&#22270;&#20687;</span>
+    imshow(uint8(res));
+<span class="comment">% &#21464;&#25442;&#32423;&#32852;&#38656;&#20445;&#23384;&#22788;&#29702;&#21518;&#30340;&#22270;&#20687;</span>
+    <span class="keyword">if</span> get(handles.RB_BianHuanJiLian,<span class="string">'value'</span>)
+        handles.img=res;
+        <span class="comment">% &#26356;&#26032;&#32467;&#26500;&#20307;&#25968;&#25454;</span>
+        guidata(hObject, handles);
+    <span class="keyword">end</span>
+</pre><p><img vspace="5" hspace="5" src="%E6%97%8B%E8%BD%AC.bmp" alt=""> </p><h2>&#24179;&#31227;&#21464;&#25442;<a name="27"></a></h2><p><b>&#36755;&#20837;X&#22352;&#26631;</b></p><pre class="codeinput"><span class="keyword">function</span> edit_X_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% &#23558;X&#22352;&#26631;&#20540;&#36716;&#20026;double&#31867;&#22411;</span>
+X=str2double(get(hObject,<span class="string">'String'</span>));
+<span class="comment">% &#20445;&#23384;&#21040;&#25511;&#20214;&#25968;&#25454;&#20013;</span>
+set(hObject,<span class="string">'value'</span>,X);
+<span class="comment">% &#26356;&#26032;&#21040;&#28369;&#21160;&#26465;</span>
+set(handles.slider2,<span class="string">'value'</span>,X);
+guidata(hObject,handles);
+</pre><p><b>&#36755;&#20837;Y&#22352;&#26631;</b></p><pre class="codeinput"><span class="keyword">function</span> edit_Y_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% &#23558;Y&#22352;&#26631;&#20540;&#36716;&#20026;double&#31867;&#22411;</span>
+Y=str2double(get(hObject,<span class="string">'String'</span>));
+<span class="comment">% &#20445;&#23384;&#21040;&#25511;&#20214;&#25968;&#25454;&#20013;</span>
+set(hObject,<span class="string">'value'</span>,Y);
+<span class="comment">% &#26356;&#26032;&#21040;&#28369;&#21160;&#26465;</span>
+set(handles.slider1,<span class="string">'value'</span>,get(handles.slider1,<span class="string">'Max'</span>)-Y);
+guidata(hObject,handles);
+</pre><p><b>X&#36724;&#24179;&#31227;&#21464;&#25442;&#28369;&#21160;&#26465;</b></p><pre class="codeinput"><span class="keyword">function</span> slider_X_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% &#35774;&#32622;X&#36724;&#28369;&#21160;&#26465;&#26368;&#22823;&#20540;</span>
+set(hObject,<span class="string">'Max'</span>,handles.img_hight);
+<span class="comment">% &#26356;&#26032;&#32534;&#36753;&#26694;&#20013;&#30340;&#25968;&#25454;</span>
+X_str=num2str(get(hObject,<span class="string">'value'</span>));
+X_value=uint16(get(hObject,<span class="string">'value'</span>));
+set(handles.edit_X,<span class="string">'String'</span>,X_str,<span class="string">'value'</span>,X_value);
+<span class="comment">% &#26356;&#26032;&#32467;&#26500;&#20307;&#25968;&#25454;</span>
+guidata(hObject, handles);
+</pre><p><b>Y&#36724;&#24179;&#31227;&#21464;&#25442;&#28369;&#21160;&#26465;</b></p><pre class="codeinput"><span class="keyword">function</span> slider_Y_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% &#35774;&#32622;Y&#36724;&#28369;&#21160;&#26465;&#26368;&#22823;&#20540;</span>
+set(hObject,<span class="string">'Max'</span>,handles.img_hight);
+<span class="comment">% &#26356;&#26032;&#32534;&#36753;&#26694;&#20013;&#30340;&#25968;&#25454;</span>
+Y_str=num2str(handles.img_hight-get(hObject,<span class="string">'value'</span>));
+Y_value=handles.img_hight-uint16(get(hObject,<span class="string">'value'</span>));
+set(handles.edit_Y,<span class="string">'String'</span>,Y_str,<span class="string">'value'</span>,Y_value);
+<span class="comment">% &#26356;&#26032;&#32467;&#26500;&#20307;&#25968;&#25454;</span>
+guidata(hObject, handles);
+</pre><p><b>&#24179;&#31227;&#21464;&#25442;</b></p><pre class="codeinput"><span class="keyword">function</span> PB_PingYiBianHuan_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% &#29366;&#24577;&#24674;&#22797;</span>
+<span class="keyword">if</span> true ~= get(handles.RB_BianHuanJiLian,<span class="string">'value'</span>)
+    set(handles.edit_XuanZhuan,<span class="string">'String'</span>,<span class="string">'0'</span>);
+    set(handles.edit_SuoFang,<span class="string">'String'</span>,<span class="string">'0'</span>);
+<span class="keyword">end</span>
+<span class="comment">% &#24179;&#31227;&#21464;&#25442;</span>
+    res=repmat(255,handles.img_hight, handles.img_width);<span class="comment">% &#20445;&#23384;&#32467;&#26524;</span>
+    X = get(handles.edit_Y,<span class="string">'value'</span>); <span class="comment">% &#26816;&#32034;&#24179;&#31227;&#37327;X</span>
+    Y = get(handles.edit_X,<span class="string">'value'</span>); <span class="comment">% &#26816;&#32034;&#24179;&#31227;&#37327;Y</span>
+    tras = [1 0 X;
+            0 1 Y;
+            0 0 1 ];     <span class="comment">% &#24179;&#31227;&#30340;&#21464;&#25442;&#30697;&#38453;</span>
+    <span class="comment">% &#27599;&#34892;</span>
+    <span class="keyword">for</span> i = 1 : handles.img_hight
+        <span class="comment">% &#27599;&#21015;</span>
+        <span class="keyword">for</span> j = 1 : handles.img_width
+            temp = [i; j; 1];
+            <span class="comment">% &#27880;&#24847;&#65306;temp&#26159;&#21015;&#21521;&#37327;</span>
+            <span class="comment">% &#30697;&#38453;&#20056;&#27861; temp=[i+X;</span>
+            <span class="comment">%                j+Y;</span>
+            <span class="comment">%                1   ]</span>
+            temp = tras * temp;
+            <span class="comment">% &#21462;&#20986;x&#65292;y&#24182;&#21028;&#26029;&#21464;&#25442;&#21518;&#30340;&#20301;&#32622;&#26159;&#21542;&#36234;&#30028;</span>
+            x = temp(1, 1);
+            y = temp(2, 1);
+            <span class="keyword">if</span> (x &lt;= handles.img_hight) &amp;&amp; (y &lt;= handles.img_width) &amp;&amp; (x &gt;= 1) &amp;&amp; (y &gt;= 1)
+                res(x, y) = handles.img(i,j);
+            <span class="keyword">end</span>
+        <span class="keyword">end</span>
+    <span class="keyword">end</span>;
+<span class="comment">% &#26174;&#31034;&#22270;&#20687;</span>
+    imshow(uint8(res));
+<span class="comment">% &#21464;&#25442;&#32423;&#32852;&#38656;&#20445;&#23384;&#22788;&#29702;&#21518;&#30340;&#22270;&#20687;</span>
+    <span class="keyword">if</span> get(handles.RB_BianHuanJiLian,<span class="string">'value'</span>)
+        handles.img=res;
+        <span class="comment">% &#26356;&#26032;&#32467;&#26500;&#20307;&#25968;&#25454;</span>
+        guidata(hObject, handles);
+    <span class="keyword">end</span>
+</pre><p><img vspace="5" hspace="5" src="%E5%B9%B3%E7%A7%BB.bmp" alt=""> </p><h2>&#32553;&#25918;&#21464;&#25442;<a name="44"></a></h2><p><b>&#36755;&#20837;&#32553;&#25918;&#20493;&#25968;</b></p><pre class="codeinput"><span class="keyword">function</span> edit_SuoFang_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% &#23558;&#32553;&#25918;&#20493;&#25968;&#36716;&#20026;double&#31867;&#22411;</span>
+SuoFang=str2double(get(hObject,<span class="string">'String'</span>));
+<span class="comment">% &#20445;&#23384;&#21040;&#25511;&#20214;&#25968;&#25454;&#20013;</span>
+set(hObject,<span class="string">'value'</span>,SuoFang);
+</pre><p><b>&#32553;&#25918;&#21464;&#25442;</b></p><pre class="codeinput"><span class="keyword">function</span> PB_SuoFangBianHuan_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% &#29366;&#24577;&#24674;&#22797;</span>
+<span class="keyword">if</span> true ~= get(handles.RB_BianHuanJiLian,<span class="string">'value'</span>)
+    set(handles.edit_XuanZhuan,<span class="string">'String'</span>,<span class="string">'0'</span>);
+    set(handles.edit_X,<span class="string">'String'</span>,<span class="string">'0'</span>);
+    set(handles.edit_Y,<span class="string">'String'</span>,<span class="string">'0'</span>);
+    set(handles.slider1,<span class="string">'value'</span>,handles.img_hight);
+    set(handles.slider2,<span class="string">'value'</span>,0);
+<span class="keyword">end</span>
+<span class="comment">% &#32553;&#25918;&#21464;&#25442;</span>
+    res=repmat(255,handles.img_hight, handles.img_width);               <span class="comment">% &#20445;&#23384;&#32467;&#26524;</span>
+    Multiple = get(handles.edit_SuoFang,<span class="string">'value'</span>);                       <span class="comment">% &#25918;&#32553;&#30340;&#20493;&#25968;</span>
+    tras = [ 1/Multiple 0 0;
+             0 1/Multiple 0;
+             0      0     1 ];       <span class="comment">% &#25918;&#32553;&#30340;&#21464;&#25442;&#30697;&#38453;</span>
+    <span class="comment">% &#27599;&#34892;</span>
+    <span class="keyword">for</span> i = 1 : handles.img_hight
+        <span class="comment">% &#27599;&#21015;</span>
+        <span class="keyword">for</span> j = 1 : handles.img_width
+            temp = [i; j; 1];
+            <span class="comment">% &#27880;&#24847;&#65306;temp&#26159;&#21015;&#21521;&#37327;</span>
+            <span class="comment">% &#30697;&#38453;&#20056;&#27861; temp=[ 1/Multiple * i;</span>
+            <span class="comment">%                 1/Multiple * j;</span>
+            <span class="comment">%                       1        ]</span>
+            temp = tras * temp;
+            <span class="comment">% &#21462;&#20986;x&#65292;y&#24182;&#21028;&#26029;&#21464;&#25442;&#21518;&#30340;&#20301;&#32622;&#26159;&#21542;&#36234;&#30028;</span>
+            x = uint16(temp(1, 1));
+            y = uint16(temp(2, 1));
+            <span class="keyword">if</span> (x &lt;= handles.img_hight) &amp;&amp; (y &lt;= handles.img_width) &amp;&amp; (x &gt;= 1) &amp;&amp; (y &gt;= 1)
+                res(i, j) = handles.img(x, y);
+            <span class="keyword">end</span>
+        <span class="keyword">end</span>
+    <span class="keyword">end</span>;
+<span class="comment">% &#26174;&#31034;&#22270;&#20687;</span>
+    imshow(uint8(res));
+<span class="comment">% &#21464;&#25442;&#32423;&#32852;&#38656;&#20445;&#23384;&#22788;&#29702;&#21518;&#30340;&#22270;&#20687;</span>
+    <span class="keyword">if</span> get(handles.RB_BianHuanJiLian,<span class="string">'value'</span>)
+        handles.img=res;
+        <span class="comment">% &#26356;&#26032;&#32467;&#26500;&#20307;&#25968;&#25454;</span>
+        guidata(hObject, handles);
+    <span class="keyword">end</span>
+</pre><p><img vspace="5" hspace="5" src="%E7%BC%A9%E6%94%BE.bmp" alt=""> </p><h2>&#38236;&#20687;&#21464;&#25442;<a name="52"></a></h2><p><b>&#27700;&#24179;&#38236;&#20687;</b></p><pre class="codeinput"><span class="keyword">function</span> PB_ShuiPingJingXiang_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% &#29366;&#24577;&#24674;&#22797;</span>
+<span class="keyword">if</span> true ~= get(handles.RB_BianHuanJiLian,<span class="string">'value'</span>)
+    set(handles.edit_XuanZhuan,<span class="string">'String'</span>,<span class="string">'0'</span>);
+    set(handles.edit_X,<span class="string">'String'</span>,<span class="string">'0'</span>);
+    set(handles.edit_Y,<span class="string">'String'</span>,<span class="string">'0'</span>);
+    set(handles.edit_SuoFang,<span class="string">'String'</span>,<span class="string">'0'</span>);
+    set(handles.slider1,<span class="string">'value'</span>,handles.img_hight);
+    set(handles.slider2,<span class="string">'value'</span>,0);
+<span class="keyword">end</span>
+<span class="comment">% &#27700;&#24179;&#38236;&#20687;</span>
+    res=repmat(255,handles.img_hight, handles.img_width);               <span class="comment">% &#20445;&#23384;&#32467;&#26524;</span>
+    <span class="comment">% &#27599;&#34892;</span>
+    <span class="keyword">for</span> i = 1 : handles.img_hight
+        <span class="comment">% &#27599;&#21015;</span>
+        <span class="keyword">for</span> j = 1 : handles.img_width
+            x=i;                    <span class="comment">% &#34892;&#22352;&#26631;&#19981;&#21464;</span>
+            y=handles.img_width-j+1;<span class="comment">% &#21015;&#22352;&#26631;&#38236;&#20687;</span>
+            res(x,y)=handles.img(i,j);
+        <span class="keyword">end</span>
+    <span class="keyword">end</span>
+<span class="comment">% &#26174;&#31034;&#22270;&#20687;</span>
+    imshow(uint8(res));
+<span class="comment">% &#21464;&#25442;&#32423;&#32852;&#38656;&#20445;&#23384;&#22788;&#29702;&#21518;&#30340;&#22270;&#20687;</span>
+    <span class="keyword">if</span> get(handles.RB_BianHuanJiLian,<span class="string">'value'</span>)
+        handles.img=res;
+        <span class="comment">% &#26356;&#26032;&#32467;&#26500;&#20307;&#25968;&#25454;</span>
+        guidata(hObject, handles);
+    <span class="keyword">end</span>
+<span class="comment">% &#28155;&#21152;&#24555;&#29031;</span>
+    snapnow;
+</pre><p><img vspace="5" hspace="5" src="%E6%B0%B4%E5%B9%B3.bmp" alt=""> </p><p><b>&#22402;&#30452;&#38236;&#20687;</b></p><pre class="codeinput"><span class="keyword">function</span> PB_ChuiZhiJingXiang_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% &#29366;&#24577;&#24674;&#22797;</span>
+<span class="keyword">if</span> true ~= get(handles.RB_BianHuanJiLian,<span class="string">'value'</span>)
+    set(handles.edit_XuanZhuan,<span class="string">'String'</span>,<span class="string">'0'</span>);
+    set(handles.edit_X,<span class="string">'String'</span>,<span class="string">'0'</span>);
+    set(handles.edit_Y,<span class="string">'String'</span>,<span class="string">'0'</span>);
+    set(handles.edit_SuoFang,<span class="string">'String'</span>,<span class="string">'0'</span>);
+    set(handles.slider1,<span class="string">'value'</span>,handles.img_hight);
+    set(handles.slider2,<span class="string">'value'</span>,0);
+<span class="keyword">end</span>
+<span class="comment">% &#22402;&#30452;&#38236;&#20687;</span>
+    res=repmat(255,handles.img_hight, handles.img_width);               <span class="comment">% &#20445;&#23384;&#32467;&#26524;</span>
+    <span class="comment">% &#27599;&#21015;</span>
+    <span class="keyword">for</span> i = 1 : handles.img_width
+        <span class="comment">% &#27599;&#34892;</span>
+        <span class="keyword">for</span> j = 1 : handles.img_hight
+            y=handles.img_hight-j+1;<span class="comment">% &#34892;&#22352;&#26631;&#38236;&#20687;</span>
+            x=i;                    <span class="comment">% &#21015;&#22352;&#26631;&#19981;&#21464;</span>
+            res(y,x)=handles.img(j,i);
+        <span class="keyword">end</span>
+    <span class="keyword">end</span>
+<span class="comment">% &#26174;&#31034;&#22270;&#20687;</span>
+    imshow(uint8(res));
+<span class="comment">% &#21464;&#25442;&#32423;&#32852;&#38656;&#20445;&#23384;&#22788;&#29702;&#21518;&#30340;&#22270;&#20687;</span>
+    <span class="keyword">if</span> get(handles.RB_BianHuanJiLian,<span class="string">'value'</span>)
+        handles.img=res;
+        <span class="comment">% &#26356;&#26032;&#32467;&#26500;&#20307;&#25968;&#25454;</span>
+        guidata(hObject, handles);
+    <span class="keyword">end</span>
+</pre><p><img vspace="5" hspace="5" src="%E5%9E%82%E7%9B%B4.bmp" alt=""> </p><h2>&#21464;&#25442;&#32423;&#32852;<a name="61"></a></h2><pre class="codeinput"><span class="keyword">function</span> RB_BianHuanJiLian_Callback(hObject, eventdata, handles)
+</pre><pre class="codeinput"><span class="comment">% &#20351;&#33021;</span>
+    RB_ChuLiGuanLian.value=true;
+<span class="comment">% &#29366;&#24577;&#24674;&#22797;</span>
+    set(handles.edit_XuanZhuan,<span class="string">'String'</span>,<span class="string">'0'</span>);
+    set(handles.edit_X,<span class="string">'String'</span>,<span class="string">'0'</span>);
+    set(handles.edit_Y,<span class="string">'String'</span>,<span class="string">'0'</span>);
+    set(handles.edit_SuoFang,<span class="string">'String'</span>,<span class="string">'0'</span>);
+    set(handles.slider1,<span class="string">'value'</span>,handles.img_hight);
+    set(handles.slider2,<span class="string">'value'</span>,0);
+<span class="comment">% &#26356;&#26032;&#32467;&#26500;&#20307;&#25968;&#25454;</span>
+    guidata(hObject, handles)
+    imshow(handles.img);
+</pre><p><img vspace="5" hspace="5" src="%E7%BA%A7%E8%81%94.bmp" alt=""> </p><p class="footer"><br><br></p></div><!--
+##### SOURCE BEGIN #####
+%% 点操作REPLACE_WITH_DASH_DASH-坐标变换
+% * 概述      ：
+% *实现图像的坐标变换，主要有旋转，平移，放缩，镜像，级联五种变换，对应反变*
+% *换实现方法类似，本例未添加*
+% * 作者		：张群伟	南昌航空大学信息工程学院自动化系
+% * 日期		：[4/5/2017]  
+
+
+%%
+%
+% <<main.bmp>>
+%
+
+
+%% 主函数
+% *不做任何修改*
+function varargout = DCZZuoBiaoBianHuan(varargin)
+% Begin initialization code - DO NOT EDIT
+gui_Singleton = 1;
+gui_State = struct('gui_Name',       mfilename, ...
+                   'gui_Singleton',  gui_Singleton, ...
+                   'gui_OpeningFcn', @DCZZuoBiaoBianHuan_OpeningFcn, ...
+                   'gui_OutputFcn',  @DCZZuoBiaoBianHuan_OutputFcn, ...
+                   'gui_LayoutFcn',  [], ...
+                   'gui_Callback',   []);
+if nargin && ischar(varargin{1})
+   gui_State.gui_Callback = str2func(varargin{1});
+end
+if nargout
+    [varargout{1:nargout}] = gui_mainfcn(gui_State, varargin{:});
+else
+    gui_mainfcn(gui_State, varargin{:});
+end
+% End initialization code - DO NOT EDIT
+
+
+%% 开始函数
+% *相关初始化*
+function DCZZuoBiaoBianHuan_OpeningFcn(hObject, eventdata, handles, varargin)
+% 全局变量
+    handles.img_str=0;      % 图像地址
+    handles.img=0;          % 图像数据
+    handles.img_width=0;    % 图像宽
+    handles.img_hight=0;    % 图像高
+% 打开并显示原图像
+    axes(handles.axes1);
+    str=' ';
+    % 图像由参数传入
+    if nargin ==2
+        if ischar(varargin{2})
+        % 显示图像
+        str=varargin{2};
+        end
+    % 重新打开图像
+    else
+        % 提示
+            load chirp   % 鸟声
+            sound(y,Fs);
+            hs=msgbox('图片未加载！','通知','warn');
+            ht=findobj(hs,'type','text');
+            set(ht,'FontSize',11);
+            % 等待确定
+            uiwait(hs);
+    end
+    % 显示原图像
+    if str~=' '
+        imshow(str);
+        % 数据初始化
+        handles.img_str=str;        % 图像地址
+        handles.img=imread(str);    % 图像数据
+        [hight,width]=size(handles.img);
+        handles.img_width=width;    % 图像宽
+        handles.img_hight=hight;    % 图像高
+        set(handles.slider1,'Max',1000);
+        set(handles.slider1,'value',1000);
+    else % 未传入图像，关闭使能
+        set(handles.PB_BaoCunTuXiang,'enable','off');
+        set(handles.RB_BianHuanJiLian,'enable','off');
+        set(handles.edit_XuanZhuan,'enable','off');
+        set(handles.edit_X,'enable','off');
+        set(handles.edit_Y,'enable','off');
+        set(handles.edit_SuoFang,'enable','off');
+        set(handles.pushbutton3,'enable','off');
+        set(handles.pushbutton4,'enable','off');
+        set(handles.pushbutton5,'enable','off');
+        set(handles.pushbutton6,'enable','off');
+        set(handles.pushbutton9,'enable','off');
+        set(handles.pushbutton10,'enable','off');
+    end
+% Choose default command line output for DCZZuoBiaoBianHuan
+handles.output = hObject;
+% Update handles structure
+guidata(hObject, handles);
+% UIWAIT makes DCZZuoBiaoBianHuan wait for user response (see UIRESUME)
+% uiwait(handles.DCZZuoBiaoBianHuan);
+
+
+%% 输出函数
+function DCZZuoBiaoBianHuan_OutputFcn(hObject, eventdata, handles)
+% Get default command line output from handles structure
+% varargout{1} = handles.output;
+%
+
+
+%% 加载图像
+function PB_JiaZaiTuXiang_Callback(hObject, eventdata, handles)
+[fname,pname,index]=uigetfile({'*.bmp';'*.jpg'},'选择图片');
+if index              
+   % 数据初始化
+        str=[pname fname]; 
+        handles.img_str=str;        % 图像地址
+        handles.img=imread(str);    % 图像数据
+        [hight,width]=size(handles.img);
+        handles.img_width=width;    % 图像宽
+        handles.img_hight=hight;    % 图像高
+        set(handles.slider1,'Max',hight);
+        set(handles.slider1,'value',hight);        
+   % 状态恢复
+        set(handles.edit_XuanZhuan,'String','0');
+        set(handles.edit_X,'String','0');
+        set(handles.edit_Y,'String','0');
+        set(handles.edit_SuoFang,'String','0');
+        set(handles.slider1,'value',handles.img_hight);
+        set(handles.slider2,'value',0);
+   % 打开使能
+        set(handles.PB_BaoCunTuXiang,'enable','on');
+        set(handles.RB_BianHuanJiLian,'enable','on');
+        set(handles.edit_XuanZhuan,'enable','on');
+        set(handles.edit_X,'enable','on');
+        set(handles.edit_Y,'enable','on');
+        set(handles.edit_SuoFang,'enable','on');
+        set(handles.pushbutton3,'enable','on');
+        set(handles.pushbutton4,'enable','on');
+        set(handles.pushbutton5,'enable','on');
+        set(handles.pushbutton6,'enable','on');
+        set(handles.pushbutton9,'enable','on');
+        set(handles.pushbutton10,'enable','on');
+   % 更新结构体数据
+        guidata(hObject, handles)
+        % 显示图像
+        imshow(str);
+   % 变换级联
+        if get(handles.RB_BianHuanJiLian,'value')
+            handles.img=res;
+            % 更新结构体数据
+            guidata(hObject, handles);
+        end     
+end
+
+
+%% 保存图像
+function PB_BaoCunTuXiang_Callback(hObject, eventdata, handles)
+% 保存图像    
+[FileName,PathName] =uiputfile({'*.jpg;*.tif;*.png;*.gif','All Image Files';...
+          '*.*','All Files' },'保存图像',...
+          'C:\Work\newfile.jpg');
+if FileName==0
+    return;
+else
+    h=getframe(handles.axes1);
+    imwrite(h.cdata,[PathName,FileName]);
+end
+
+
+%% 恢复原图
+ function PB_HuiFuYuanTu_Callback(hObject, eventdata, handles)
+% 图像恢复
+    handles.img=imread(handles.img_str);
+% 状态恢复
+    set(handles.edit_XuanZhuan,'String','0');
+    set(handles.edit_X,'String','0');
+    set(handles.edit_Y,'String','0');
+    set(handles.edit_SuoFang,'String','0');
+    set(handles.slider1,'value',handles.img_hight);
+    set(handles.slider2,'value',0);
+% 更新结构体数据
+    guidata(hObject, handles);
+    imshow(handles.img)
+
+
+%% 旋转变换
+
+%% 
+% *输入旋转角度* 
+function edit_XuanZhuan_Callback(hObject, eventdata, handles)
+%将数据转化为double类型
+Angle=str2double(get(hObject,'String'));
+% 保存到控件数据中
+set(hObject,'value',Angle);
+
+%%
+% *执行旋转操作*
+function PB_XuanZhuanBianHuan_Callback(hObject, eventdata, handles)
+% 状态恢复
+if true ~= get(handles.RB_BianHuanJiLian,'value')
+    set(handles.edit_X,'String','0');
+    set(handles.edit_Y,'String','0');
+    set(handles.edit_SuoFang,'String','0');
+    set(handles.slider1,'value',handles.img_hight);
+    set(handles.slider2,'value',0);
+end
+% 旋转变换
+    res=repmat(255,handles.img_hight, handles.img_width);               % 保存结果
+    Angle = get(handles.edit_XuanZhuan,'value') * pi / 180.0;           % 旋转角度
+    tras = [ cos(Angle) -sin(Angle)  0;                                 % 旋转的变换矩阵
+             sin(Angle) cos(Angle)   0; 
+             0          0            1 ];       
+    % 每行
+    for i = 1 : handles.img_hight
+        % 每列
+        for j = 1 : handles.img_width
+            temp = [i; j; 1];
+            % 注意：temp是列向量
+            % 矩阵乘法 temp=[ i*cos(Angle)-j*sin(Angle);
+            %                 i*sin(Angle)+j*cos(Angle);
+            %                           1               ]    
+            temp = tras * temp;
+            % 取出x，y并判断变换后的位置是否越界
+            x = uint16(temp(1, 1));
+            y = uint16(temp(2, 1));
+            if (x <= handles.img_hight) && (y <= handles.img_width) && (x >= 1) && (y >= 1)
+                res(i, j) = handles.img(x, y);
+            end
+        end
+    end;
+% 显示图像
+    imshow(uint8(res)); 
+% 变换级联需保存处理后的图像
+    if get(handles.RB_BianHuanJiLian,'value')
+        handles.img=res;
+        % 更新结构体数据
+        guidata(hObject, handles);
+    end  
+%%
+%
+% <<旋转.bmp>>
+% 
+
+
+%% 平移变换
+
+%%
+% *输入X坐标*
+function edit_X_Callback(hObject, eventdata, handles)
+% 将X坐标值转为double类型
+X=str2double(get(hObject,'String'));
+% 保存到控件数据中
+set(hObject,'value',X);
+% 更新到滑动条
+set(handles.slider2,'value',X);
+guidata(hObject,handles);
+
+%%
+% *输入Y坐标*
+function edit_Y_Callback(hObject, eventdata, handles)
+% 将Y坐标值转为double类型
+Y=str2double(get(hObject,'String'));
+% 保存到控件数据中
+set(hObject,'value',Y);
+% 更新到滑动条
+set(handles.slider1,'value',get(handles.slider1,'Max')-Y);
+guidata(hObject,handles);
+
+%%
+% *X轴平移变换滑动条*
+function slider_X_Callback(hObject, eventdata, handles)
+% 设置X轴滑动条最大值
+set(hObject,'Max',handles.img_hight);
+% 更新编辑框中的数据
+X_str=num2str(get(hObject,'value'));
+X_value=uint16(get(hObject,'value'));
+set(handles.edit_X,'String',X_str,'value',X_value);
+% 更新结构体数据
+guidata(hObject, handles);
+
+%%
+% *Y轴平移变换滑动条*
+function slider_Y_Callback(hObject, eventdata, handles)
+% 设置Y轴滑动条最大值
+set(hObject,'Max',handles.img_hight);
+% 更新编辑框中的数据
+Y_str=num2str(handles.img_hight-get(hObject,'value'));
+Y_value=handles.img_hight-uint16(get(hObject,'value'));
+set(handles.edit_Y,'String',Y_str,'value',Y_value);
+% 更新结构体数据
+guidata(hObject, handles);
+
+%% 
+% *平移变换*
+function PB_PingYiBianHuan_Callback(hObject, eventdata, handles)
+% 状态恢复
+if true ~= get(handles.RB_BianHuanJiLian,'value')
+    set(handles.edit_XuanZhuan,'String','0');
+    set(handles.edit_SuoFang,'String','0');
+end
+% 平移变换
+    res=repmat(255,handles.img_hight, handles.img_width);% 保存结果
+    X = get(handles.edit_Y,'value'); % 检索平移量X
+    Y = get(handles.edit_X,'value'); % 检索平移量Y
+    tras = [1 0 X; 
+            0 1 Y; 
+            0 0 1 ];     % 平移的变换矩阵
+    % 每行
+    for i = 1 : handles.img_hight
+        % 每列
+        for j = 1 : handles.img_width
+            temp = [i; j; 1];
+            % 注意：temp是列向量
+            % 矩阵乘法 temp=[i+X;
+            %                j+Y;
+            %                1   ] 
+            temp = tras * temp; 
+            % 取出x，y并判断变换后的位置是否越界
+            x = temp(1, 1);
+            y = temp(2, 1);
+            if (x <= handles.img_hight) && (y <= handles.img_width) && (x >= 1) && (y >= 1)
+                res(x, y) = handles.img(i,j);
+            end
+        end
+    end;
+% 显示图像
+    imshow(uint8(res)); 
+% 变换级联需保存处理后的图像
+    if get(handles.RB_BianHuanJiLian,'value')
+        handles.img=res;
+        % 更新结构体数据
+        guidata(hObject, handles);
+    end
+%%
+%
+% <<平移.bmp>>
+% 
+ 
+
+%% 缩放变换
+%%
+% *输入缩放倍数*
+function edit_SuoFang_Callback(hObject, eventdata, handles)
+% 将缩放倍数转为double类型
+SuoFang=str2double(get(hObject,'String'));
+% 保存到控件数据中
+set(hObject,'value',SuoFang);
+
+%%
+% *缩放变换*
+function PB_SuoFangBianHuan_Callback(hObject, eventdata, handles)
+% 状态恢复
+if true ~= get(handles.RB_BianHuanJiLian,'value')
+    set(handles.edit_XuanZhuan,'String','0');
+    set(handles.edit_X,'String','0');
+    set(handles.edit_Y,'String','0');
+    set(handles.slider1,'value',handles.img_hight);
+    set(handles.slider2,'value',0);
+end
+% 缩放变换
+    res=repmat(255,handles.img_hight, handles.img_width);               % 保存结果
+    Multiple = get(handles.edit_SuoFang,'value');                       % 放缩的倍数
+    tras = [ 1/Multiple 0 0; 
+             0 1/Multiple 0; 
+             0      0     1 ];       % 放缩的变换矩阵
+    % 每行
+    for i = 1 : handles.img_hight
+        % 每列
+        for j = 1 : handles.img_width
+            temp = [i; j; 1];
+            % 注意：temp是列向量
+            % 矩阵乘法 temp=[ 1/Multiple * i;
+            %                 1/Multiple * j;
+            %                       1        ]    
+            temp = tras * temp;
+            % 取出x，y并判断变换后的位置是否越界
+            x = uint16(temp(1, 1));
+            y = uint16(temp(2, 1));
+            if (x <= handles.img_hight) && (y <= handles.img_width) && (x >= 1) && (y >= 1)
+                res(i, j) = handles.img(x, y);
+            end
+        end
+    end;
+% 显示图像
+    imshow(uint8(res)); 
+% 变换级联需保存处理后的图像
+    if get(handles.RB_BianHuanJiLian,'value')
+        handles.img=res;
+        % 更新结构体数据
+        guidata(hObject, handles);
+    end
+
+%%
+% 
+% <<缩放.bmp>>
+% 
+
+
+%% 镜像变换
+
+%%
+% *水平镜像*
+function PB_ShuiPingJingXiang_Callback(hObject, eventdata, handles)
+% 状态恢复
+if true ~= get(handles.RB_BianHuanJiLian,'value')
+    set(handles.edit_XuanZhuan,'String','0');
+    set(handles.edit_X,'String','0');
+    set(handles.edit_Y,'String','0');
+    set(handles.edit_SuoFang,'String','0');
+    set(handles.slider1,'value',handles.img_hight);
+    set(handles.slider2,'value',0);
+end
+% 水平镜像
+    res=repmat(255,handles.img_hight, handles.img_width);               % 保存结果
+    % 每行
+    for i = 1 : handles.img_hight
+        % 每列
+        for j = 1 : handles.img_width
+            x=i;                    % 行坐标不变
+            y=handles.img_width-j+1;% 列坐标镜像
+            res(x,y)=handles.img(i,j);
+        end
+    end
+% 显示图像
+    imshow(uint8(res)); 
+% 变换级联需保存处理后的图像
+    if get(handles.RB_BianHuanJiLian,'value')
+        handles.img=res;
+        % 更新结构体数据
+        guidata(hObject, handles);
+    end  
+% 添加快照
+    snapnow;
+
+%%
+% 
+% <<水平.bmp>>
+% 
+
+%%
+% *垂直镜像*
+function PB_ChuiZhiJingXiang_Callback(hObject, eventdata, handles)
+% 状态恢复
+if true ~= get(handles.RB_BianHuanJiLian,'value')
+    set(handles.edit_XuanZhuan,'String','0');
+    set(handles.edit_X,'String','0');
+    set(handles.edit_Y,'String','0');
+    set(handles.edit_SuoFang,'String','0');
+    set(handles.slider1,'value',handles.img_hight);
+    set(handles.slider2,'value',0);
+end
+% 垂直镜像
+    res=repmat(255,handles.img_hight, handles.img_width);               % 保存结果
+    % 每列
+    for i = 1 : handles.img_width
+        % 每行
+        for j = 1 : handles.img_hight
+            y=handles.img_hight-j+1;% 行坐标镜像
+            x=i;                    % 列坐标不变
+            res(y,x)=handles.img(j,i);
+        end
+    end
+% 显示图像
+    imshow(uint8(res));
+% 变换级联需保存处理后的图像
+    if get(handles.RB_BianHuanJiLian,'value')
+        handles.img=res;
+        % 更新结构体数据
+        guidata(hObject, handles);
+    end 
+    
+%%
+% 
+% <<垂直.bmp>>
+% 
+
+
+%% 变换级联
+function RB_BianHuanJiLian_Callback(hObject, eventdata, handles)
+% 使能
+    RB_ChuLiGuanLian.value=true;
+% 状态恢复
+    set(handles.edit_XuanZhuan,'String','0');
+    set(handles.edit_X,'String','0');
+    set(handles.edit_Y,'String','0');
+    set(handles.edit_SuoFang,'String','0');
+    set(handles.slider1,'value',handles.img_hight);
+    set(handles.slider2,'value',0);
+% 更新结构体数据
+    guidata(hObject, handles)
+    imshow(handles.img);
+
+%%
+% 
+% <<级联.bmp>>
+% 
+    
+
+##### SOURCE END #####
+--></body></html>
